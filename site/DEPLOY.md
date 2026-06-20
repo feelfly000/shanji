@@ -18,9 +18,19 @@
 - 测试 GPX 是否替换为真实轨迹。
 - 活动报名链接是否为俱乐部官方链接。
 
+## 推荐部署方式
+
+当前仓库已配置 GitHub Pages 自动发布。每次把 `main` 分支推送到 GitHub 后，GitHub Actions 会把 `site/` 目录发布到 GitHub Pages。
+
+首次使用时，需要在 GitHub 仓库页面确认：
+
+```text
+Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+```
+
 ## 部署目录
 
-部署 `shanji-site/` 整个目录。
+部署 `site/` 整个目录。
 
 首页文件：
 
