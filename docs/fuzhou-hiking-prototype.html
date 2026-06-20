@@ -1,0 +1,1593 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>山迹｜福州徒步线路库原型</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17211d;
+      --muted: #66756e;
+      --line: #d9e2dd;
+      --paper: #fbfcf8;
+      --panel: #ffffff;
+      --forest: #1f6f5b;
+      --forest-dark: #154b42;
+      --leaf: #dcedd3;
+      --river: #d7ecf2;
+      --sun: #f3b454;
+      --earth: #9b6a3c;
+      --danger: #b84a3a;
+      --shadow: 0 14px 36px rgba(22, 38, 32, .12);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    button, input, select {
+      font: inherit;
+    }
+
+    .app-shell {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(251, 252, 248, .92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 14px 22px;
+      display: grid;
+      grid-template-columns: minmax(180px, 280px) 1fr auto;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.38), transparent 48%),
+        linear-gradient(135deg, var(--forest), #6b9f76 68%, var(--sun));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.36);
+      flex: 0 0 auto;
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .brand span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .search {
+      position: relative;
+    }
+
+    .search input {
+      width: 100%;
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0 44px 0 42px;
+      background: #fff;
+      color: var(--ink);
+      outline: none;
+    }
+
+    .search input:focus {
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(31, 111, 91, .14);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      transform: translateY(-50%);
+      color: var(--muted);
+    }
+
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 8px;
+      background: var(--leaf);
+      color: var(--forest-dark);
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    .workspace {
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 18px 22px 30px;
+      display: grid;
+      grid-template-columns: 280px minmax(420px, 1fr) 360px;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .filters, .map-panel, .drawer {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 8px 22px rgba(22, 38, 32, .06);
+    }
+
+    .filters {
+      position: sticky;
+      top: 82px;
+      padding: 16px;
+    }
+
+    .filter-title, .panel-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 1.22;
+      margin-bottom: 8px;
+    }
+
+    .filter-title h2, .panel-title h2 {
+      font-size: 15px;
+    }
+
+    .small-button, .icon-button {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--forest-dark);
+      border-radius: 8px;
+      min-height: 34px;
+      padding: 0 10px;
+      cursor: pointer;
+    }
+
+    .small-button:hover, .icon-button:hover {
+      border-color: var(--forest);
+      background: #f4faf6;
+    }
+
+    .icon-button {
+      width: 36px;
+      padding: 0;
+      display: inline-grid;
+      place-items: center;
+    }
+
+    .filter-group {
+      padding: 14px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .filter-group:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .filter-label {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 9px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      min-height: 32px;
+      padding: 0 10px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .chip.active {
+      background: var(--forest);
+      border-color: var(--forest);
+      color: #fff;
+    }
+
+    .range-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      accent-color: var(--forest);
+      width: 100%;
+    }
+
+    .content {
+      display: grid;
+      gap: 16px;
+    }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      min-height: 236px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(15, 36, 30, .88), rgba(15, 36, 30, .58), rgba(15, 36, 30, .18)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: #fff;
+      display: grid;
+      align-content: end;
+      padding: 24px;
+    }
+
+    .intro p {
+      max-width: 660px;
+      color: rgba(255,255,255,.88);
+      line-height: 1.65;
+    }
+
+    .quick-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .quick-actions .chip {
+      background: rgba(255,255,255,.92);
+      border-color: rgba(255,255,255,.52);
+      color: var(--forest-dark);
+    }
+
+    .entry-switch {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .entry-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 15px;
+      text-align: left;
+      cursor: pointer;
+      min-height: 106px;
+    }
+
+    .entry-card.active {
+      border-color: var(--forest);
+      box-shadow: 0 0 0 3px rgba(31, 111, 91, .12);
+    }
+
+    .entry-card strong {
+      display: block;
+      color: var(--forest-dark);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+
+    .entry-card span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .club-panel {
+      display: none;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .club-panel.open {
+      display: block;
+    }
+
+    .club-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .club-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .club-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfcf8;
+    }
+
+    .club-card strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .club-card p {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .club-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin: 10px 0;
+    }
+
+    .club-status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 26px;
+      border-radius: 7px;
+      padding: 0 8px;
+      background: var(--leaf);
+      color: var(--forest-dark);
+      font-size: 12px;
+    }
+
+    .club-status.hot {
+      background: #fff0d5;
+      color: #80520f;
+    }
+
+    .club-status.closed {
+      background: #ecefed;
+      color: var(--muted);
+    }
+
+    .club-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .club-actions a {
+      color: var(--forest-dark);
+      font-size: 13px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .club-note {
+      margin-top: 12px;
+      color: #7a3027;
+      background: #fff4ef;
+      border: 1px solid #f0d3c7;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .summary-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .metric {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 22px;
+      color: var(--forest-dark);
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .list-tools {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .result-count {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .sort {
+      min-height: 36px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 0 10px;
+      background: #fff;
+      color: var(--ink);
+    }
+
+    .route-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .route-card {
+      display: grid;
+      grid-template-columns: 112px 1fr;
+      gap: 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+    }
+
+    .route-card:hover, .route-card.active {
+      border-color: rgba(31, 111, 91, .62);
+      box-shadow: var(--shadow);
+      transform: translateY(-1px);
+    }
+
+    .route-thumb {
+      min-height: 132px;
+      border-radius: 6px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.06), rgba(0,0,0,.22)),
+        var(--thumb, #cad8cf);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .route-thumb::after {
+      content: "";
+      position: absolute;
+      inset: auto 10px 10px auto;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.78);
+      box-shadow: 0 0 0 7px rgba(255,255,255,.22);
+    }
+
+    .route-main {
+      min-width: 0;
+    }
+
+    .route-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+
+    .route-head h3 {
+      font-size: 18px;
+      line-height: 1.28;
+    }
+
+    .difficulty {
+      flex: 0 0 auto;
+      border-radius: 8px;
+      padding: 5px 8px;
+      color: #fff;
+      background: var(--forest);
+      font-size: 12px;
+    }
+
+    .difficulty.medium { background: #9a6b22; }
+    .difficulty.hard { background: var(--danger); }
+
+    .route-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+
+    .meta-pill {
+      border-radius: 7px;
+      padding: 5px 7px;
+      background: #f1f6f3;
+      color: var(--forest-dark);
+      font-size: 12px;
+    }
+
+    .route-desc {
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .route-warning {
+      color: #7a3027;
+      background: #fff4ef;
+      border: 1px solid #f0d3c7;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .map-panel {
+      position: sticky;
+      top: 82px;
+      overflow: hidden;
+    }
+
+    .map-header {
+      padding: 16px 16px 0;
+    }
+
+    .map-canvas {
+      margin: 12px 16px 16px;
+      height: 300px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 78% 18%, rgba(215, 236, 242, .95) 0 13%, transparent 13%),
+        radial-gradient(circle at 35% 32%, rgba(220, 237, 211, .98) 0 22%, transparent 22%),
+        radial-gradient(circle at 64% 66%, rgba(220, 237, 211, .9) 0 28%, transparent 28%),
+        linear-gradient(145deg, #eef5e9, #f8f5ea);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-canvas::before {
+      content: "";
+      position: absolute;
+      inset: 32px 18px 34px;
+      border: 2px dashed rgba(31, 111, 91, .18);
+      border-radius: 45% 55% 48% 52%;
+      transform: rotate(-9deg);
+    }
+
+    .map-point {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background: var(--forest);
+      border: 2px solid #fff;
+      box-shadow: 0 4px 14px rgba(31, 111, 91, .36);
+      cursor: pointer;
+      transform: translate(-50%, -50%);
+    }
+
+    .map-point.active {
+      background: var(--sun);
+      width: 20px;
+      height: 20px;
+      box-shadow: 0 0 0 8px rgba(243, 180, 84, .26);
+    }
+
+    .map-legend {
+      display: grid;
+      gap: 8px;
+      padding: 0 16px 16px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .topics {
+      border-top: 1px solid var(--line);
+      padding: 16px;
+    }
+
+    .topic-list {
+      display: grid;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .topic-item {
+      width: 100%;
+      text-align: left;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 10px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .topic-item:hover {
+      border-color: var(--forest);
+      background: #f4faf6;
+    }
+
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      background: rgba(15, 28, 24, .34);
+      display: none;
+    }
+
+    .drawer-backdrop.open {
+      display: block;
+    }
+
+    .drawer {
+      position: fixed;
+      z-index: 60;
+      right: 18px;
+      top: 18px;
+      bottom: 18px;
+      width: min(520px, calc(100vw - 36px));
+      display: none;
+      overflow: auto;
+      box-shadow: var(--shadow);
+    }
+
+    .drawer.open {
+      display: block;
+    }
+
+    .drawer-cover {
+      height: 160px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.34)),
+        var(--drawer-thumb, #dbe8dd);
+      position: relative;
+    }
+
+    .drawer-close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255,255,255,.92);
+    }
+
+    .drawer-body {
+      padding: 18px;
+    }
+
+    .drawer-body h2 {
+      font-size: 22px;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 14px 0;
+    }
+
+    .detail-stat {
+      background: #f5f8f3;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .detail-stat strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--forest-dark);
+    }
+
+    .detail-stat span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .detail-section {
+      border-top: 1px solid var(--line);
+      padding-top: 14px;
+      margin-top: 14px;
+    }
+
+    .detail-section h3 {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .detail-section p, .detail-section li {
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .detail-section ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .empty-state {
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .mobile-filter-toggle {
+      display: none;
+    }
+
+    @media (max-width: 1120px) {
+      .workspace {
+        grid-template-columns: 260px 1fr;
+      }
+
+      .map-panel {
+        grid-column: 1 / -1;
+        position: static;
+      }
+
+      .map-canvas {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        grid-template-columns: 1fr auto;
+      }
+
+      .search {
+        grid-column: 1 / -1;
+      }
+
+      .workspace {
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+
+      .filters {
+        display: none;
+        position: static;
+      }
+
+      .filters.open {
+        display: block;
+      }
+
+      .mobile-filter-toggle {
+        display: inline-flex;
+      }
+
+      .summary-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .entry-switch, .club-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .route-card {
+        grid-template-columns: 1fr;
+      }
+
+      .route-thumb {
+        min-height: 120px;
+      }
+
+      .detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <strong>山迹</strong>
+            <span>福州徒步线路库</span>
+          </div>
+        </div>
+        <label class="search">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="searchInput" type="search" placeholder="搜索路线、区域、风景，例如：鼓山、看海、新手">
+        </label>
+        <button class="small-button mobile-filter-toggle" id="mobileFilterButton">筛选</button>
+      <div class="status-chip">福州周边 · 含平潭</div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="filters" id="filters">
+        <div class="filter-title">
+          <h2>筛选路线</h2>
+          <button class="small-button" id="resetButton">重置</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">区域</span>
+          <div class="chips" data-filter="region"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">难度</span>
+          <div class="chips" data-filter="difficulty"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">风景/主题</span>
+          <div class="chips" data-filter="theme"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">适合人群</span>
+          <div class="chips" data-filter="audience"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">最大距离</span>
+          <div class="range-row">
+            <input id="distanceRange" type="range" min="5" max="18" value="18">
+            <span id="distanceValue">18km</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <section class="intro">
+          <h1>福州周边最值得走的徒步路线，先从适合你的那一条开始</h1>
+          <p>山迹是福州徒步线路库。用户可以自己按条件选路线，也可以查看户外俱乐部每周发布的活动线路；范围包含福州、平潭，后期可扩展到宁德边界等周边路线。</p>
+          <div class="quick-actions" id="quickActions"></div>
+        </section>
+
+        <section class="entry-switch" aria-label="入口选择">
+          <button class="entry-card active" id="routeEntryButton">
+            <strong>自己选路线</strong>
+            <span>按区域、难度、距离、交通和风景筛选，查看路线详情、风险提示和GPX轨迹。</span>
+          </button>
+          <button class="entry-card" id="clubEntryButton">
+            <strong>本周俱乐部活动</strong>
+            <span>集中查看各户外俱乐部发布的组织线路，比较时间、强度、费用和报名状态。</span>
+          </button>
+        </section>
+
+        <section class="club-panel" id="clubPanel">
+          <div class="panel-title">
+            <h2>本周俱乐部活动</h2>
+            <span class="status-chip">信息聚合 · 待审核</span>
+          </div>
+          <div class="club-toolbar" id="clubFilters"></div>
+          <div class="club-grid" id="clubList"></div>
+          <div class="club-note">正式版建议只展示经过审核的活动摘要，并跳转到俱乐部自己的报名页；山迹不直接代收费用、不替代活动组织方的安全责任。</div>
+        </section>
+
+        <section class="summary-row">
+          <div class="metric"><strong id="metricTotal">20</strong><span>候选路线</span></div>
+          <div class="metric"><strong id="metricEasy">0</strong><span>新手/轻松向</span></div>
+          <div class="metric"><strong id="metricTransit">0</strong><span>公共交通友好</span></div>
+          <div class="metric"><strong id="metricSea">0</strong><span>看海/山海</span></div>
+        </section>
+
+        <div class="list-tools">
+          <div class="result-count" id="resultCount"></div>
+          <select class="sort" id="sortSelect" aria-label="排序">
+            <option value="recommended">推荐排序</option>
+            <option value="distanceAsc">距离从短到长</option>
+            <option value="timeAsc">用时从短到长</option>
+            <option value="difficultyAsc">难度从低到高</option>
+          </select>
+        </div>
+
+        <section class="route-list" id="routeList"></section>
+      </section>
+
+      <aside class="map-panel">
+        <div class="map-header">
+          <div class="panel-title">
+            <h2>路线分布</h2>
+            <span class="status-chip" id="mapCount">0条</span>
+          </div>
+        </div>
+        <div class="map-canvas" id="mapCanvas" aria-label="简化路线分布图"></div>
+        <div class="map-legend">
+          <p>这是原型用的简化分布图。正式版建议优先用开源地图验证；如使用谷歌地图，需要确认国内访问稳定性、Key、费用和域名限制。</p>
+        </div>
+        <div class="topics">
+          <div class="panel-title">
+            <h2>专题入口</h2>
+          </div>
+          <div class="topic-list" id="topicList"></div>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-modal="true" aria-label="路线详情">
+    <div class="drawer-cover" id="drawerCover">
+      <button class="icon-button drawer-close" id="drawerClose" aria-label="关闭">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+
+  <script>
+    const routes = [
+      {
+        id: "FZ001", name: "福道精华段", region: "鼓楼区", type: "城市森林步道", difficulty: "轻松",
+        distance: 5.8, time: 2, ascent: 180, transit: "公交/打车", transitFriendly: true,
+        themes: ["城市森林", "栈道", "亲子"], audience: ["新手", "亲子", "游客"], score: 98,
+        highlight: "不用出城就能走的标志性城市森林步道，适合第一次体验。",
+        summary: "适合用作网站的新手样板路线：路况清楚、出口较多、观景点密集，用户容易理解路线价值。",
+        warning: "周末人流较大，雨天栈道可能湿滑，恐高人群需谨慎。",
+        verify: "入口、开放时间、不同出口交通", x: "38%", y: "42%", color: "#7fb27a"
+      },
+      {
+        id: "FZ002", name: "福山-福道-冶山历史风貌区", region: "鼓楼区", type: "城市山地+人文", difficulty: "轻松",
+        distance: 6.2, time: 2.5, ascent: 160, transit: "公交/地铁周边", transitFriendly: true,
+        themes: ["城市森林", "历史人文"], audience: ["新手", "游客", "摄影"], score: 89,
+        highlight: "把福道和城市历史节点串起来，适合做文化轻徒步专题。",
+        summary: "路线更偏城市漫步和轻量登高，适合外地游客或周末低强度活动。",
+        warning: "需要确认实际串联动线，避免城市道路段过长影响体验。",
+        verify: "实际步行串联方式和耗时", x: "39%", y: "39%", color: "#9dbf77"
+      },
+      {
+        id: "FZ003", name: "鼓山登山道-涌泉寺", region: "晋安区", type: "古道登山", difficulty: "中等",
+        distance: 7.5, time: 3.5, ascent: 520, transit: "地铁+步行/打车", transitFriendly: true,
+        themes: ["古道", "寺庙", "城市观景"], audience: ["新手进阶", "半日", "摄影"], score: 96,
+        highlight: "福州经典登高古道，交通方便，但台阶强度不低。",
+        summary: "适合作为市区入门进阶路线。它的优势是识别度高、交通便利、文化景观密集。",
+        warning: "雨后石阶湿滑，节假日人多，夏季闷热。",
+        verify: "台阶强度、节假日人流、返程方式", x: "55%", y: "42%", color: "#6ea36f"
+      },
+      {
+        id: "FZ004", name: "鼓山-十八景-喝水岩-白云顶", region: "晋安区", type: "古道+观景", difficulty: "较难",
+        distance: 11.5, time: 5.5, ascent: 780, transit: "地铁+公交/打车", transitFriendly: true,
+        themes: ["古道", "观景", "训练"], audience: ["进阶", "摄影"], score: 91,
+        highlight: "比普通鼓山线更完整，适合有一定体力的人做半日到一日训练。",
+        summary: "这条线可以展示路线详情页的分段说明、风险提示和下撤信息，是原型里的进阶样板。",
+        warning: "爬升明显，部分路段需确认开放和路况，不建议新手独行。",
+        verify: "分段距离、爬升、白云顶开放状态", x: "58%", y: "36%", color: "#8b7749"
+      },
+      {
+        id: "FZ005", name: "鼓山白云洞/凤池白云洞线", region: "晋安区", type: "登山观景", difficulty: "较难",
+        distance: 9.2, time: 4.5, ascent: 720, transit: "公交/打车", transitFriendly: false,
+        themes: ["观景", "寺庙", "训练"], audience: ["进阶", "摄影"], score: 80,
+        highlight: "观景和登山属性强，适合做进阶路线内容。",
+        summary: "路线需要更严格核验，适合展示网站对高强度路线的安全边界表达。",
+        warning: "台阶多、体力要求较高，雨后和夜间不建议尝试。",
+        verify: "台阶数量、路况、是否适合下山", x: "57%", y: "34%", color: "#8d5f45"
+      },
+      {
+        id: "FZ006", name: "鼓山-鼓岭线路", region: "晋安区", type: "古道+避暑", difficulty: "较难",
+        distance: 13.5, time: 6, ascent: 900, transit: "公交/接驳", transitFriendly: false,
+        themes: ["古道", "避暑", "历史人文"], audience: ["进阶", "游客"], score: 88,
+        highlight: "官方十大名山线路之一，兼具古道、人文和夏季避暑价值。",
+        summary: "适合做鼓山鼓岭专题的核心路线，但正式发布前要细化起终点和交通。",
+        warning: "耗时较长，返程接驳需要提前计划。",
+        verify: "具体起终点、接驳交通、耗时", x: "60%", y: "31%", color: "#4d8b6f"
+      },
+      {
+        id: "FZ007", name: "鼓岭柳杉王公园-鼓岭栈道", region: "晋安区", type: "避暑轻徒步", difficulty: "轻松",
+        distance: 5.6, time: 2.2, ascent: 180, transit: "公交/自驾", transitFriendly: true,
+        themes: ["森林", "避暑", "亲子"], audience: ["新手", "亲子", "游客"], score: 92,
+        highlight: "夏季避暑、亲子和游客都容易理解的轻徒步选择。",
+        summary: "适合作为夏季专题入口，强度不高但交通和停车信息要写清楚。",
+        warning: "山上天气变化快，节假日停车和接驳需提前确认。",
+        verify: "景区交通、开放时间、停车", x: "62%", y: "28%", color: "#5f9e78"
+      },
+      {
+        id: "FZ008", name: "五虎山-五灵岩寺折返", region: "闽侯县", type: "郊野登山", difficulty: "中等",
+        distance: 8.4, time: 4, ascent: 560, transit: "自驾/打车", transitFriendly: false,
+        themes: ["名山", "寺庙", "训练"], audience: ["新手进阶", "进阶"], score: 84,
+        highlight: "山体辨识度高，适合作为闽侯方向的登山样板。",
+        summary: "适合有一定体力的周末登山用户，正式发布时要确认停车和折返点。",
+        warning: "部分路段暴晒，雨后土路和石阶需注意防滑。",
+        verify: "起点停车、步道状态、折返节点", x: "30%", y: "66%", color: "#94734c"
+      },
+      {
+        id: "FZ009", name: "五虎山-龙祥岛-旗山湖", region: "闽侯县", type: "山岛湖串联", difficulty: "中等",
+        distance: 12, time: 5.5, ascent: 480, transit: "自驾/接驳", transitFriendly: false,
+        themes: ["名山", "湖景", "亲水"], audience: ["进阶", "游客"], score: 78,
+        highlight: "官方十大名山线路之一，适合做闽侯山岛湖专题。",
+        summary: "更像目的地串联路线，网站里需要区分徒步段和游览段。",
+        warning: "点位串联可能依赖车辆接驳，不应直接宣传为纯徒步线。",
+        verify: "串联是否适合步行、交通接驳", x: "28%", y: "70%", color: "#608ba4"
+      },
+      {
+        id: "FZ010", name: "旗山-万佛寺-博思软件线路", region: "闽侯县/高新区", type: "名山+古刹", difficulty: "中等",
+        distance: 10.8, time: 5, ascent: 620, transit: "自驾/公交部分可达", transitFriendly: false,
+        themes: ["名山", "寺庙", "森林"], audience: ["新手进阶", "进阶"], score: 82,
+        highlight: "名山、古刹和产业园区形成多元路线主题。",
+        summary: "适合在原型里测试复杂路线的标签和专题归类。",
+        warning: "需要确认实际徒步段比例，避免城市道路段过多。",
+        verify: "实际徒步段和城市道路占比", x: "24%", y: "58%", color: "#7f9d68"
+      },
+      {
+        id: "FZ011", name: "旗山森林公园轻徒步", region: "闽侯县", type: "森林/溪谷", difficulty: "轻松",
+        distance: 6, time: 2.5, ascent: 260, transit: "自驾/打车", transitFriendly: false,
+        themes: ["森林", "溪谷", "避暑"], audience: ["新手", "亲子", "避暑"], score: 86,
+        highlight: "森林感强、坡度相对温和，适合周末半日放松。",
+        summary: "适合新手和亲子，但需要确认景区状态和溪谷安全边界。",
+        warning: "雨后溪边湿滑，部分谷地信号可能较弱。",
+        verify: "景区开放状态、门票、溪谷风险", x: "22%", y: "56%", color: "#609b73"
+      },
+      {
+        id: "FZ012", name: "飞凤山-海峡奥体中心", region: "仓山区", type: "城市山地", difficulty: "轻松",
+        distance: 5.4, time: 2, ascent: 180, transit: "公交/地铁周边", transitFriendly: true,
+        themes: ["城市观景", "公园", "半日"], audience: ["新手", "亲子", "夜走谨慎"], score: 83,
+        highlight: "市区南部轻徒步代表，适合半日线和下班后短走。",
+        summary: "路线适合验证移动端用户按附近区域找路线的需求。",
+        warning: "夜间路线需确认照明和人流，不建议走偏僻支路。",
+        verify: "可走步道入口、停车、夜间安全", x: "43%", y: "59%", color: "#81a76b"
+      },
+      {
+        id: "FZ013", name: "高盖山生态公园线", region: "仓山区", type: "城市登山", difficulty: "轻松",
+        distance: 5.2, time: 2, ascent: 210, transit: "公交/打车", transitFriendly: true,
+        themes: ["城市观景", "公园", "亲子"], audience: ["新手", "亲子", "半日"], score: 87,
+        highlight: "南台岛中心山体，适合仓山周边用户快速出门走山。",
+        summary: "适合做城市轻徒步专题，也是亲子和新手筛选里的好样例。",
+        warning: "入口较多，正式内容需给出最清楚的推荐走法。",
+        verify: "入口选择、步道完整度、夜间照明", x: "41%", y: "63%", color: "#789e62"
+      },
+      {
+        id: "FZ014", name: "天马山-中国船政文化景区", region: "马尾区", type: "登山+人文", difficulty: "中等",
+        distance: 7.8, time: 3.5, ascent: 360, transit: "公交/自驾", transitFriendly: true,
+        themes: ["城市观景", "历史人文", "江景"], audience: ["游客", "摄影", "新手进阶"], score: 81,
+        highlight: "登山观景和船政文化结合，适合做马尾人文路线。",
+        summary: "路线价值在于山体和文化景区的组合，详情页要写清楚两者如何衔接。",
+        warning: "城市道路和景区段占比需核实，夏季注意暴晒。",
+        verify: "山路与景区串联方式", x: "68%", y: "49%", color: "#7f8fa1"
+      },
+      {
+        id: "FZ015", name: "石竹山-东关寨-罗汉里", region: "福清市", type: "山地+古堡+红色文化", difficulty: "中等",
+        distance: 14.5, time: 6.5, ascent: 650, transit: "自驾/接驳", transitFriendly: false,
+        themes: ["名山", "古村", "历史人文"], audience: ["进阶", "游客"], score: 76,
+        highlight: "梦文化、古堡和红色记忆层次丰富，适合做深度专题。",
+        summary: "更适合做一日游路线，需要谨慎区分徒步段与车辆串联段。",
+        warning: "点位距离较远，直接步行串联可能不适合普通用户。",
+        verify: "点位距离较远，需确认是否适合徒步串联", x: "45%", y: "86%", color: "#956a4c"
+      },
+      {
+        id: "FZ016", name: "青芝山-贵安旅游度假区", region: "连江县", type: "山地+景区", difficulty: "中等",
+        distance: 9.5, time: 4.5, ascent: 520, transit: "自驾/公交部分可达", transitFriendly: false,
+        themes: ["山水", "洞泉", "景区"], audience: ["新手进阶", "游客"], score: 79,
+        highlight: "山、溪、湖、滩、谷资源丰富，适合景区型徒步内容。",
+        summary: "适合连江方向内容建设，但景区收费和串联方式必须写清楚。",
+        warning: "节假日景区人流和停车可能影响体验。",
+        verify: "串联交通、景区开放和收费", x: "70%", y: "24%", color: "#5c9476"
+      },
+      {
+        id: "FZ017", name: "汤岭古道贵安-降虎寨", region: "连江县/贵安周边", type: "古道", difficulty: "中等",
+        distance: 9, time: 4, ascent: 460, transit: "自驾/接驳", transitFriendly: false,
+        themes: ["古道", "森林", "村寨"], audience: ["新手进阶", "摄影"], score: 85,
+        highlight: "古道特色鲜明，适合做福州周边古道专题。",
+        summary: "路线具备故事性和风景辨识度，发布前应优先确认起终点和岔路。",
+        warning: "古道可能存在杂草、岔路和雨后湿滑问题。",
+        verify: "起终点定位、全程路况、岔路", x: "72%", y: "22%", color: "#717d51"
+      },
+      {
+        id: "FZ018", name: "连江奇达村-旗冠顶", region: "连江县", type: "山海观景", difficulty: "中等",
+        distance: 6.8, time: 3, ascent: 430, transit: "自驾/包车", transitFriendly: false,
+        themes: ["看海", "山海", "摄影"], audience: ["摄影", "游客", "新手进阶"], score: 93,
+        highlight: "山海景观强，适合作为网站最容易传播的看海路线。",
+        summary: "视觉吸引力强，适合首页推荐和看海专题，但安全护栏与人流需核实。",
+        warning: "台阶强度不低，临海观景注意安全，节假日人流较大。",
+        verify: "台阶强度、停车、人流、安全护栏", x: "83%", y: "31%", color: "#2f8aa2"
+      },
+      {
+        id: "FZ019", name: "长乐西洛岛灯塔线", region: "长乐区", type: "海岛/海岸", difficulty: "轻松",
+        distance: 6.5, time: 3, ascent: 120, transit: "自驾/包车", transitFriendly: false,
+        themes: ["看海", "灯塔", "日出"], audience: ["摄影", "情侣", "轻徒步"], score: 90,
+        highlight: "看海、灯塔和日出主题鲜明，适合社交传播。",
+        summary: "适合看海专题和摄影专题，但必须强调潮汐、风浪和天气。",
+        warning: "海岸线受潮汐和风浪影响，台风天和恶劣天气不要前往。",
+        verify: "潮汐、风浪、上岛路径安全", x: "76%", y: "66%", color: "#3d99b2"
+      },
+      {
+        id: "FZ020", name: "永泰天门山-赤壁-欧乐堡周边线", region: "永泰县", type: "山地/景区串联", difficulty: "较难",
+        distance: 15.8, time: 7, ascent: 850, transit: "自驾/接驳", transitFriendly: false,
+        themes: ["山地", "溪谷", "景区"], audience: ["进阶", "避暑"], score: 75,
+        highlight: "永泰方向代表性山地景区串联，适合做进阶和避暑专题。",
+        summary: "这类路线更适合一日或两日安排，网站需要明确交通和门票边界。",
+        warning: "景区间距离和纯徒步可行性需核实，不建议直接按一条徒步线发布。",
+        verify: "景区间距离、是否适合纯徒步、门票", x: "20%", y: "82%", color: "#6d7f62"
+      }
+    ];
+
+    const clubActivities = [
+      {
+        id: "A202607001", title: "周五鼓山夜爬轻徒步", club: "示例户外A", date: "周五晚",
+        routeId: "FZ003", region: "晋安区", difficulty: "中等", distance: 7, ascent: 520,
+        meeting: "鼓山地铁站", transport: "公共交通集合", fee: "39元", status: "报名中",
+        tags: ["新手进阶", "夜爬", "市区"], signup: "俱乐部官方报名页", audit: "已审核",
+        note: "适合有基础的新手，雨后取消或改线。"
+      },
+      {
+        id: "A202607002", title: "周六奇达旗冠顶看海线", club: "示例户外B", date: "周六",
+        routeId: "FZ018", region: "连江县", difficulty: "中等", distance: 6.8, ascent: 430,
+        meeting: "五一广场附近", transport: "大巴往返", fee: "128元", status: "余位紧张",
+        tags: ["看海", "摄影", "山海"], signup: "俱乐部官方报名页", audit: "已审核",
+        note: "临海观景注意安全，台阶强度不低，需自备午餐。"
+      },
+      {
+        id: "A202607003", title: "周六福道亲子轻徒步", club: "示例亲子户外", date: "周六上午",
+        routeId: "FZ001", region: "鼓楼区", difficulty: "轻松", distance: 5.8, ascent: 180,
+        meeting: "福道入口", transport: "自行前往", fee: "免费/AA", status: "报名中",
+        tags: ["亲子", "新手", "城市森林"], signup: "俱乐部官方报名页", audit: "待审核",
+        note: "适合亲子轻量体验，需确认集合点和儿童年龄建议。"
+      },
+      {
+        id: "A202607004", title: "周日永泰溪谷避暑线", club: "示例户外C", date: "周日",
+        routeId: "FZ020", region: "永泰县", difficulty: "较难", distance: 12, ascent: 650,
+        meeting: "市区指定集合点", transport: "大巴往返", fee: "158元", status: "待确认",
+        tags: ["进阶", "避暑", "溪谷"], signup: "俱乐部官方报名页", audit: "待审核",
+        note: "雨天自动取消或改线，需确认溪谷涨水风险。"
+      },
+      {
+        id: "A202607005", title: "周日鼓岭避暑半日线", club: "示例户外D", date: "周日",
+        routeId: "FZ007", region: "晋安区", difficulty: "轻松", distance: 5.6, ascent: 180,
+        meeting: "鼓岭柳杉王公园", transport: "自驾/拼车", fee: "68元", status: "报名中",
+        tags: ["新手", "亲子", "避暑"], signup: "俱乐部官方报名页", audit: "已审核",
+        note: "山上天气变化快，建议带薄外套和饮水。"
+      }
+    ];
+
+    const state = {
+      query: "",
+      filters: { region: null, difficulty: null, theme: null, audience: null },
+      maxDistance: 18,
+      sort: "recommended",
+      selectedId: null,
+      clubFilter: "全部"
+    };
+
+    const filterDefs = {
+      region: ["鼓楼区", "晋安区", "闽侯县", "仓山区", "马尾区", "连江县", "长乐区", "永泰县", "福清市"],
+      difficulty: ["轻松", "中等", "较难"],
+      theme: ["城市森林", "古道", "看海", "森林", "寺庙", "亲子", "历史人文", "避暑", "训练"],
+      audience: ["新手", "亲子", "摄影", "游客", "进阶", "半日"]
+    };
+
+    const topics = [
+      { name: "新手友好", filter: { audience: "新手" } },
+      { name: "公交/地铁可达", custom: "transit" },
+      { name: "半日可走", filter: { audience: "半日" } },
+      { name: "看海摄影", filter: { theme: "看海" } },
+      { name: "进阶训练", filter: { audience: "进阶" } },
+      { name: "夏季避暑", filter: { theme: "避暑" } }
+    ];
+
+    const quickActions = ["新手", "亲子", "看海", "古道", "公交友好", "进阶"];
+    const routeList = document.getElementById("routeList");
+    const searchInput = document.getElementById("searchInput");
+    const resultCount = document.getElementById("resultCount");
+    const sortSelect = document.getElementById("sortSelect");
+    const mapCanvas = document.getElementById("mapCanvas");
+    const mapCount = document.getElementById("mapCount");
+    const drawer = document.getElementById("drawer");
+    const drawerBackdrop = document.getElementById("drawerBackdrop");
+    const drawerBody = document.getElementById("drawerBody");
+    const drawerCover = document.getElementById("drawerCover");
+
+    function difficultyRank(route) {
+      if (route.difficulty.includes("轻松")) return 1;
+      if (route.difficulty.includes("中等")) return 2;
+      return 3;
+    }
+
+    function difficultyClass(route) {
+      const rank = difficultyRank(route);
+      if (rank === 1) return "";
+      if (rank === 2) return "medium";
+      return "hard";
+    }
+
+    function routeMatches(route) {
+      const q = state.query.trim().toLowerCase();
+      const haystack = [
+        route.id, route.name, route.region, route.type, route.difficulty, route.transit,
+        route.highlight, route.summary, route.warning, route.verify,
+        ...route.themes, ...route.audience
+      ].join(" ").toLowerCase();
+
+      if (q && !haystack.includes(q)) return false;
+      if (route.distance > state.maxDistance) return false;
+      if (state.filters.region && !route.region.includes(state.filters.region)) return false;
+      if (state.filters.difficulty && !route.difficulty.includes(state.filters.difficulty)) return false;
+      if (state.filters.theme && !route.themes.includes(state.filters.theme)) return false;
+      if (state.filters.audience && !route.audience.some(item => item.includes(state.filters.audience) || state.filters.audience.includes(item))) return false;
+      return true;
+    }
+
+    function getFilteredRoutes() {
+      const list = routes.filter(routeMatches);
+      const sorters = {
+        recommended: (a, b) => b.score - a.score,
+        distanceAsc: (a, b) => a.distance - b.distance,
+        timeAsc: (a, b) => a.time - b.time,
+        difficultyAsc: (a, b) => difficultyRank(a) - difficultyRank(b) || a.distance - b.distance
+      };
+      return list.sort(sorters[state.sort]);
+    }
+
+    function renderFilterChips() {
+      for (const [key, items] of Object.entries(filterDefs)) {
+        const container = document.querySelector(`[data-filter="${key}"]`);
+        container.innerHTML = "";
+        items.forEach(item => {
+          const button = document.createElement("button");
+          button.className = `chip ${state.filters[key] === item ? "active" : ""}`;
+          button.textContent = item;
+          button.addEventListener("click", () => {
+            state.filters[key] = state.filters[key] === item ? null : item;
+            render();
+          });
+          container.appendChild(button);
+        });
+      }
+    }
+
+    function renderQuickActions() {
+      const container = document.getElementById("quickActions");
+      container.innerHTML = "";
+      quickActions.forEach(item => {
+        const button = document.createElement("button");
+        button.className = "chip";
+        button.textContent = item;
+        button.addEventListener("click", () => {
+          if (item === "公交友好") {
+            state.query = "公交";
+            searchInput.value = "公交";
+          } else if (["新手", "亲子", "进阶"].includes(item)) {
+            state.filters.audience = item;
+          } else {
+            state.filters.theme = item;
+          }
+          render();
+        });
+        container.appendChild(button);
+      });
+    }
+
+    function renderMetrics(filtered) {
+      document.getElementById("metricTotal").textContent = routes.length;
+      document.getElementById("metricEasy").textContent = routes.filter(r => difficultyRank(r) === 1 || r.audience.includes("新手")).length;
+      document.getElementById("metricTransit").textContent = routes.filter(r => r.transitFriendly).length;
+      document.getElementById("metricSea").textContent = routes.filter(r => r.themes.includes("看海") || r.themes.includes("山海")).length;
+      resultCount.textContent = `当前显示 ${filtered.length} 条路线`;
+      mapCount.textContent = `${filtered.length}条`;
+    }
+
+    function renderRoutes(filtered) {
+      routeList.innerHTML = "";
+      if (!filtered.length) {
+        routeList.innerHTML = `<div class="empty-state">没有找到匹配路线。可以放宽距离、难度或关键词。</div>`;
+        return;
+      }
+
+      filtered.forEach(route => {
+        const card = document.createElement("article");
+        card.className = `route-card ${state.selectedId === route.id ? "active" : ""}`;
+        card.tabIndex = 0;
+        card.innerHTML = `
+          <div class="route-thumb" style="--thumb:${route.color}"></div>
+          <div class="route-main">
+            <div class="route-head">
+              <h3>${route.name}</h3>
+              <span class="difficulty ${difficultyClass(route)}">${route.difficulty}</span>
+            </div>
+            <div class="route-meta">
+              <span class="meta-pill">${route.region}</span>
+              <span class="meta-pill">${route.distance}km</span>
+              <span class="meta-pill">约${route.time}h</span>
+              <span class="meta-pill">爬升${route.ascent}m</span>
+              <span class="meta-pill">${route.transit}</span>
+            </div>
+            <p class="route-desc">${route.highlight}</p>
+            <div class="route-warning">待复核：${route.verify}</div>
+          </div>
+        `;
+        card.addEventListener("click", () => openDrawer(route.id));
+        card.addEventListener("keydown", event => {
+          if (event.key === "Enter") openDrawer(route.id);
+        });
+        routeList.appendChild(card);
+      });
+    }
+
+    function renderMap(filtered) {
+      mapCanvas.innerHTML = "";
+      filtered.forEach(route => {
+        const point = document.createElement("button");
+        point.className = `map-point ${state.selectedId === route.id ? "active" : ""}`;
+        point.style.setProperty("--x", route.x);
+        point.style.setProperty("--y", route.y);
+        point.title = route.name;
+        point.setAttribute("aria-label", route.name);
+        point.addEventListener("click", () => openDrawer(route.id));
+        mapCanvas.appendChild(point);
+      });
+    }
+
+    function renderTopics() {
+      const container = document.getElementById("topicList");
+      container.innerHTML = "";
+      topics.forEach(topic => {
+        const button = document.createElement("button");
+        button.className = "topic-item";
+        button.textContent = topic.name;
+        button.addEventListener("click", () => {
+          state.query = "";
+          searchInput.value = "";
+          state.filters = { region: null, difficulty: null, theme: null, audience: null };
+          if (topic.custom === "transit") {
+            state.query = "公交";
+            searchInput.value = "公交";
+          }
+          if (topic.filter) {
+            state.filters = { ...state.filters, ...topic.filter };
+          }
+          render();
+        });
+        container.appendChild(button);
+      });
+    }
+
+    function activityMatches(activity) {
+      if (state.clubFilter === "全部") return true;
+      if (state.clubFilter === "报名中") return activity.status === "报名中";
+      if (state.clubFilter === "即将满员") return activity.status === "余位紧张";
+      return activity.tags.includes(state.clubFilter) || activity.difficulty === state.clubFilter;
+    }
+
+    function statusClass(status) {
+      if (status === "余位紧张") return "hot";
+      if (status === "已截止" || status === "已满员") return "closed";
+      return "";
+    }
+
+    function renderClubFilters() {
+      const filters = ["全部", "报名中", "即将满员", "新手", "亲子", "看海", "进阶", "避暑"];
+      const container = document.getElementById("clubFilters");
+      container.innerHTML = "";
+      filters.forEach(item => {
+        const button = document.createElement("button");
+        button.className = `chip ${state.clubFilter === item ? "active" : ""}`;
+        button.textContent = item;
+        button.addEventListener("click", () => {
+          state.clubFilter = item;
+          renderClubActivities();
+          renderClubFilters();
+        });
+        container.appendChild(button);
+      });
+    }
+
+    function renderClubActivities() {
+      const container = document.getElementById("clubList");
+      const filtered = clubActivities.filter(activityMatches);
+      container.innerHTML = "";
+      if (!filtered.length) {
+        container.innerHTML = `<div class="empty-state">当前没有匹配的俱乐部活动。</div>`;
+        return;
+      }
+
+      filtered.forEach(activity => {
+        const linkedRoute = routes.find(route => route.id === activity.routeId);
+        const card = document.createElement("article");
+        card.className = "club-card";
+        card.innerHTML = `
+          <strong>${activity.title}</strong>
+          <span class="club-status ${statusClass(activity.status)}">${activity.status}</span>
+          <div class="club-meta">
+            <span class="meta-pill">${activity.date}</span>
+            <span class="meta-pill">${activity.club}</span>
+            <span class="meta-pill">${activity.region}</span>
+            <span class="meta-pill">${activity.difficulty}</span>
+            <span class="meta-pill">${activity.distance}km</span>
+            <span class="meta-pill">爬升${activity.ascent}m</span>
+          </div>
+          <p>${activity.meeting}｜${activity.transport}｜费用：${activity.fee}</p>
+          <p>${activity.note}</p>
+          <div class="club-actions">
+            <span class="club-status">${activity.audit}</span>
+            <a href="#" aria-label="${activity.title}报名入口">${activity.signup}</a>
+          </div>
+          ${linkedRoute ? `<p style="margin-top:8px">关联路线：${linkedRoute.name}</p>` : ""}
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function openDrawer(routeId) {
+      const route = routes.find(item => item.id === routeId);
+      if (!route) return;
+      state.selectedId = route.id;
+      drawerCover.style.setProperty("--drawer-thumb", route.color);
+      drawerBody.innerHTML = `
+        <span class="status-chip">${route.id} · ${route.region}</span>
+        <h2>${route.name}</h2>
+        <p class="route-desc">${route.summary}</p>
+        <div class="detail-grid">
+          <div class="detail-stat"><strong>${route.distance}km</strong><span>距离</span></div>
+          <div class="detail-stat"><strong>${route.time}h</strong><span>预计用时</span></div>
+          <div class="detail-stat"><strong>${route.ascent}m</strong><span>累计爬升</span></div>
+          <div class="detail-stat"><strong>${route.difficulty}</strong><span>难度</span></div>
+          <div class="detail-stat"><strong>${route.type}</strong><span>路线类型</span></div>
+          <div class="detail-stat"><strong>${route.transitFriendly ? "较方便" : "需规划"}</strong><span>交通</span></div>
+        </div>
+        <div class="detail-section">
+          <h3>路线亮点</h3>
+          <p>${route.highlight}</p>
+        </div>
+        <div class="detail-section">
+          <h3>标签</h3>
+          <p>${[...route.themes, ...route.audience].join("、")}</p>
+        </div>
+        <div class="detail-section">
+          <h3>风险提示</h3>
+          <p>${route.warning}</p>
+        </div>
+        <div class="detail-section">
+          <h3>发布前必须复核</h3>
+          <ul>
+            <li>${route.verify}</li>
+            <li>起点、终点、距离、累计爬升和最新开放状态。</li>
+            <li>交通返程、补给厕所、下撤点和雨天风险。</li>
+          </ul>
+        </div>
+        <div class="detail-section">
+          <h3>GPX轨迹</h3>
+          <p>正式发布后允许下载GPX轨迹。候选路线阶段只显示入口，待实地复核、轨迹清洗和风险标注完成后开放下载。</p>
+        </div>
+      `;
+      drawer.classList.add("open");
+      drawerBackdrop.classList.add("open");
+      render();
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove("open");
+      drawerBackdrop.classList.remove("open");
+    }
+
+    function render() {
+      renderFilterChips();
+      const filtered = getFilteredRoutes();
+      renderMetrics(filtered);
+      renderRoutes(filtered);
+      renderMap(filtered);
+    }
+
+    searchInput.addEventListener("input", event => {
+      state.query = event.target.value;
+      render();
+    });
+
+    sortSelect.addEventListener("change", event => {
+      state.sort = event.target.value;
+      render();
+    });
+
+    document.getElementById("distanceRange").addEventListener("input", event => {
+      state.maxDistance = Number(event.target.value);
+      document.getElementById("distanceValue").textContent = `${state.maxDistance}km`;
+      render();
+    });
+
+    document.getElementById("resetButton").addEventListener("click", () => {
+      state.query = "";
+      searchInput.value = "";
+      state.filters = { region: null, difficulty: null, theme: null, audience: null };
+      state.maxDistance = 18;
+      document.getElementById("distanceRange").value = 18;
+      document.getElementById("distanceValue").textContent = "18km";
+      state.sort = "recommended";
+      sortSelect.value = "recommended";
+      render();
+    });
+
+    document.getElementById("mobileFilterButton").addEventListener("click", () => {
+      document.getElementById("filters").classList.toggle("open");
+    });
+
+    document.getElementById("routeEntryButton").addEventListener("click", () => {
+      document.getElementById("routeEntryButton").classList.add("active");
+      document.getElementById("clubEntryButton").classList.remove("active");
+      document.getElementById("clubPanel").classList.remove("open");
+      document.querySelector(".summary-row").style.display = "";
+      document.querySelector(".list-tools").style.display = "";
+      document.getElementById("routeList").style.display = "";
+    });
+
+    document.getElementById("clubEntryButton").addEventListener("click", () => {
+      document.getElementById("clubEntryButton").classList.add("active");
+      document.getElementById("routeEntryButton").classList.remove("active");
+      document.getElementById("clubPanel").classList.add("open");
+      document.querySelector(".summary-row").style.display = "none";
+      document.querySelector(".list-tools").style.display = "none";
+      document.getElementById("routeList").style.display = "none";
+      renderClubActivities();
+    });
+
+    document.getElementById("drawerClose").addEventListener("click", closeDrawer);
+    drawerBackdrop.addEventListener("click", closeDrawer);
+    renderQuickActions();
+    renderTopics();
+    renderClubFilters();
+    renderClubActivities();
+    render();
+  </script>
+</body>
+</html>

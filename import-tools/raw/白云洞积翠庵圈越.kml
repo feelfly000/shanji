@@ -1,0 +1,2467 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document id="TbuluKmlVersion2">
+    <name><![CDATA[白云洞积翠庵圈越]]>
+    </name>
+    <description><![CDATA[]]>
+    </description>
+    <snippet><![CDATA[通过“两步路”生成，http://www.2bulu.com]]>
+    </snippet>
+    <author><![CDATA[冲电宝大壮爱爬山]]>
+    </author>
+    <ExtendedData>
+      <Data name="TrackTypeId">
+        <value>8</value>
+      </Data>
+      <Data name="SportTypeId">
+        <value>0</value>
+      </Data>
+      <Data name="OperationType">
+        <value>1</value>
+      </Data>
+      <Data name="TrackTags">
+        <value>散步,爬山,徒步</value>
+      </Data>
+      <Data name="BeginTime">
+        <value>1766277603000</value>
+      </Data>
+      <Data name="EndTime">
+        <value>1766292005000</value>
+      </Data>
+      <Data name="TimeUsed">
+        <value>14402665</value>
+      </Data>
+      <Data name="PauseTime">
+        <value>1934211</value>
+      </Data>
+      <Data name="PosStartName">
+        <value>埠兴新苑</value>
+      </Data>
+      <Data name="PosEndName">
+        <value>埠兴新苑</value>
+      </Data>
+      <Data name="ProductVersion">
+        <value>and_8.1.0</value>
+      </Data>
+      <Data name="StartDistrictId">
+        <value>11416</value>
+      </Data>
+      <Data name="EndDistrictId">
+        <value>11416</value>
+      </Data>
+      <Data name="CreaterId">
+        <value>61234587</value>
+      </Data>
+      <Data name="CreaterName">
+        <value>冲电宝大壮爱爬山</value>
+      </Data>
+      <Data name="CreaterIcon">
+        <value>1471692950</value>
+      </Data>
+      <Data name="OriginCreaterId">
+        <value>61234587</value>
+      </Data>
+      <Data name="OriginCreaterNickname">
+        <value>冲电宝大壮爱爬山</value>
+      </Data>
+      <Data name="OriginCreaterName">
+        <value>zs_aleAA0</value>
+      </Data>
+      <Data name="OriginCreaterIcon">
+        <value>1471692950</value>
+      </Data>
+      <Data name="ThumbnailId">
+        <value>0</value>
+      </Data>
+      <Data name="Privacy">
+        <value>0</value>
+      </Data>
+      <Data name="ContextInfo">
+        <value>region:CN;lan:zh;model:android;system:android35;app:2bulu-V8.1.0</value>
+      </Data>
+      <Data name="Distance">
+        <value>6176.3785206501</value>
+      </Data>
+      <Data name="ElevationGain">
+        <value>739.9503457614395</value>
+      </Data>
+      <Data name="ElevationLoss">
+        <value>744.8245434565448</value>
+      </Data>
+      <Data name="SportAvgSpeed">
+        <value>0.49536041281863014</value>
+      </Data>
+    </ExtendedData>
+    <Style id="TrackStyle_n">
+      <LineStyle>
+        <color>ff1034e8</color>
+        <width>5</width>
+      </LineStyle>
+      <IconStyle>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=BYohR0x5OLAr0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="TrackStyle_h">
+      <LineStyle>
+        <color>ff1034e8</color>
+        <width>7</width>
+        <scale>1.1</scale>
+      </LineStyle>
+      <IconStyle>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=BYohR0x5OLAr0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <StyleMap id="TrackStyle">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#TrackStyle_n</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#TrackStyle_h</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="LineStringStyle">
+      <LineStyle>
+        <color>ff1034e8</color>
+        <width>6</width>
+      </LineStyle>
+    </Style>
+    <Style id="startPointStyle">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=n%2BVE0NaFmzwndk%2BZ75NU9A%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="endPointStyle">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=0Q3GJ5o%2FHpsr0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="MarkerStylePicture">
+      <LabelStyle>
+        <color>ff00ffff</color>
+        <colorMode>normal</colorMode>
+      </LabelStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=vMzvc3dTBl0r0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="MarkerStyleSound">
+      <LabelStyle>
+        <color>ff00ffff</color>
+        <colorMode>normal</colorMode>
+      </LabelStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=poL0RfxWHTIr0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="MarkerStyleVideo">
+      <LabelStyle>
+        <color>ff00ffff</color>
+        <colorMode>normal</colorMode>
+      </LabelStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=vMzvc3dTBl0r0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="MarkerStyleText">
+      <LabelStyle>
+        <color>ff00ffff</color>
+        <colorMode>normal</colorMode>
+      </LabelStyle>
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon><![CDATA[http://files.2bulu.com/f/d1?downParams=s2An6%2B3%2BIWUr0OBxohfNOA%3D%3D%0A]]>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Folder id="TbuluHisPointFolder">
+      <name>标注点</name>
+      <Placemark id="startPoint">
+        <name>起点</name>
+        <styleUrl>#startPointStyle</styleUrl>
+        <TimeStamp>
+          <when>2025-12-21T00:40:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3675308,26.0738942,20.03 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="endPoint">
+        <name>终点</name>
+        <styleUrl>#endPointStyle</styleUrl>
+        <TimeStamp>
+          <when>2025-12-21T04:40:03Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3675539,26.0738787,27.89 </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[独向山]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=Nd8yPyLKy8DM7r3a1UOo74PfNSS%2BbCdj" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:40:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3675308,26.0738942,20.03 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.64</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>4.3632545</value>
+          </Data>
+          <Data name="Time">
+            <value>1766277604705</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862589</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1790660</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[入口]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=Nd8yPyLKy8B8M2WRCA3VCslHZXpxJ0Q2" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:42:00Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3683751,26.0742258,23.64 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.91</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766277720557</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862586</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2008702</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[标志]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=Nd8yPyLKy8A5i%2Fm1bh8WOCLaac07bRuA" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:52:18Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3730609,26.0753439,96.31 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.78</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766278338543</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862581</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2875083</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[拉黄树]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=Nd8yPyLKy8Ajxslj3m5L2sFLEY7OdKqN" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:53:32Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3734476,26.0753607,99.79 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.0</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766278412542</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862575</value>
+          </Data>
+          <Data name="FileSize">
+            <value>3107500</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[慈母泉]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=Nd8yPyLKy8BpYdpGwKun2ACL7jjkIVwI" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:56:00Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3744185,26.0756856,137.92 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.0</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766278560559</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862574</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1993292</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[爱晚亭]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJF71PsCyzuFb8lxBzx4zPA" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T00:58:57Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3756859,26.0756808,178.47 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.88</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766278737553</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862471</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2045426</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[岔路口往右]]>
+        </name>
+        <styleUrl>#MarkerStyleVideo</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><embed style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vIjmVvkZ46RBzaq9LHz0Szr" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:05:33Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3761531,26.076075,188.97 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.78</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766279133589</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862470</value>
+          </Data>
+          <Data name="FileSize">
+            <value>4708179</value>
+          </Data>
+          <Data name="FileType">
+            <value>2</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[翠台]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJE6yD0mKKBOyGXtvCOHB%2BE" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:18:42Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3794922,26.0778624,298.46 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.67</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766279922551</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862461</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1171092</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[一天门]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vKBM4Z9L10eEsGc%2F24Thp3P" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:33:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3818008,26.0772135,427.63 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.5</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766280784552</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862459</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2523785</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJYkYvRP7que5RvvLl3ngyI" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:33:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3818008,26.0772135,427.63 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.5</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766280784552</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862457</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2512962</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[凡圣庵]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vKBQEsYFY2RrNjiBuYkrbn%2B" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:39:50Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3823463,26.077512,465.06 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.49</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766281190563</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862455</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2186443</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[二天门]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJPtUXQ%2FuJh8eXBO7R9vAWi" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T01:59:32Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3837326,26.0781146,600.77 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.54</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766282372534</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862452</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2463221</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[三天门]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vKTT%2BE1RyLMG5NX5ECx0b1V" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:02:24Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3838379,26.0783722,613.31 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.85</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766282544541</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862450</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1755791</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[白云洞]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vKsEO9QsNIJXuTs1DbNEigi" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:10:43Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3841144,26.0782278,654.68 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.47</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>6.855732</value>
+          </Data>
+          <Data name="Time">
+            <value>1766283043635</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862449</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1026458</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[海音洞]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJPtF%2BOsfS71rQ5I%2FC15pxG" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:42:03Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3848625,26.0782638,686.81 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.68</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766284923558</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862448</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2929993</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[左转去公路]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vLF3vk0s%2B2bGNelcJ6XMgxE" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:45:19Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3852119,26.0784465,719.21 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.69</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766285119546</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862447</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1068073</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[积翠庵方向走]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vL5aVFLfXX2X%2FsGWfYAVIgY" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:54:27Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3875723,26.0810175,758.91 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.95</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766285667548</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862446</value>
+          </Data>
+          <Data name="FileSize">
+            <value>839401</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[左转去积翠庵]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vIqSFswVqX9ER%2FwlgWc7t%2Fp" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T02:58:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.387471,26.0814806,770.65 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.91</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766285884542</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862444</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2451542</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[右转去十八罗汉]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vIhw1xsOHCT%2F8ja5rMLkwJK" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T03:28:13Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3826987,26.0804277,565.55 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.6</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>9.935046</value>
+          </Data>
+          <Data name="Time">
+            <value>1766287693541</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862443</value>
+          </Data>
+          <Data name="FileSize">
+            <value>3456890</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[开阔点]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vK%2B5AdWogsAWdYxrq8TKlmW" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T03:41:04Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.38083,26.0804877,472.02 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.0</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766288464537</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862438</value>
+          </Data>
+          <Data name="FileSize">
+            <value>949819</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[蝴蝶的茧]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vLeiTz58xR%2F00%2BDnM1M3hfx" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T03:46:08Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3795613,26.0804018,438.71 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.65</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766288768545</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862432</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1115952</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[左转]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vKbibgAkzPZPj4ZGXqwH9yo" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T04:15:19Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3766046,26.0769067,218.68 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.69</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766290519531</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862429</value>
+          </Data>
+          <Data name="FileSize">
+            <value>839731</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[积翠庵]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vI4maZUQj9Sahxfo9ND4c5F" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T04:17:38Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3764216,26.0764783,212.16 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.95</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766290658539</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862426</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2968061</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[左转]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vICo%2FBg3xSWf6t6M%2FLBj%2FFT" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T04:17:38Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3764216,26.0764783,212.16 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.95</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766290658539</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862421</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2308729</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[右转]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vI3nFtrcUNLT7XDaNWF3LkT" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T04:20:13Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3760908,26.0761333,198.69 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.76</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>5.203429</value>
+          </Data>
+          <Data name="Time">
+            <value>1766290813490</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862416</value>
+          </Data>
+          <Data name="FileSize">
+            <value>2324745</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+      <Placemark id="realPoint">
+        <name><![CDATA[回到起点]]>
+        </name>
+        <styleUrl>#MarkerStylePicture</styleUrl>
+        <description><![CDATA[<div><a href="" target="_blank"><img style="height:360" src="https://down-files.2bulu.com/f/dn1?downParams=kDSChlwM5vJurAndMGbq840FhYylnMsF" /></a></div>]]>
+        </description>
+        <TimeStamp>
+          <when>2025-12-21T04:39:53Z</when>
+        </TimeStamp>
+        <Point>
+          <coordinates>119.3675539,26.0738787,29.61 </coordinates>
+        </Point>
+        <ExtendedData>
+          <Data name="PosType">
+            <value>0</value>
+          </Data>
+          <Data name="Speed">
+            <value>0.36</value>
+          </Data>
+          <Data name="Accuracy">
+            <value>3.7900925</value>
+          </Data>
+          <Data name="Time">
+            <value>1766291993524</value>
+          </Data>
+          <Data name="description">
+            <value></value>
+          </Data>
+          <Data name="FileId">
+            <value>1529862412</value>
+          </Data>
+          <Data name="FileSize">
+            <value>1009613</value>
+          </Data>
+          <Data name="FileType">
+            <value>0</value>
+          </Data>
+        </ExtendedData>
+      </Placemark>
+    </Folder>
+    <Folder id="TbuluTrackFolder">
+      <name>轨迹</name>
+      <Placemark>
+        <name><![CDATA[轨迹片段1]]>
+        </name>
+        <description>
+          <div>通过“两步路”生成，http://www.2bulu.com</div>
+          <div>上传者:冲电宝大壮爱爬山</div>
+          <div>开始时间:2025-12-21 08:40:04</div>
+          <div>结束时间:2025-12-21 10:05:46</div>
+          <div>轨迹点数:213</div>
+          <div>本段里程:2346.688527909914米</div>
+          <div>最高海拔:635.6842904123579米</div>
+          <div>最低海拔:18.436586371185246米</div>
+          <div>累计爬升:614.0177248224358米</div>
+          <div>累计下降:0.0米</div>
+        </description>
+        <gx:Track>
+          <gx:coord>119.3675308 26.0738942 20.03</gx:coord>
+          <gx:coord>119.3676301 26.0739487 20.03</gx:coord>
+          <gx:coord>119.3676822 26.0740368 19.82</gx:coord>
+          <gx:coord>119.3677481 26.0741193 19.4</gx:coord>
+          <gx:coord>119.3678411 26.074146 19.19</gx:coord>
+          <gx:coord>119.367948 26.0741214 18.99</gx:coord>
+          <gx:coord>119.3680619 26.0741029 18.62</gx:coord>
+          <gx:coord>119.3681755 26.0741107 18.44</gx:coord>
+          <gx:coord>119.3682856 26.0741503 18.67</gx:coord>
+          <gx:coord>119.3683751 26.0742258 19.75</gx:coord>
+          <gx:coord>119.3684598 26.0742872 21.42</gx:coord>
+          <gx:coord>119.3685523 26.0743229 22.99</gx:coord>
+          <gx:coord>119.368661 26.0743353 24.17</gx:coord>
+          <gx:coord>119.3687692 26.0743139 26.25</gx:coord>
+          <gx:coord>119.368872 26.0743122 28.5</gx:coord>
+          <gx:coord>119.3689318 26.0743839 28.97</gx:coord>
+          <gx:coord>119.368987 26.0744673 27.84</gx:coord>
+          <gx:coord>119.3690534 26.0745393 26.52</gx:coord>
+          <gx:coord>119.369147 26.0745871 25.67</gx:coord>
+          <gx:coord>119.369253 26.07461 26.18</gx:coord>
+          <gx:coord>119.3693649 26.0746257 28.0</gx:coord>
+          <gx:coord>119.3694718 26.0746445 29.18</gx:coord>
+          <gx:coord>119.3695825 26.0746746 30.32</gx:coord>
+          <gx:coord>119.3696938 26.0747136 33.05</gx:coord>
+          <gx:coord>119.3697923 26.0747541 34.13</gx:coord>
+          <gx:coord>119.3698967 26.0747903 35.75</gx:coord>
+          <gx:coord>119.3699965 26.074841 36.64</gx:coord>
+          <gx:coord>119.3701029 26.0748825 37.15</gx:coord>
+          <gx:coord>119.3701961 26.0749313 37.56</gx:coord>
+          <gx:coord>119.3702847 26.0749956 38.49</gx:coord>
+          <gx:coord>119.3703827 26.0750483 39.89</gx:coord>
+          <gx:coord>119.3704864 26.0750867 41.43</gx:coord>
+          <gx:coord>119.3705876 26.075111 44.75</gx:coord>
+          <gx:coord>119.3706839 26.0751372 48.18</gx:coord>
+          <gx:coord>119.37078 26.0751788 50.97</gx:coord>
+          <gx:coord>119.3708401 26.0751308 53.31</gx:coord>
+          <gx:coord>119.3708764 26.075039 55.92</gx:coord>
+          <gx:coord>119.370914 26.074937 59.27</gx:coord>
+          <gx:coord>119.3709452 26.0748349 62.85</gx:coord>
+          <gx:coord>119.3710046 26.074746 64.65</gx:coord>
+          <gx:coord>119.3710724 26.0746668 66.09</gx:coord>
+          <gx:coord>119.3711699 26.0746555 65.91</gx:coord>
+          <gx:coord>119.371205 26.074677 66.17</gx:coord>
+          <gx:coord>119.3712855 26.0747234 66.52</gx:coord>
+          <gx:coord>119.3713881 26.0747619 65.81</gx:coord>
+          <gx:coord>119.3715048 26.0747806 65.89</gx:coord>
+          <gx:coord>119.3716067 26.0748254 66.36</gx:coord>
+          <gx:coord>119.3716746 26.0748939 66.28</gx:coord>
+          <gx:coord>119.3717498 26.0749712 66.21</gx:coord>
+          <gx:coord>119.3718354 26.0750313 66.55</gx:coord>
+          <gx:coord>119.3719371 26.0750706 69.93</gx:coord>
+          <gx:coord>119.3720474 26.0750664 73.61</gx:coord>
+          <gx:coord>119.3721604 26.0750663 76.82</gx:coord>
+          <gx:coord>119.3722562 26.0751041 78.67</gx:coord>
+          <gx:coord>119.3723483 26.0751616 80.39</gx:coord>
+          <gx:coord>119.3724312 26.0752278 80.36</gx:coord>
+          <gx:coord>119.3725252 26.0752924 80.54</gx:coord>
+          <gx:coord>119.3726333 26.0753136 81.82</gx:coord>
+          <gx:coord>119.3727421 26.0753185 83.42</gx:coord>
+          <gx:coord>119.3728484 26.0753222 84.69</gx:coord>
+          <gx:coord>119.3729514 26.0753313 86.86</gx:coord>
+          <gx:coord>119.3730609 26.0753439 89.48</gx:coord>
+          <gx:coord>119.3731683 26.0753682 92.42</gx:coord>
+          <gx:coord>119.3732778 26.0753636 94.13</gx:coord>
+          <gx:coord>119.3734029 26.0753658 96.49</gx:coord>
+          <gx:coord>119.3734476 26.0753607 99.46</gx:coord>
+          <gx:coord>119.3734786 26.0754251 99.6</gx:coord>
+          <gx:coord>119.3734942 26.0755188 101.43</gx:coord>
+          <gx:coord>119.3734947 26.0755595 102.6</gx:coord>
+          <gx:coord>119.3735359 26.0756259 103.12</gx:coord>
+          <gx:coord>119.3736175 26.0756893 105.69</gx:coord>
+          <gx:coord>119.3737154 26.0757293 109.7</gx:coord>
+          <gx:coord>119.3738253 26.0757164 115.53</gx:coord>
+          <gx:coord>119.3738392 26.0757063 119.63</gx:coord>
+          <gx:coord>119.373911 26.0757319 121.28</gx:coord>
+          <gx:coord>119.3740149 26.0757491 123.77</gx:coord>
+          <gx:coord>119.3741225 26.0757393 126.37</gx:coord>
+          <gx:coord>119.3742364 26.0757219 129.0</gx:coord>
+          <gx:coord>119.3743574 26.0756948 130.9</gx:coord>
+          <gx:coord>119.3744185 26.0756856 133.82</gx:coord>
+          <gx:coord>119.3745094 26.0756665 135.58</gx:coord>
+          <gx:coord>119.3746144 26.075649 137.23</gx:coord>
+          <gx:coord>119.3747234 26.0756318 140.92</gx:coord>
+          <gx:coord>119.3748343 26.0756144 145.03</gx:coord>
+          <gx:coord>119.3749313 26.0755734 148.75</gx:coord>
+          <gx:coord>119.3749964 26.0755005 152.13</gx:coord>
+          <gx:coord>119.3750926 26.0754668 154.86</gx:coord>
+          <gx:coord>119.3751936 26.0754688 157.41</gx:coord>
+          <gx:coord>119.3752988 26.0754799 159.42</gx:coord>
+          <gx:coord>119.3754054 26.0755025 162.4</gx:coord>
+          <gx:coord>119.3755015 26.0755517 166.22</gx:coord>
+          <gx:coord>119.3756018 26.0756105 168.86</gx:coord>
+          <gx:coord>119.3756859 26.0756808 171.25</gx:coord>
+          <gx:coord>119.3757424 26.075775 174.36</gx:coord>
+          <gx:coord>119.3758061 26.0758667 176.52</gx:coord>
+          <gx:coord>119.3758729 26.0759549 177.6</gx:coord>
+          <gx:coord>119.3759637 26.0759908 178.43</gx:coord>
+          <gx:coord>119.3760604 26.0760279 180.22</gx:coord>
+          <gx:coord>119.3761531 26.076075 182.64</gx:coord>
+          <gx:coord>119.3762559 26.0760914 185.36</gx:coord>
+          <gx:coord>119.3763397 26.0760434 187.34</gx:coord>
+          <gx:coord>119.37639 26.0759562 186.53</gx:coord>
+          <gx:coord>119.3764693 26.0758771 185.85</gx:coord>
+          <gx:coord>119.3765704 26.0758428 184.64</gx:coord>
+          <gx:coord>119.3766754 26.0758505 185.22</gx:coord>
+          <gx:coord>119.3767833 26.0758485 188.68</gx:coord>
+          <gx:coord>119.3768825 26.0758845 192.4</gx:coord>
+          <gx:coord>119.3769669 26.0759432 199.66</gx:coord>
+          <gx:coord>119.3770495 26.0760102 205.77</gx:coord>
+          <gx:coord>119.3771327 26.0760785 209.88</gx:coord>
+          <gx:coord>119.3772283 26.0761242 214.64</gx:coord>
+          <gx:coord>119.3773222 26.0761683 216.66</gx:coord>
+          <gx:coord>119.3773795 26.0762455 218.42</gx:coord>
+          <gx:coord>119.3774281 26.0763317 221.84</gx:coord>
+          <gx:coord>119.3774935 26.0764133 226.75</gx:coord>
+          <gx:coord>119.3775716 26.076356 231.53</gx:coord>
+          <gx:coord>119.3776081 26.0764523 241.58</gx:coord>
+          <gx:coord>119.3776674 26.0765383 244.44</gx:coord>
+          <gx:coord>119.3777663 26.076557 245.88</gx:coord>
+          <gx:coord>119.377849 26.0766168 246.93</gx:coord>
+          <gx:coord>119.3779543 26.0766539 248.35</gx:coord>
+          <gx:coord>119.3780618 26.0766636 250.63</gx:coord>
+          <gx:coord>119.3781577 26.0766949 253.43</gx:coord>
+          <gx:coord>119.3782342 26.0767637 258.93</gx:coord>
+          <gx:coord>119.3782923 26.0768484 263.04</gx:coord>
+          <gx:coord>119.3783547 26.076926 265.95</gx:coord>
+          <gx:coord>119.3784202 26.076998 268.3</gx:coord>
+          <gx:coord>119.3784817 26.0770739 270.55</gx:coord>
+          <gx:coord>119.3785547 26.0771492 272.28</gx:coord>
+          <gx:coord>119.3786369 26.0772232 273.89</gx:coord>
+          <gx:coord>119.3787346 26.0772767 275.36</gx:coord>
+          <gx:coord>119.3788267 26.0773228 275.71</gx:coord>
+          <gx:coord>119.3789314 26.0773428 276.24</gx:coord>
+          <gx:coord>119.3790343 26.0773809 277.33</gx:coord>
+          <gx:coord>119.3791122 26.0774427 280.81</gx:coord>
+          <gx:coord>119.3792006 26.0774842 283.85</gx:coord>
+          <gx:coord>119.3792888 26.0775306 284.89</gx:coord>
+          <gx:coord>119.3793482 26.0776062 287.23</gx:coord>
+          <gx:coord>119.379367 26.0776985 289.8</gx:coord>
+          <gx:coord>119.3794292 26.0777784 291.17</gx:coord>
+          <gx:coord>119.3794922 26.0778624 292.39</gx:coord>
+          <gx:coord>119.3795733 26.0779353 295.0</gx:coord>
+          <gx:coord>119.3796492 26.077903 296.18</gx:coord>
+          <gx:coord>119.37974 26.0779283 298.3</gx:coord>
+          <gx:coord>119.3798419 26.0779672 295.59</gx:coord>
+          <gx:coord>119.3799457 26.0779389 301.66</gx:coord>
+          <gx:coord>119.3800527 26.0779275 307.89</gx:coord>
+          <gx:coord>119.3801415 26.0779701 312.95</gx:coord>
+          <gx:coord>119.3802267 26.0779402 316.22</gx:coord>
+          <gx:coord>119.3803171 26.0779003 319.94</gx:coord>
+          <gx:coord>119.3804275 26.077884 323.56</gx:coord>
+          <gx:coord>119.3804698 26.0778711 326.34</gx:coord>
+          <gx:coord>119.3805057 26.0777839 328.06</gx:coord>
+          <gx:coord>119.3805975 26.0777316 331.63</gx:coord>
+          <gx:coord>119.3807043 26.0777384 335.64</gx:coord>
+          <gx:coord>119.3807965 26.0776934 342.98</gx:coord>
+          <gx:coord>119.3808829 26.0776409 347.07</gx:coord>
+          <gx:coord>119.3809731 26.077598 353.98</gx:coord>
+          <gx:coord>119.3810453 26.0775277 358.7</gx:coord>
+          <gx:coord>119.3811359 26.0775008 363.68</gx:coord>
+          <gx:coord>119.3812323 26.077478 369.23</gx:coord>
+          <gx:coord>119.3812803 26.0774042 375.15</gx:coord>
+          <gx:coord>119.3813196 26.077313 377.72</gx:coord>
+          <gx:coord>119.381392 26.0772497 382.42</gx:coord>
+          <gx:coord>119.3814977 26.0772658 389.05</gx:coord>
+          <gx:coord>119.3816029 26.0772536 396.34</gx:coord>
+          <gx:coord>119.381703 26.0772362 404.72</gx:coord>
+          <gx:coord>119.3818008 26.0772135 413.92</gx:coord>
+          <gx:coord>119.3818869 26.0771599 419.82</gx:coord>
+          <gx:coord>119.3819846 26.0771344 430.09</gx:coord>
+          <gx:coord>119.3820748 26.0771679 436.28</gx:coord>
+          <gx:coord>119.3821551 26.077126 444.48</gx:coord>
+          <gx:coord>119.3822503 26.077125 451.36</gx:coord>
+          <gx:coord>119.3823064 26.077203 457.76</gx:coord>
+          <gx:coord>119.3823186 26.0773089 462.05</gx:coord>
+          <gx:coord>119.3823345 26.077411 464.51</gx:coord>
+          <gx:coord>119.3823463 26.077512 464.31</gx:coord>
+          <gx:coord>119.3823518 26.0776099 464.64</gx:coord>
+          <gx:coord>119.3824332 26.0776596 465.02</gx:coord>
+          <gx:coord>119.3825118 26.0777191 468.37</gx:coord>
+          <gx:coord>119.382605 26.077756 474.32</gx:coord>
+          <gx:coord>119.3826989 26.0777961 483.03</gx:coord>
+          <gx:coord>119.3827475 26.0777046 489.64</gx:coord>
+          <gx:coord>119.3827127 26.0777994 499.48</gx:coord>
+          <gx:coord>119.3829582 26.0777757 507.19</gx:coord>
+          <gx:coord>119.3831602 26.077794 526.7</gx:coord>
+          <gx:coord>119.3832638 26.0778165 541.1</gx:coord>
+          <gx:coord>119.3833478 26.0778688 549.43</gx:coord>
+          <gx:coord>119.3834446 26.0778916 557.44</gx:coord>
+          <gx:coord>119.3835138 26.0778396 561.81</gx:coord>
+          <gx:coord>119.3836051 26.0778323 564.68</gx:coord>
+          <gx:coord>119.3835539 26.0778491 565.11</gx:coord>
+          <gx:coord>119.3835881 26.0778935 569.36</gx:coord>
+          <gx:coord>119.3835618 26.0779727 573.62</gx:coord>
+          <gx:coord>119.3835421 26.0780719 579.33</gx:coord>
+          <gx:coord>119.383547 26.0781773 583.17</gx:coord>
+          <gx:coord>119.3836254 26.0782338 585.82</gx:coord>
+          <gx:coord>119.3837204 26.0782062 586.75</gx:coord>
+          <gx:coord>119.3837326 26.0781146 587.31</gx:coord>
+          <gx:coord>119.3837746 26.0781605 593.1</gx:coord>
+          <gx:coord>119.3837721 26.0782544 598.62</gx:coord>
+          <gx:coord>119.383786 26.0783467 600.64</gx:coord>
+          <gx:coord>119.3838316 26.0784264 602.05</gx:coord>
+          <gx:coord>119.3838379 26.0783722 604.23</gx:coord>
+          <gx:coord>119.3838548 26.0784086 608.13</gx:coord>
+          <gx:coord>119.383928 26.0784758 616.03</gx:coord>
+          <gx:coord>119.3840283 26.0785117 620.79</gx:coord>
+          <gx:coord>119.3841376 26.0785099 623.76</gx:coord>
+          <gx:coord>119.3842445 26.0784997 625.56</gx:coord>
+          <gx:coord>119.3842256 26.0784322 627.19</gx:coord>
+          <gx:coord>119.3841341 26.0783892 630.83</gx:coord>
+          <gx:coord>119.3840489 26.0783239 635.68</gx:coord>
+          <gx:coord>119.3840489 26.0783239 635.68</gx:coord>
+          <when>2025-12-21T00:40:04Z</when>
+          <when>2025-12-21T00:40:18Z</when>
+          <when>2025-12-21T00:40:32Z</when>
+          <when>2025-12-21T00:40:44Z</when>
+          <when>2025-12-21T00:40:56Z</when>
+          <when>2025-12-21T00:41:08Z</when>
+          <when>2025-12-21T00:41:22Z</when>
+          <when>2025-12-21T00:41:36Z</when>
+          <when>2025-12-21T00:41:48Z</when>
+          <when>2025-12-21T00:42:00Z</when>
+          <when>2025-12-21T00:42:14Z</when>
+          <when>2025-12-21T00:42:24Z</when>
+          <when>2025-12-21T00:42:34Z</when>
+          <when>2025-12-21T00:42:44Z</when>
+          <when>2025-12-21T00:42:56Z</when>
+          <when>2025-12-21T00:43:06Z</when>
+          <when>2025-12-21T00:43:16Z</when>
+          <when>2025-12-21T00:43:24Z</when>
+          <when>2025-12-21T00:43:32Z</when>
+          <when>2025-12-21T00:43:42Z</when>
+          <when>2025-12-21T00:43:52Z</when>
+          <when>2025-12-21T00:44:02Z</when>
+          <when>2025-12-21T00:44:14Z</when>
+          <when>2025-12-21T00:44:26Z</when>
+          <when>2025-12-21T00:44:34Z</when>
+          <when>2025-12-21T00:44:44Z</when>
+          <when>2025-12-21T00:44:54Z</when>
+          <when>2025-12-21T00:45:04Z</when>
+          <when>2025-12-21T00:45:12Z</when>
+          <when>2025-12-21T00:45:24Z</when>
+          <when>2025-12-21T00:45:36Z</when>
+          <when>2025-12-21T00:45:48Z</when>
+          <when>2025-12-21T00:46:04Z</when>
+          <when>2025-12-21T00:46:20Z</when>
+          <when>2025-12-21T00:46:34Z</when>
+          <when>2025-12-21T00:46:42Z</when>
+          <when>2025-12-21T00:46:52Z</when>
+          <when>2025-12-21T00:47:04Z</when>
+          <when>2025-12-21T00:47:18Z</when>
+          <when>2025-12-21T00:47:30Z</when>
+          <when>2025-12-21T00:47:42Z</when>
+          <when>2025-12-21T00:47:58Z</when>
+          <when>2025-12-21T00:48:06Z</when>
+          <when>2025-12-21T00:48:22Z</when>
+          <when>2025-12-21T00:48:32Z</when>
+          <when>2025-12-21T00:48:42Z</when>
+          <when>2025-12-21T00:48:52Z</when>
+          <when>2025-12-21T00:49:02Z</when>
+          <when>2025-12-21T00:49:14Z</when>
+          <when>2025-12-21T00:49:26Z</when>
+          <when>2025-12-21T00:49:40Z</when>
+          <when>2025-12-21T00:49:52Z</when>
+          <when>2025-12-21T00:50:04Z</when>
+          <when>2025-12-21T00:50:16Z</when>
+          <when>2025-12-21T00:50:28Z</when>
+          <when>2025-12-21T00:50:36Z</when>
+          <when>2025-12-21T00:50:46Z</when>
+          <when>2025-12-21T00:50:56Z</when>
+          <when>2025-12-21T00:51:06Z</when>
+          <when>2025-12-21T00:51:18Z</when>
+          <when>2025-12-21T00:52:04Z</when>
+          <when>2025-12-21T00:52:18Z</when>
+          <when>2025-12-21T00:52:58Z</when>
+          <when>2025-12-21T00:53:14Z</when>
+          <when>2025-12-21T00:53:26Z</when>
+          <when>2025-12-21T00:53:32Z</when>
+          <when>2025-12-21T00:53:46Z</when>
+          <when>2025-12-21T00:53:56Z</when>
+          <when>2025-12-21T00:53:58Z</when>
+          <when>2025-12-21T00:54:08Z</when>
+          <when>2025-12-21T00:54:22Z</when>
+          <when>2025-12-21T00:54:38Z</when>
+          <when>2025-12-21T00:54:48Z</when>
+          <when>2025-12-21T00:54:52Z</when>
+          <when>2025-12-21T00:55:10Z</when>
+          <when>2025-12-21T00:55:24Z</when>
+          <when>2025-12-21T00:55:34Z</when>
+          <when>2025-12-21T00:55:44Z</when>
+          <when>2025-12-21T00:55:54Z</when>
+          <when>2025-12-21T00:56:00Z</when>
+          <when>2025-12-21T00:56:25Z</when>
+          <when>2025-12-21T00:56:37Z</when>
+          <when>2025-12-21T00:56:55Z</when>
+          <when>2025-12-21T00:57:05Z</when>
+          <when>2025-12-21T00:57:15Z</when>
+          <when>2025-12-21T00:57:25Z</when>
+          <when>2025-12-21T00:57:37Z</when>
+          <when>2025-12-21T00:57:49Z</when>
+          <when>2025-12-21T00:58:05Z</when>
+          <when>2025-12-21T00:58:19Z</when>
+          <when>2025-12-21T00:58:33Z</when>
+          <when>2025-12-21T00:58:45Z</when>
+          <when>2025-12-21T00:58:57Z</when>
+          <when>2025-12-21T01:04:31Z</when>
+          <when>2025-12-21T01:04:45Z</when>
+          <when>2025-12-21T01:04:57Z</when>
+          <when>2025-12-21T01:05:07Z</when>
+          <when>2025-12-21T01:05:19Z</when>
+          <when>2025-12-21T01:05:33Z</when>
+          <when>2025-12-21T01:05:51Z</when>
+          <when>2025-12-21T01:06:13Z</when>
+          <when>2025-12-21T01:06:21Z</when>
+          <when>2025-12-21T01:06:31Z</when>
+          <when>2025-12-21T01:06:43Z</when>
+          <when>2025-12-21T01:06:57Z</when>
+          <when>2025-12-21T01:07:11Z</when>
+          <when>2025-12-21T01:07:29Z</when>
+          <when>2025-12-21T01:07:49Z</when>
+          <when>2025-12-21T01:08:05Z</when>
+          <when>2025-12-21T01:08:27Z</when>
+          <when>2025-12-21T01:08:55Z</when>
+          <when>2025-12-21T01:09:13Z</when>
+          <when>2025-12-21T01:09:29Z</when>
+          <when>2025-12-21T01:09:49Z</when>
+          <when>2025-12-21T01:10:09Z</when>
+          <when>2025-12-21T01:11:10Z</when>
+          <when>2025-12-21T01:11:18Z</when>
+          <when>2025-12-21T01:12:12Z</when>
+          <when>2025-12-21T01:12:24Z</when>
+          <when>2025-12-21T01:12:40Z</when>
+          <when>2025-12-21T01:13:02Z</when>
+          <when>2025-12-21T01:13:20Z</when>
+          <when>2025-12-21T01:13:40Z</when>
+          <when>2025-12-21T01:13:54Z</when>
+          <when>2025-12-21T01:14:04Z</when>
+          <when>2025-12-21T01:14:22Z</when>
+          <when>2025-12-21T01:14:34Z</when>
+          <when>2025-12-21T01:14:44Z</when>
+          <when>2025-12-21T01:14:56Z</when>
+          <when>2025-12-21T01:15:08Z</when>
+          <when>2025-12-21T01:15:20Z</when>
+          <when>2025-12-21T01:15:32Z</when>
+          <when>2025-12-21T01:15:48Z</when>
+          <when>2025-12-21T01:16:06Z</when>
+          <when>2025-12-21T01:16:18Z</when>
+          <when>2025-12-21T01:16:28Z</when>
+          <when>2025-12-21T01:17:38Z</when>
+          <when>2025-12-21T01:17:48Z</when>
+          <when>2025-12-21T01:18:16Z</when>
+          <when>2025-12-21T01:18:26Z</when>
+          <when>2025-12-21T01:18:42Z</when>
+          <when>2025-12-21T01:19:14Z</when>
+          <when>2025-12-21T01:19:28Z</when>
+          <when>2025-12-21T01:19:44Z</when>
+          <when>2025-12-21T01:19:56Z</when>
+          <when>2025-12-21T01:20:12Z</when>
+          <when>2025-12-21T01:20:28Z</when>
+          <when>2025-12-21T01:20:40Z</when>
+          <when>2025-12-21T01:21:02Z</when>
+          <when>2025-12-21T01:21:18Z</when>
+          <when>2025-12-21T01:21:46Z</when>
+          <when>2025-12-21T01:21:48Z</when>
+          <when>2025-12-21T01:23:20Z</when>
+          <when>2025-12-21T01:23:46Z</when>
+          <when>2025-12-21T01:24:08Z</when>
+          <when>2025-12-21T01:24:34Z</when>
+          <when>2025-12-21T01:25:10Z</when>
+          <when>2025-12-21T01:25:38Z</when>
+          <when>2025-12-21T01:26:12Z</when>
+          <when>2025-12-21T01:26:54Z</when>
+          <when>2025-12-21T01:27:24Z</when>
+          <when>2025-12-21T01:27:42Z</when>
+          <when>2025-12-21T01:28:16Z</when>
+          <when>2025-12-21T01:28:56Z</when>
+          <when>2025-12-21T01:30:06Z</when>
+          <when>2025-12-21T01:31:36Z</when>
+          <when>2025-12-21T01:32:46Z</when>
+          <when>2025-12-21T01:33:04Z</when>
+          <when>2025-12-21T01:35:52Z</when>
+          <when>2025-12-21T01:36:38Z</when>
+          <when>2025-12-21T01:37:28Z</when>
+          <when>2025-12-21T01:38:14Z</when>
+          <when>2025-12-21T01:38:44Z</when>
+          <when>2025-12-21T01:39:00Z</when>
+          <when>2025-12-21T01:39:18Z</when>
+          <when>2025-12-21T01:39:32Z</when>
+          <when>2025-12-21T01:39:50Z</when>
+          <when>2025-12-21T01:40:24Z</when>
+          <when>2025-12-21T01:41:32Z</when>
+          <when>2025-12-21T01:43:04Z</when>
+          <when>2025-12-21T01:45:08Z</when>
+          <when>2025-12-21T01:46:04Z</when>
+          <when>2025-12-21T01:47:46Z</when>
+          <when>2025-12-21T01:48:50Z</when>
+          <when>2025-12-21T01:51:45Z</when>
+          <when>2025-12-21T01:54:46Z</when>
+          <when>2025-12-21T01:55:48Z</when>
+          <when>2025-12-21T01:56:08Z</when>
+          <when>2025-12-21T01:56:34Z</when>
+          <when>2025-12-21T01:56:40Z</when>
+          <when>2025-12-21T01:56:56Z</when>
+          <when>2025-12-21T01:57:10Z</when>
+          <when>2025-12-21T01:57:38Z</when>
+          <when>2025-12-21T01:58:06Z</when>
+          <when>2025-12-21T01:58:20Z</when>
+          <when>2025-12-21T01:58:30Z</when>
+          <when>2025-12-21T01:58:46Z</when>
+          <when>2025-12-21T01:59:12Z</when>
+          <when>2025-12-21T01:59:32Z</when>
+          <when>2025-12-21T02:01:10Z</when>
+          <when>2025-12-21T02:01:22Z</when>
+          <when>2025-12-21T02:01:36Z</when>
+          <when>2025-12-21T02:01:50Z</when>
+          <when>2025-12-21T02:02:24Z</when>
+          <when>2025-12-21T02:03:16Z</when>
+          <when>2025-12-21T02:03:22Z</when>
+          <when>2025-12-21T02:03:36Z</when>
+          <when>2025-12-21T02:03:54Z</when>
+          <when>2025-12-21T02:04:14Z</when>
+          <when>2025-12-21T02:04:30Z</when>
+          <when>2025-12-21T02:04:50Z</when>
+          <when>2025-12-21T02:05:16Z</when>
+          <when>2025-12-21T02:05:46Z</when>
+          <ExtendedData>
+            <Data name="GxTrackExtendedData">
+              <value>0.64,4.3632545;0.94,3.7900925;0.85,3.7900925;0.86,3.7900925;0.78,3.7900925;0.95,3.7900925;0.89,3.7900925;0.82,9.935046;0.96,3.7900925;0.91,3.7900925;0.97,3.7900925;0.93,3.7900925;0.84,3.7900925;1.1,3.7900925;0.93,3.7900925;0.96,3.7900925;0.96,3.7900925;0.99,3.7900925;1.47,3.7900925;0.9,3.7900925;0.94,3.7900925;1.05,3.7900925;0.95,9.935046;1.01,9.935046;1.04,9.935046;1.06,9.935046;1.03,9.935046;1.77,9.935046;1.05,9.935046;0.97,9.935046;0.8,9.935046;0.9,3.7900925;0.67,3.7900925;0.7,3.7900925;1.01,3.7900925;0.8,3.7900925;0.87,9.935046;0.75,9.935046;0.7,9.935046;0.82,9.935046;0.99,9.935046;1.1,9.935046;0.0,9.935046;0.9,9.935046;1.0,9.935046;1.05,9.935046;1.05,9.935046;0.0,9.935046;0.84,3.7900925;0.9,3.7900925;0.9,3.7900925;0.89,3.7900925;0.88,3.7900925;0.82,3.7900925;1.04,3.7900925;1.03,3.7900925;1.22,3.7900925;0.96,3.7900925;1.12,3.7900925;0.65,3.7900925;0.57,3.7900925;0.78,3.7900925;0.75,3.7900925;0.82,3.7900925;1.08,3.7900925;0.0,3.7900925;0.88,3.7900925;1.59,3.7900925;0.0,3.7900925;0.61,3.7900925;0.92,3.7900925;0.82,3.7900925;1.01,3.7900925;0.0,3.7900925;0.7,9.935046;0.81,9.935046;0.89,9.935046;1.0,9.935046;1.16,9.935046;0.0,3.7900925;0.62,3.7900925;0.82,3.7900925;0.88,3.7900925;0.87,3.7900925;0.9,3.7900925;0.87,3.7900925;0.84,3.7900925;0.76,3.7900925;0.75,3.7900925;0.83,3.7900925;0.74,3.7900925;0.77,3.7900925;0.88,3.7900925;1.06,3.7900925;1.23,9.935046;0.97,9.935046;0.86,9.935046;0.83,9.935046;0.78,3.7900925;0.65,3.7900925;0.97,3.7900925;1.3,3.7900925;1.01,3.7900925;1.17,3.7900925;0.88,3.7900925;0.74,3.7900925;0.66,3.7900925;0.58,3.7900925;0.71,9.935046;0.82,9.935046;0.58,9.935046;0.88,9.935046;1.0,9.935046;0.95,3.7900925;0.82,3.7900925;0.0,3.7900925;0.63,3.7900925;0.8,3.7900925;0.87,3.7900925;0.78,3.7900925;0.83,3.7900925;1.04,3.7900925;0.74,9.935046;0.85,9.935046;0.68,9.935046;0.85,3.7900925;0.78,3.7900925;0.88,3.7900925;0.9,3.7900925;0.85,3.7900925;1.03,3.7900925;0.89,9.935046;0.73,9.935046;0.43,9.935046;0.81,9.935046;0.97,9.935046;1.02,9.935046;0.0,9.935046;1.01,9.935046;1.08,9.935046;0.67,3.7900925;1.08,3.7900925;0.87,3.7900925;0.96,3.7900925;0.46,3.7900925;1.05,3.7900925;0.79,3.7900925;0.81,3.7900925;0.69,9.935046;0.71,9.935046;0.71,9.935046;0.0,9.935046;0.8,9.935046;0.55,9.935046;0.64,9.935046;0.78,9.935046;0.83,9.935046;0.67,9.935046;0.33,9.935046;0.73,9.935046;0.76,9.935046;0.62,9.935046;0.89,9.935046;0.56,9.935046;0.0,3.7900925;0.0,9.935046;0.27,9.935046;0.5,9.935046;0.0,3.7900925;0.22,9.935046;0.91,9.935046;0.47,9.935046;0.38,9.935046;0.93,9.935046;0.99,9.935046;0.7,9.935046;0.49,3.7900925;0.72,3.7900925;0.0,3.7900925;0.0,3.7900925;0.0,3.7900925;0.26,3.7900925;0.68,3.7900925;1.0,3.7900925;0.0,6.0132604;0.0,5.3729024;0.35,3.7900925;0.39,3.7900925;0.62,4.5294766;1.08,3.7900925;0.85,3.7900925;0.79,3.7900925;0.17,3.7900925;0.6,3.7900925;1.01,3.7900925;1.08,3.7900925;1.06,3.7900925;0.63,3.7900925;0.54,9.935046;0.79,9.935046;0.87,9.935046;0.79,9.935046;0.57,9.935046;0.85,9.935046;1.91,3.7900925;1.18,3.7900925;0.9,3.7900925;0.7,3.7900925;0.67,9.935046;0.66,9.935046;0.52,9.935046;0.31,9.935046;0.31,9.935046;</value>
+            </Data>
+            <Data name="PauseTimes">
+              <value>1766282746776:pause</value>
+            </Data>
+          </ExtendedData>
+        </gx:Track>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[轨迹片段2]]>
+        </name>
+        <description>
+          <div>通过“两步路”生成，http://www.2bulu.com</div>
+          <div>上传者:冲电宝大壮爱爬山</div>
+          <div>开始时间:2025-12-21 10:10:42</div>
+          <div>结束时间:2025-12-21 10:10:51</div>
+          <div>轨迹点数:3</div>
+          <div>本段里程:0.0米</div>
+          <div>最高海拔:641.2050737982071米</div>
+          <div>最低海拔:641.2050737982071米</div>
+          <div>累计爬升:0.0米</div>
+          <div>累计下降:0.0米</div>
+        </description>
+        <gx:Track>
+          <gx:coord>119.3841144 26.0782278 641.21</gx:coord>
+          <gx:coord>119.3841144 26.0782278 641.21</gx:coord>
+          <gx:coord>119.3841144 26.0782278 641.21</gx:coord>
+          <when>2025-12-21T02:10:42Z</when>
+          <when>2025-12-21T02:10:43Z</when>
+          <when>2025-12-21T02:10:51Z</when>
+          <ExtendedData>
+            <Data name="GxTrackExtendedData">
+              <value>0.47,6.855732;0.47,6.855732;0.47,6.855732;</value>
+            </Data>
+            <Data name="PauseTimes">
+              <value>1766283051576:pause</value>
+            </Data>
+          </ExtendedData>
+        </gx:Track>
+      </Placemark>
+      <Placemark>
+        <name><![CDATA[轨迹片段3]]>
+        </name>
+        <description>
+          <div>通过“两步路”生成，http://www.2bulu.com</div>
+          <div>上传者:冲电宝大壮爱爬山</div>
+          <div>开始时间:2025-12-21 10:38:06</div>
+          <div>结束时间:2025-12-21 12:40:03</div>
+          <div>轨迹点数:363</div>
+          <div>本段里程:3829.689992740186米</div>
+          <div>最高海拔:769.9510860135221米</div>
+          <div>最低海拔:27.610129266557422米</div>
+          <div>累计爬升:125.93262093900375米</div>
+          <div>累计下降:744.8245434565448米</div>
+        </description>
+        <gx:Track>
+          <gx:coord>119.3842038 26.0781276 647.0</gx:coord>
+          <gx:coord>119.3842038 26.0781276 647.0</gx:coord>
+          <gx:coord>119.3843062 26.078105 652.11</gx:coord>
+          <gx:coord>119.3844084 26.0780841 651.88</gx:coord>
+          <gx:coord>119.3845067 26.0780438 650.5</gx:coord>
+          <gx:coord>119.3846111 26.0780185 650.83</gx:coord>
+          <gx:coord>119.3847208 26.0780122 647.92</gx:coord>
+          <gx:coord>119.3846735 26.0780453 649.64</gx:coord>
+          <gx:coord>119.3845703 26.0780912 653.68</gx:coord>
+          <gx:coord>119.3846032 26.0781335 659.42</gx:coord>
+          <gx:coord>119.3846014 26.0782161 663.52</gx:coord>
+          <gx:coord>119.3845771 26.0783113 667.36</gx:coord>
+          <gx:coord>119.3846436 26.078318 673.68</gx:coord>
+          <gx:coord>119.3847524 26.0782982 678.88</gx:coord>
+          <gx:coord>119.3848625 26.0782638 681.38</gx:coord>
+          <gx:coord>119.3847797 26.0782754 683.72</gx:coord>
+          <gx:coord>119.3848788 26.0783153 688.8</gx:coord>
+          <gx:coord>119.3849714 26.0783604 693.3</gx:coord>
+          <gx:coord>119.3849775 26.0784416 696.12</gx:coord>
+          <gx:coord>119.38504 26.0784946 700.55</gx:coord>
+          <gx:coord>119.3851341 26.0785029 705.59</gx:coord>
+          <gx:coord>119.3852119 26.0784465 710.58</gx:coord>
+          <gx:coord>119.3853073 26.0784289 714.29</gx:coord>
+          <gx:coord>119.3853988 26.078469 717.72</gx:coord>
+          <gx:coord>119.3854818 26.0785266 721.44</gx:coord>
+          <gx:coord>119.3855386 26.0786124 723.99</gx:coord>
+          <gx:coord>119.3855799 26.0787034 726.59</gx:coord>
+          <gx:coord>119.3856534 26.0787627 728.59</gx:coord>
+          <gx:coord>119.3857118 26.0788367 730.94</gx:coord>
+          <gx:coord>119.3857561 26.0789237 733.47</gx:coord>
+          <gx:coord>119.385809 26.0790159 734.48</gx:coord>
+          <gx:coord>119.3858635 26.0791044 736.3</gx:coord>
+          <gx:coord>119.3859133 26.0791965 738.26</gx:coord>
+          <gx:coord>119.3859679 26.07928 740.55</gx:coord>
+          <gx:coord>119.3860293 26.0793577 742.74</gx:coord>
+          <gx:coord>119.3860925 26.0794333 744.37</gx:coord>
+          <gx:coord>119.3861465 26.0795202 745.01</gx:coord>
+          <gx:coord>119.3861978 26.0796101 745.69</gx:coord>
+          <gx:coord>119.3862718 26.0796739 746.7</gx:coord>
+          <gx:coord>119.3863644 26.0797233 748.67</gx:coord>
+          <gx:coord>119.3864412 26.0797989 749.37</gx:coord>
+          <gx:coord>119.3865283 26.0798669 749.9</gx:coord>
+          <gx:coord>119.3866264 26.0799204 750.57</gx:coord>
+          <gx:coord>119.3867312 26.0799515 751.47</gx:coord>
+          <gx:coord>119.3868437 26.0799662 752.52</gx:coord>
+          <gx:coord>119.3869527 26.0799788 754.08</gx:coord>
+          <gx:coord>119.3870574 26.0799764 754.92</gx:coord>
+          <gx:coord>119.3871626 26.0799739 755.72</gx:coord>
+          <gx:coord>119.3872621 26.0799901 757.33</gx:coord>
+          <gx:coord>119.3873103 26.0800665 757.59</gx:coord>
+          <gx:coord>119.387302 26.0801602 758.17</gx:coord>
+          <gx:coord>119.3872793 26.0802608 758.17</gx:coord>
+          <gx:coord>119.3872923 26.0803668 757.83</gx:coord>
+          <gx:coord>119.3873703 26.0804343 756.99</gx:coord>
+          <gx:coord>119.3874757 26.0804926 756.12</gx:coord>
+          <gx:coord>119.3875884 26.0805397 755.81</gx:coord>
+          <gx:coord>119.3877062 26.0805702 755.75</gx:coord>
+          <gx:coord>119.3878205 26.0805934 753.79</gx:coord>
+          <gx:coord>119.387908 26.0806579 753.42</gx:coord>
+          <gx:coord>119.3879263 26.0807477 753.07</gx:coord>
+          <gx:coord>119.3878555 26.0808269 752.93</gx:coord>
+          <gx:coord>119.3877442 26.080885 752.1</gx:coord>
+          <gx:coord>119.3876287 26.0809352 752.75</gx:coord>
+          <gx:coord>119.3875723 26.0810175 753.76</gx:coord>
+          <gx:coord>119.3874994 26.0810836 755.98</gx:coord>
+          <gx:coord>119.3874332 26.0811526 761.01</gx:coord>
+          <gx:coord>119.387362 26.0812349 763.01</gx:coord>
+          <gx:coord>119.3873114 26.0813234 762.45</gx:coord>
+          <gx:coord>119.3873604 26.0813887 762.62</gx:coord>
+          <gx:coord>119.3874102 26.0814697 761.5</gx:coord>
+          <gx:coord>119.3874519 26.0815589 760.9</gx:coord>
+          <gx:coord>119.387403 26.0816442 761.18</gx:coord>
+          <gx:coord>119.3873171 26.081701 761.51</gx:coord>
+          <gx:coord>119.3872251 26.0817549 762.9</gx:coord>
+          <gx:coord>119.387267 26.0817187 763.52</gx:coord>
+          <gx:coord>119.3873481 26.0816539 765.43</gx:coord>
+          <gx:coord>119.3874328 26.081576 767.65</gx:coord>
+          <gx:coord>119.387471 26.0814806 769.43</gx:coord>
+          <gx:coord>119.3874083 26.0814139 769.95</gx:coord>
+          <gx:coord>119.3873357 26.0813893 769.62</gx:coord>
+          <gx:coord>119.3872426 26.0814368 769.4</gx:coord>
+          <gx:coord>119.3872132 26.0814637 768.66</gx:coord>
+          <gx:coord>119.3871378 26.0814406 768.09</gx:coord>
+          <gx:coord>119.3870599 26.0813848 765.81</gx:coord>
+          <gx:coord>119.386982 26.0813183 765.72</gx:coord>
+          <gx:coord>119.3870805 26.0813102 765.84</gx:coord>
+          <gx:coord>119.387003 26.081328 759.07</gx:coord>
+          <gx:coord>119.3870423 26.0813728 757.96</gx:coord>
+          <gx:coord>119.3869895 26.0813634 758.85</gx:coord>
+          <gx:coord>119.3869132 26.0813131 757.66</gx:coord>
+          <gx:coord>119.3868253 26.0812559 757.24</gx:coord>
+          <gx:coord>119.3867591 26.0811785 756.79</gx:coord>
+          <gx:coord>119.3866648 26.081141 756.79</gx:coord>
+          <gx:coord>119.3865617 26.0811116 756.21</gx:coord>
+          <gx:coord>119.3864751 26.0810538 755.65</gx:coord>
+          <gx:coord>119.3864488 26.0810305 753.72</gx:coord>
+          <gx:coord>119.3864083 26.0809692 752.93</gx:coord>
+          <gx:coord>119.3863382 26.0809053 751.0</gx:coord>
+          <gx:coord>119.3862565 26.0809378 746.85</gx:coord>
+          <gx:coord>119.386161 26.0809812 743.14</gx:coord>
+          <gx:coord>119.386104 26.0810693 736.95</gx:coord>
+          <gx:coord>119.3860664 26.0811682 732.27</gx:coord>
+          <gx:coord>119.3860611 26.0812111 729.11</gx:coord>
+          <gx:coord>119.3859942 26.0812403 726.67</gx:coord>
+          <gx:coord>119.3858966 26.0812545 723.31</gx:coord>
+          <gx:coord>119.3857931 26.0812788 721.57</gx:coord>
+          <gx:coord>119.3856838 26.0812987 719.26</gx:coord>
+          <gx:coord>119.3855757 26.0813305 716.24</gx:coord>
+          <gx:coord>119.3854648 26.081314 714.34</gx:coord>
+          <gx:coord>119.3854396 26.0813121 712.09</gx:coord>
+          <gx:coord>119.3853742 26.0812684 709.95</gx:coord>
+          <gx:coord>119.3852619 26.0812479 706.42</gx:coord>
+          <gx:coord>119.3852524 26.0812393 702.09</gx:coord>
+          <gx:coord>119.3853101 26.0811806 699.55</gx:coord>
+          <gx:coord>119.3852564 26.0811433 698.16</gx:coord>
+          <gx:coord>119.385168 26.0811372 696.48</gx:coord>
+          <gx:coord>119.3851749 26.0810789 693.78</gx:coord>
+          <gx:coord>119.3851423 26.0810015 691.03</gx:coord>
+          <gx:coord>119.3850585 26.080959 686.93</gx:coord>
+          <gx:coord>119.38496 26.0809236 681.51</gx:coord>
+          <gx:coord>119.384858 26.0808907 676.48</gx:coord>
+          <gx:coord>119.3847602 26.0808489 672.22</gx:coord>
+          <gx:coord>119.3846572 26.0808238 667.45</gx:coord>
+          <gx:coord>119.3845526 26.0808348 663.48</gx:coord>
+          <gx:coord>119.3844441 26.0808319 658.45</gx:coord>
+          <gx:coord>119.3843615 26.0808624 653.93</gx:coord>
+          <gx:coord>119.3842711 26.080897 649.85</gx:coord>
+          <gx:coord>119.3841944 26.080959 646.21</gx:coord>
+          <gx:coord>119.3841897 26.0809102 642.58</gx:coord>
+          <gx:coord>119.3842636 26.0808007 640.24</gx:coord>
+          <gx:coord>119.3841706 26.0807012 638.36</gx:coord>
+          <gx:coord>119.3842349 26.0806304 634.61</gx:coord>
+          <gx:coord>119.3841303 26.080623 628.82</gx:coord>
+          <gx:coord>119.3840361 26.0805844 623.3</gx:coord>
+          <gx:coord>119.3839502 26.0806262 619.17</gx:coord>
+          <gx:coord>119.3838793 26.0807042 615.13</gx:coord>
+          <gx:coord>119.3838013 26.0807579 611.71</gx:coord>
+          <gx:coord>119.3836999 26.080768 608.47</gx:coord>
+          <gx:coord>119.3835944 26.08077 606.25</gx:coord>
+          <gx:coord>119.3835085 26.0807214 604.75</gx:coord>
+          <gx:coord>119.383439 26.0806481 603.54</gx:coord>
+          <gx:coord>119.3833927 26.0805609 599.96</gx:coord>
+          <gx:coord>119.3833131 26.0805034 596.31</gx:coord>
+          <gx:coord>119.3832163 26.080503 592.42</gx:coord>
+          <gx:coord>119.3831064 26.0805146 588.18</gx:coord>
+          <gx:coord>119.3829923 26.0805052 582.58</gx:coord>
+          <gx:coord>119.3828954 26.0804711 577.87</gx:coord>
+          <gx:coord>119.3827913 26.0804656 573.96</gx:coord>
+          <gx:coord>119.3826987 26.0804277 570.75</gx:coord>
+          <gx:coord>119.3826323 26.080361 568.51</gx:coord>
+          <gx:coord>119.3825687 26.0802897 567.7</gx:coord>
+          <gx:coord>119.3825012 26.0802219 565.47</gx:coord>
+          <gx:coord>119.3824175 26.0802346 562.49</gx:coord>
+          <gx:coord>119.382333 26.0802924 558.79</gx:coord>
+          <gx:coord>119.3822598 26.0802666 555.17</gx:coord>
+          <gx:coord>119.3822095 26.0803165 550.17</gx:coord>
+          <gx:coord>119.3821864 26.0802638 545.65</gx:coord>
+          <gx:coord>119.3821797 26.080169 542.93</gx:coord>
+          <gx:coord>119.3821001 26.0801503 539.28</gx:coord>
+          <gx:coord>119.3820235 26.0802067 534.62</gx:coord>
+          <gx:coord>119.381981 26.0802435 530.52</gx:coord>
+          <gx:coord>119.3819738 26.0801885 528.56</gx:coord>
+          <gx:coord>119.3818966 26.0801177 526.08</gx:coord>
+          <gx:coord>119.3817877 26.0801108 521.08</gx:coord>
+          <gx:coord>119.3816813 26.0801086 516.56</gx:coord>
+          <gx:coord>119.3815797 26.0801217 511.51</gx:coord>
+          <gx:coord>119.3814939 26.080179 505.38</gx:coord>
+          <gx:coord>119.3813994 26.0802168 498.13</gx:coord>
+          <gx:coord>119.3813352 26.0802902 491.9</gx:coord>
+          <gx:coord>119.3812877 26.0803358 486.8</gx:coord>
+          <gx:coord>119.3812033 26.0803611 483.85</gx:coord>
+          <gx:coord>119.3811044 26.080384 481.82</gx:coord>
+          <gx:coord>119.380997 26.0804146 480.56</gx:coord>
+          <gx:coord>119.3808959 26.0804632 478.18</gx:coord>
+          <gx:coord>119.38083 26.0804877 475.72</gx:coord>
+          <gx:coord>119.3807311 26.0804845 474.13</gx:coord>
+          <gx:coord>119.3806307 26.0804908 470.68</gx:coord>
+          <gx:coord>119.3805241 26.080488 467.77</gx:coord>
+          <gx:coord>119.3804387 26.0804351 464.65</gx:coord>
+          <gx:coord>119.3803274 26.0804212 462.63</gx:coord>
+          <gx:coord>119.3802103 26.080417 459.21</gx:coord>
+          <gx:coord>119.3801043 26.0804323 455.04</gx:coord>
+          <gx:coord>119.3800349 26.0805016 451.75</gx:coord>
+          <gx:coord>119.380027 26.0805192 451.46</gx:coord>
+          <gx:coord>119.3799522 26.0804951 450.12</gx:coord>
+          <gx:coord>119.3798466 26.0804829 447.44</gx:coord>
+          <gx:coord>119.3797365 26.0804889 445.16</gx:coord>
+          <gx:coord>119.3796302 26.0804982 441.66</gx:coord>
+          <gx:coord>119.379591 26.0804753 440.17</gx:coord>
+          <gx:coord>119.3795613 26.0804018 440.84</gx:coord>
+          <gx:coord>119.3795203 26.0803045 439.92</gx:coord>
+          <gx:coord>119.3794037 26.0803022 438.51</gx:coord>
+          <gx:coord>119.3793099 26.0802644 435.69</gx:coord>
+          <gx:coord>119.3793527 26.0803156 432.35</gx:coord>
+          <gx:coord>119.379393 26.0803372 429.21</gx:coord>
+          <gx:coord>119.3794956 26.0803593 428.09</gx:coord>
+          <gx:coord>119.3794656 26.0803279 429.27</gx:coord>
+          <gx:coord>119.3793666 26.0802987 429.83</gx:coord>
+          <gx:coord>119.3792631 26.0802375 428.59</gx:coord>
+          <gx:coord>119.3791711 26.080168 427.53</gx:coord>
+          <gx:coord>119.3790598 26.0801584 425.95</gx:coord>
+          <gx:coord>119.3789473 26.0801462 424.93</gx:coord>
+          <gx:coord>119.3788405 26.0801531 421.17</gx:coord>
+          <gx:coord>119.3788426 26.080089 417.64</gx:coord>
+          <gx:coord>119.3787711 26.0800623 414.65</gx:coord>
+          <gx:coord>119.3786881 26.080012 411.31</gx:coord>
+          <gx:coord>119.3786621 26.0799288 407.37</gx:coord>
+          <gx:coord>119.3786875 26.0798778 404.3</gx:coord>
+          <gx:coord>119.3786117 26.0798517 401.38</gx:coord>
+          <gx:coord>119.3785286 26.0798013 398.47</gx:coord>
+          <gx:coord>119.3784473 26.0797443 395.41</gx:coord>
+          <gx:coord>119.3783775 26.0796721 390.5</gx:coord>
+          <gx:coord>119.3782928 26.0796243 383.85</gx:coord>
+          <gx:coord>119.3781867 26.0795839 378.8</gx:coord>
+          <gx:coord>119.3781086 26.0795667 374.09</gx:coord>
+          <gx:coord>119.3780135 26.0795407 370.23</gx:coord>
+          <gx:coord>119.3779513 26.0795856 368.04</gx:coord>
+          <gx:coord>119.3778609 26.0795935 367.98</gx:coord>
+          <gx:coord>119.3778027 26.0795963 367.6</gx:coord>
+          <gx:coord>119.3777399 26.0795461 366.32</gx:coord>
+          <gx:coord>119.377653 26.0794978 363.67</gx:coord>
+          <gx:coord>119.3775663 26.0794355 360.74</gx:coord>
+          <gx:coord>119.3774806 26.0793693 358.4</gx:coord>
+          <gx:coord>119.3773858 26.0793194 357.23</gx:coord>
+          <gx:coord>119.3772807 26.0793271 355.49</gx:coord>
+          <gx:coord>119.3771699 26.0793304 353.22</gx:coord>
+          <gx:coord>119.3771438 26.0793226 350.65</gx:coord>
+          <gx:coord>119.3771149 26.0792566 348.8</gx:coord>
+          <gx:coord>119.3770799 26.0791717 345.61</gx:coord>
+          <gx:coord>119.3770309 26.079083 343.15</gx:coord>
+          <gx:coord>119.3769852 26.0790472 342.45</gx:coord>
+          <gx:coord>119.3769091 26.0790023 342.36</gx:coord>
+          <gx:coord>119.3769675 26.0789628 341.13</gx:coord>
+          <gx:coord>119.3770507 26.0789011 338.25</gx:coord>
+          <gx:coord>119.377028 26.0788263 336.65</gx:coord>
+          <gx:coord>119.3770439 26.0787234 335.04</gx:coord>
+          <gx:coord>119.3771276 26.0786741 332.49</gx:coord>
+          <gx:coord>119.3771981 26.0786011 330.36</gx:coord>
+          <gx:coord>119.377142 26.0785988 324.29</gx:coord>
+          <gx:coord>119.3771403 26.0785371 321.06</gx:coord>
+          <gx:coord>119.3771203 26.0784503 316.6</gx:coord>
+          <gx:coord>119.377047 26.0783814 312.97</gx:coord>
+          <gx:coord>119.376942 26.0783221 309.36</gx:coord>
+          <gx:coord>119.376899 26.0782271 303.43</gx:coord>
+          <gx:coord>119.376916 26.0782164 298.47</gx:coord>
+          <gx:coord>119.3768976 26.0781494 295.35</gx:coord>
+          <gx:coord>119.3769059 26.0780588 292.52</gx:coord>
+          <gx:coord>119.3768616 26.0779795 288.37</gx:coord>
+          <gx:coord>119.3767769 26.0779236 282.93</gx:coord>
+          <gx:coord>119.3767334 26.0778437 278.56</gx:coord>
+          <gx:coord>119.376722 26.0778096 273.96</gx:coord>
+          <gx:coord>119.3767051 26.0777366 271.27</gx:coord>
+          <gx:coord>119.3767135 26.0776455 267.52</gx:coord>
+          <gx:coord>119.3767433 26.077548 263.61</gx:coord>
+          <gx:coord>119.3767548 26.0774514 259.4</gx:coord>
+          <gx:coord>119.3767661 26.0773582 254.6</gx:coord>
+          <gx:coord>119.3768022 26.0772668 250.53</gx:coord>
+          <gx:coord>119.3767728 26.0771834 245.56</gx:coord>
+          <gx:coord>119.3768087 26.0771011 241.87</gx:coord>
+          <gx:coord>119.3767723 26.077027 237.96</gx:coord>
+          <gx:coord>119.3766964 26.0769646 233.54</gx:coord>
+          <gx:coord>119.3766046 26.0769067 229.37</gx:coord>
+          <gx:coord>119.3766377 26.0768322 224.77</gx:coord>
+          <gx:coord>119.3767299 26.0767928 221.56</gx:coord>
+          <gx:coord>119.3767686 26.0767095 220.39</gx:coord>
+          <gx:coord>119.3767222 26.0766258 218.54</gx:coord>
+          <gx:coord>119.3766279 26.0765728 216.95</gx:coord>
+          <gx:coord>119.3765259 26.0765297 216.38</gx:coord>
+          <gx:coord>119.3764216 26.0764783 215.35</gx:coord>
+          <gx:coord>119.3763164 26.0764492 213.98</gx:coord>
+          <gx:coord>119.3762321 26.0763958 211.3</gx:coord>
+          <gx:coord>119.3761663 26.0763269 207.26</gx:coord>
+          <gx:coord>119.3760992 26.0762495 203.72</gx:coord>
+          <gx:coord>119.3760908 26.0761333 201.93</gx:coord>
+          <gx:coord>119.3760388 26.0760519 200.54</gx:coord>
+          <gx:coord>119.3759479 26.0759945 195.42</gx:coord>
+          <gx:coord>119.3758533 26.0759407 191.12</gx:coord>
+          <gx:coord>119.3757925 26.0758626 188.09</gx:coord>
+          <gx:coord>119.3757326 26.0757821 185.72</gx:coord>
+          <gx:coord>119.3756632 26.0757055 182.71</gx:coord>
+          <gx:coord>119.3755795 26.0756439 180.52</gx:coord>
+          <gx:coord>119.3755061 26.0755727 178.01</gx:coord>
+          <gx:coord>119.3754048 26.0755373 175.91</gx:coord>
+          <gx:coord>119.3752937 26.0755224 173.93</gx:coord>
+          <gx:coord>119.3751858 26.0755084 171.58</gx:coord>
+          <gx:coord>119.3750777 26.0755005 169.62</gx:coord>
+          <gx:coord>119.3749652 26.0755127 166.71</gx:coord>
+          <gx:coord>119.3748839 26.0755759 163.32</gx:coord>
+          <gx:coord>119.3748196 26.0756527 160.23</gx:coord>
+          <gx:coord>119.3747273 26.0756944 156.95</gx:coord>
+          <gx:coord>119.3746252 26.0756947 155.52</gx:coord>
+          <gx:coord>119.3745214 26.0757204 153.64</gx:coord>
+          <gx:coord>119.3744088 26.0757186 151.17</gx:coord>
+          <gx:coord>119.3743017 26.0757315 147.05</gx:coord>
+          <gx:coord>119.3742033 26.075756 144.11</gx:coord>
+          <gx:coord>119.3741077 26.0757827 141.76</gx:coord>
+          <gx:coord>119.3740028 26.0757989 138.77</gx:coord>
+          <gx:coord>119.3738927 26.0757827 137.41</gx:coord>
+          <gx:coord>119.3738072 26.0757265 135.85</gx:coord>
+          <gx:coord>119.3737177 26.0757297 134.42</gx:coord>
+          <gx:coord>119.3736187 26.0757281 132.13</gx:coord>
+          <gx:coord>119.3735436 26.0756652 129.48</gx:coord>
+          <gx:coord>119.373483 26.0755839 126.15</gx:coord>
+          <gx:coord>119.3734445 26.0754915 121.89</gx:coord>
+          <gx:coord>119.3733929 26.0754098 119.09</gx:coord>
+          <gx:coord>119.3733022 26.0754004 115.62</gx:coord>
+          <gx:coord>119.3731938 26.0753965 113.4</gx:coord>
+          <gx:coord>119.373083 26.0753903 110.74</gx:coord>
+          <gx:coord>119.3729811 26.0753688 108.38</gx:coord>
+          <gx:coord>119.3728703 26.0753591 106.4</gx:coord>
+          <gx:coord>119.3727537 26.0753491 104.37</gx:coord>
+          <gx:coord>119.3726355 26.0753449 101.33</gx:coord>
+          <gx:coord>119.3725763 26.0753319 98.77</gx:coord>
+          <gx:coord>119.3721103 26.0751957 97.28</gx:coord>
+          <gx:coord>119.3718887 26.0750986 93.08</gx:coord>
+          <gx:coord>119.3717839 26.0750219 88.41</gx:coord>
+          <gx:coord>119.3717098 26.074964 84.47</gx:coord>
+          <gx:coord>119.3716442 26.0749086 81.2</gx:coord>
+          <gx:coord>119.3715676 26.0748525 77.93</gx:coord>
+          <gx:coord>119.3714732 26.0748073 77.07</gx:coord>
+          <gx:coord>119.3713673 26.0747948 76.31</gx:coord>
+          <gx:coord>119.371263 26.0747653 73.82</gx:coord>
+          <gx:coord>119.3711696 26.0747166 72.31</gx:coord>
+          <gx:coord>119.3710669 26.0747274 70.15</gx:coord>
+          <gx:coord>119.3709895 26.0748029 67.39</gx:coord>
+          <gx:coord>119.3709138 26.0748862 66.31</gx:coord>
+          <gx:coord>119.3708648 26.0749773 65.69</gx:coord>
+          <gx:coord>119.3708282 26.075072 65.08</gx:coord>
+          <gx:coord>119.3707738 26.0751676 64.79</gx:coord>
+          <gx:coord>119.3706897 26.0752197 63.77</gx:coord>
+          <gx:coord>119.370595 26.0751797 63.51</gx:coord>
+          <gx:coord>119.370486 26.075129 62.77</gx:coord>
+          <gx:coord>119.3703791 26.0750916 62.31</gx:coord>
+          <gx:coord>119.3702673 26.0750657 61.02</gx:coord>
+          <gx:coord>119.3701648 26.0750175 59.65</gx:coord>
+          <gx:coord>119.3700705 26.0749622 57.78</gx:coord>
+          <gx:coord>119.3699755 26.0749105 56.17</gx:coord>
+          <gx:coord>119.3698731 26.074858 54.97</gx:coord>
+          <gx:coord>119.3697672 26.0748094 54.61</gx:coord>
+          <gx:coord>119.3696703 26.0747675 54.11</gx:coord>
+          <gx:coord>119.3695806 26.0747245 53.34</gx:coord>
+          <gx:coord>119.3694817 26.0746866 53.72</gx:coord>
+          <gx:coord>119.3693782 26.0746605 51.1</gx:coord>
+          <gx:coord>119.3692659 26.0746461 49.39</gx:coord>
+          <gx:coord>119.3691554 26.0746294 46.45</gx:coord>
+          <gx:coord>119.3690502 26.0745987 43.95</gx:coord>
+          <gx:coord>119.3689673 26.074536 41.73</gx:coord>
+          <gx:coord>119.368906 26.0744551 37.67</gx:coord>
+          <gx:coord>119.368837 26.0743643 35.49</gx:coord>
+          <gx:coord>119.3687325 26.074352 34.19</gx:coord>
+          <gx:coord>119.3686152 26.0743532 34.07</gx:coord>
+          <gx:coord>119.3684929 26.0743351 33.98</gx:coord>
+          <gx:coord>119.3683843 26.0742883 34.02</gx:coord>
+          <gx:coord>119.3682892 26.0742368 34.26</gx:coord>
+          <gx:coord>119.3681897 26.0741982 33.73</gx:coord>
+          <gx:coord>119.3680823 26.0741718 32.4</gx:coord>
+          <gx:coord>119.3679709 26.0741532 31.17</gx:coord>
+          <gx:coord>119.3678529 26.0741544 29.96</gx:coord>
+          <gx:coord>119.3677386 26.0741308 29.51</gx:coord>
+          <gx:coord>119.3676649 26.0740619 28.11</gx:coord>
+          <gx:coord>119.3676003 26.0739723 27.61</gx:coord>
+          <gx:coord>119.3675539 26.0738787 27.89</gx:coord>
+          <gx:coord>119.3675539 26.0738787 27.89</gx:coord>
+          <when>2025-12-21T02:38:06Z</when>
+          <when>2025-12-21T02:38:11Z</when>
+          <when>2025-12-21T02:38:29Z</when>
+          <when>2025-12-21T02:38:41Z</when>
+          <when>2025-12-21T02:38:55Z</when>
+          <when>2025-12-21T02:39:13Z</when>
+          <when>2025-12-21T02:39:29Z</when>
+          <when>2025-12-21T02:39:43Z</when>
+          <when>2025-12-21T02:40:05Z</when>
+          <when>2025-12-21T02:40:33Z</when>
+          <when>2025-12-21T02:40:53Z</when>
+          <when>2025-12-21T02:41:15Z</when>
+          <when>2025-12-21T02:41:27Z</when>
+          <when>2025-12-21T02:41:47Z</when>
+          <when>2025-12-21T02:42:03Z</when>
+          <when>2025-12-21T02:43:03Z</when>
+          <when>2025-12-21T02:43:29Z</when>
+          <when>2025-12-21T02:43:45Z</when>
+          <when>2025-12-21T02:44:19Z</when>
+          <when>2025-12-21T02:44:39Z</when>
+          <when>2025-12-21T02:45:01Z</when>
+          <when>2025-12-21T02:45:19Z</when>
+          <when>2025-12-21T02:45:49Z</when>
+          <when>2025-12-21T02:46:07Z</when>
+          <when>2025-12-21T02:46:21Z</when>
+          <when>2025-12-21T02:46:35Z</when>
+          <when>2025-12-21T02:46:49Z</when>
+          <when>2025-12-21T02:47:23Z</when>
+          <when>2025-12-21T02:47:35Z</when>
+          <when>2025-12-21T02:47:47Z</when>
+          <when>2025-12-21T02:47:59Z</when>
+          <when>2025-12-21T02:48:11Z</when>
+          <when>2025-12-21T02:48:23Z</when>
+          <when>2025-12-21T02:48:35Z</when>
+          <when>2025-12-21T02:48:49Z</when>
+          <when>2025-12-21T02:49:11Z</when>
+          <when>2025-12-21T02:49:23Z</when>
+          <when>2025-12-21T02:49:35Z</when>
+          <when>2025-12-21T02:49:55Z</when>
+          <when>2025-12-21T02:50:07Z</when>
+          <when>2025-12-21T02:50:19Z</when>
+          <when>2025-12-21T02:50:29Z</when>
+          <when>2025-12-21T02:50:39Z</when>
+          <when>2025-12-21T02:50:49Z</when>
+          <when>2025-12-21T02:51:05Z</when>
+          <when>2025-12-21T02:51:17Z</when>
+          <when>2025-12-21T02:51:29Z</when>
+          <when>2025-12-21T02:51:39Z</when>
+          <when>2025-12-21T02:51:49Z</when>
+          <when>2025-12-21T02:52:01Z</when>
+          <when>2025-12-21T02:52:13Z</when>
+          <when>2025-12-21T02:52:25Z</when>
+          <when>2025-12-21T02:52:37Z</when>
+          <when>2025-12-21T02:52:47Z</when>
+          <when>2025-12-21T02:52:57Z</when>
+          <when>2025-12-21T02:53:07Z</when>
+          <when>2025-12-21T02:53:17Z</when>
+          <when>2025-12-21T02:53:27Z</when>
+          <when>2025-12-21T02:53:37Z</when>
+          <when>2025-12-21T02:53:47Z</when>
+          <when>2025-12-21T02:53:57Z</when>
+          <when>2025-12-21T02:54:07Z</when>
+          <when>2025-12-21T02:54:17Z</when>
+          <when>2025-12-21T02:54:27Z</when>
+          <when>2025-12-21T02:54:57Z</when>
+          <when>2025-12-21T02:55:09Z</when>
+          <when>2025-12-21T02:55:19Z</when>
+          <when>2025-12-21T02:55:56Z</when>
+          <when>2025-12-21T02:56:18Z</when>
+          <when>2025-12-21T02:56:44Z</when>
+          <when>2025-12-21T02:56:54Z</when>
+          <when>2025-12-21T02:57:04Z</when>
+          <when>2025-12-21T02:57:12Z</when>
+          <when>2025-12-21T02:57:22Z</when>
+          <when>2025-12-21T02:57:40Z</when>
+          <when>2025-12-21T02:57:48Z</when>
+          <when>2025-12-21T02:57:56Z</when>
+          <when>2025-12-21T02:58:04Z</when>
+          <when>2025-12-21T02:58:34Z</when>
+          <when>2025-12-21T02:58:40Z</when>
+          <when>2025-12-21T02:59:12Z</when>
+          <when>2025-12-21T02:59:14Z</when>
+          <when>2025-12-21T02:59:34Z</when>
+          <when>2025-12-21T03:00:00Z</when>
+          <when>2025-12-21T03:00:20Z</when>
+          <when>2025-12-21T03:00:36Z</when>
+          <when>2025-12-21T03:00:45Z</when>
+          <when>2025-12-21T03:01:05Z</when>
+          <when>2025-12-21T03:01:41Z</when>
+          <when>2025-12-21T03:02:34Z</when>
+          <when>2025-12-21T03:02:46Z</when>
+          <when>2025-12-21T03:03:06Z</when>
+          <when>2025-12-21T03:03:16Z</when>
+          <when>2025-12-21T03:03:26Z</when>
+          <when>2025-12-21T03:03:42Z</when>
+          <when>2025-12-21T03:03:46Z</when>
+          <when>2025-12-21T03:04:34Z</when>
+          <when>2025-12-21T03:04:58Z</when>
+          <when>2025-12-21T03:05:14Z</when>
+          <when>2025-12-21T03:05:38Z</when>
+          <when>2025-12-21T03:05:52Z</when>
+          <when>2025-12-21T03:06:12Z</when>
+          <when>2025-12-21T03:06:16Z</when>
+          <when>2025-12-21T03:06:40Z</when>
+          <when>2025-12-21T03:07:06Z</when>
+          <when>2025-12-21T03:07:48Z</when>
+          <when>2025-12-21T03:08:22Z</when>
+          <when>2025-12-21T03:08:38Z</when>
+          <when>2025-12-21T03:09:26Z</when>
+          <when>2025-12-21T03:09:30Z</when>
+          <when>2025-12-21T03:10:54Z</when>
+          <when>2025-12-21T03:11:18Z</when>
+          <when>2025-12-21T03:11:22Z</when>
+          <when>2025-12-21T03:11:34Z</when>
+          <when>2025-12-21T03:11:56Z</when>
+          <when>2025-12-21T03:12:14Z</when>
+          <when>2025-12-21T03:12:42Z</when>
+          <when>2025-12-21T03:13:22Z</when>
+          <when>2025-12-21T03:14:00Z</when>
+          <when>2025-12-21T03:14:20Z</when>
+          <when>2025-12-21T03:14:36Z</when>
+          <when>2025-12-21T03:15:04Z</when>
+          <when>2025-12-21T03:15:28Z</when>
+          <when>2025-12-21T03:15:48Z</when>
+          <when>2025-12-21T03:16:14Z</when>
+          <when>2025-12-21T03:16:36Z</when>
+          <when>2025-12-21T03:17:04Z</when>
+          <when>2025-12-21T03:17:40Z</when>
+          <when>2025-12-21T03:18:14Z</when>
+          <when>2025-12-21T03:19:26Z</when>
+          <when>2025-12-21T03:20:05Z</when>
+          <when>2025-12-21T03:21:29Z</when>
+          <when>2025-12-21T03:21:55Z</when>
+          <when>2025-12-21T03:22:19Z</when>
+          <when>2025-12-21T03:22:39Z</when>
+          <when>2025-12-21T03:22:59Z</when>
+          <when>2025-12-21T03:23:15Z</when>
+          <when>2025-12-21T03:23:33Z</when>
+          <when>2025-12-21T03:23:53Z</when>
+          <when>2025-12-21T03:24:53Z</when>
+          <when>2025-12-21T03:25:47Z</when>
+          <when>2025-12-21T03:26:19Z</when>
+          <when>2025-12-21T03:26:39Z</when>
+          <when>2025-12-21T03:26:51Z</when>
+          <when>2025-12-21T03:27:09Z</when>
+          <when>2025-12-21T03:27:27Z</when>
+          <when>2025-12-21T03:27:41Z</when>
+          <when>2025-12-21T03:27:57Z</when>
+          <when>2025-12-21T03:28:13Z</when>
+          <when>2025-12-21T03:29:01Z</when>
+          <when>2025-12-21T03:29:41Z</when>
+          <when>2025-12-21T03:30:01Z</when>
+          <when>2025-12-21T03:30:13Z</when>
+          <when>2025-12-21T03:30:31Z</when>
+          <when>2025-12-21T03:31:23Z</when>
+          <when>2025-12-21T03:31:37Z</when>
+          <when>2025-12-21T03:32:17Z</when>
+          <when>2025-12-21T03:32:39Z</when>
+          <when>2025-12-21T03:33:25Z</when>
+          <when>2025-12-21T03:33:51Z</when>
+          <when>2025-12-21T03:33:55Z</when>
+          <when>2025-12-21T03:34:13Z</when>
+          <when>2025-12-21T03:35:27Z</when>
+          <when>2025-12-21T03:35:45Z</when>
+          <when>2025-12-21T03:36:35Z</when>
+          <when>2025-12-21T03:37:13Z</when>
+          <when>2025-12-21T03:38:11Z</when>
+          <when>2025-12-21T03:38:41Z</when>
+          <when>2025-12-21T03:39:16Z</when>
+          <when>2025-12-21T03:39:24Z</when>
+          <when>2025-12-21T03:39:40Z</when>
+          <when>2025-12-21T03:39:56Z</when>
+          <when>2025-12-21T03:40:44Z</when>
+          <when>2025-12-21T03:40:54Z</when>
+          <when>2025-12-21T03:41:04Z</when>
+          <when>2025-12-21T03:42:18Z</when>
+          <when>2025-12-21T03:42:40Z</when>
+          <when>2025-12-21T03:43:06Z</when>
+          <when>2025-12-21T03:43:28Z</when>
+          <when>2025-12-21T03:43:40Z</when>
+          <when>2025-12-21T03:43:52Z</when>
+          <when>2025-12-21T03:44:06Z</when>
+          <when>2025-12-21T03:44:22Z</when>
+          <when>2025-12-21T03:44:24Z</when>
+          <when>2025-12-21T03:45:02Z</when>
+          <when>2025-12-21T03:45:20Z</when>
+          <when>2025-12-21T03:45:32Z</when>
+          <when>2025-12-21T03:45:42Z</when>
+          <when>2025-12-21T03:45:50Z</when>
+          <when>2025-12-21T03:46:08Z</when>
+          <when>2025-12-21T03:47:39Z</when>
+          <when>2025-12-21T03:47:55Z</when>
+          <when>2025-12-21T03:48:07Z</when>
+          <when>2025-12-21T03:48:19Z</when>
+          <when>2025-12-21T03:48:25Z</when>
+          <when>2025-12-21T03:48:45Z</when>
+          <when>2025-12-21T03:49:31Z</when>
+          <when>2025-12-21T03:49:43Z</when>
+          <when>2025-12-21T03:49:57Z</when>
+          <when>2025-12-21T03:50:11Z</when>
+          <when>2025-12-21T03:50:23Z</when>
+          <when>2025-12-21T03:50:39Z</when>
+          <when>2025-12-21T03:50:53Z</when>
+          <when>2025-12-21T03:51:17Z</when>
+          <when>2025-12-21T03:52:47Z</when>
+          <when>2025-12-21T03:53:15Z</when>
+          <when>2025-12-21T03:53:43Z</when>
+          <when>2025-12-21T03:53:55Z</when>
+          <when>2025-12-21T03:55:11Z</when>
+          <when>2025-12-21T03:55:25Z</when>
+          <when>2025-12-21T03:55:53Z</when>
+          <when>2025-12-21T03:56:15Z</when>
+          <when>2025-12-21T03:56:37Z</when>
+          <when>2025-12-21T03:57:23Z</when>
+          <when>2025-12-21T03:57:37Z</when>
+          <when>2025-12-21T03:58:15Z</when>
+          <when>2025-12-21T03:58:31Z</when>
+          <when>2025-12-21T03:58:49Z</when>
+          <when>2025-12-21T03:59:03Z</when>
+          <when>2025-12-21T03:59:23Z</when>
+          <when>2025-12-21T03:59:41Z</when>
+          <when>2025-12-21T04:00:03Z</when>
+          <when>2025-12-21T04:00:17Z</when>
+          <when>2025-12-21T04:00:33Z</when>
+          <when>2025-12-21T04:00:43Z</when>
+          <when>2025-12-21T04:00:57Z</when>
+          <when>2025-12-21T04:01:07Z</when>
+          <when>2025-12-21T04:01:27Z</when>
+          <when>2025-12-21T04:01:45Z</when>
+          <when>2025-12-21T04:01:59Z</when>
+          <when>2025-12-21T04:02:07Z</when>
+          <when>2025-12-21T04:02:23Z</when>
+          <when>2025-12-21T04:02:33Z</when>
+          <when>2025-12-21T04:02:43Z</when>
+          <when>2025-12-21T04:02:58Z</when>
+          <when>2025-12-21T04:03:20Z</when>
+          <when>2025-12-21T04:03:30Z</when>
+          <when>2025-12-21T04:04:01Z</when>
+          <when>2025-12-21T04:04:17Z</when>
+          <when>2025-12-21T04:04:49Z</when>
+          <when>2025-12-21T04:05:27Z</when>
+          <when>2025-12-21T04:05:45Z</when>
+          <when>2025-12-21T04:07:29Z</when>
+          <when>2025-12-21T04:08:01Z</when>
+          <when>2025-12-21T04:08:07Z</when>
+          <when>2025-12-21T04:08:51Z</when>
+          <when>2025-12-21T04:09:33Z</when>
+          <when>2025-12-21T04:10:11Z</when>
+          <when>2025-12-21T04:10:29Z</when>
+          <when>2025-12-21T04:11:27Z</when>
+          <when>2025-12-21T04:11:31Z</when>
+          <when>2025-12-21T04:11:57Z</when>
+          <when>2025-12-21T04:12:19Z</when>
+          <when>2025-12-21T04:12:43Z</when>
+          <when>2025-12-21T04:13:03Z</when>
+          <when>2025-12-21T04:13:17Z</when>
+          <when>2025-12-21T04:13:37Z</when>
+          <when>2025-12-21T04:13:57Z</when>
+          <when>2025-12-21T04:14:13Z</when>
+          <when>2025-12-21T04:14:33Z</when>
+          <when>2025-12-21T04:14:51Z</when>
+          <when>2025-12-21T04:15:19Z</when>
+          <when>2025-12-21T04:16:30Z</when>
+          <when>2025-12-21T04:16:38Z</when>
+          <when>2025-12-21T04:16:48Z</when>
+          <when>2025-12-21T04:17:00Z</when>
+          <when>2025-12-21T04:17:12Z</when>
+          <when>2025-12-21T04:17:26Z</when>
+          <when>2025-12-21T04:17:38Z</when>
+          <when>2025-12-21T04:18:34Z</when>
+          <when>2025-12-21T04:19:10Z</when>
+          <when>2025-12-21T04:19:32Z</when>
+          <when>2025-12-21T04:19:54Z</when>
+          <when>2025-12-21T04:20:13Z</when>
+          <when>2025-12-21T04:20:49Z</when>
+          <when>2025-12-21T04:21:03Z</when>
+          <when>2025-12-21T04:21:13Z</when>
+          <when>2025-12-21T04:21:27Z</when>
+          <when>2025-12-21T04:21:43Z</when>
+          <when>2025-12-21T04:22:05Z</when>
+          <when>2025-12-21T04:22:19Z</when>
+          <when>2025-12-21T04:22:35Z</when>
+          <when>2025-12-21T04:22:51Z</when>
+          <when>2025-12-21T04:23:07Z</when>
+          <when>2025-12-21T04:23:23Z</when>
+          <when>2025-12-21T04:23:37Z</when>
+          <when>2025-12-21T04:23:53Z</when>
+          <when>2025-12-21T04:24:03Z</when>
+          <when>2025-12-21T04:24:15Z</when>
+          <when>2025-12-21T04:24:29Z</when>
+          <when>2025-12-21T04:24:41Z</when>
+          <when>2025-12-21T04:24:53Z</when>
+          <when>2025-12-21T04:25:07Z</when>
+          <when>2025-12-21T04:25:19Z</when>
+          <when>2025-12-21T04:25:29Z</when>
+          <when>2025-12-21T04:25:39Z</when>
+          <when>2025-12-21T04:25:49Z</when>
+          <when>2025-12-21T04:25:59Z</when>
+          <when>2025-12-21T04:26:11Z</when>
+          <when>2025-12-21T04:26:21Z</when>
+          <when>2025-12-21T04:26:35Z</when>
+          <when>2025-12-21T04:27:07Z</when>
+          <when>2025-12-21T04:27:27Z</when>
+          <when>2025-12-21T04:27:41Z</when>
+          <when>2025-12-21T04:27:55Z</when>
+          <when>2025-12-21T04:28:03Z</when>
+          <when>2025-12-21T04:28:15Z</when>
+          <when>2025-12-21T04:28:23Z</when>
+          <when>2025-12-21T04:28:37Z</when>
+          <when>2025-12-21T04:29:15Z</when>
+          <when>2025-12-21T04:29:29Z</when>
+          <when>2025-12-21T04:29:43Z</when>
+          <when>2025-12-21T04:29:56Z</when>
+          <when>2025-12-21T04:30:55Z</when>
+          <when>2025-12-21T04:31:09Z</when>
+          <when>2025-12-21T04:31:19Z</when>
+          <when>2025-12-21T04:31:33Z</when>
+          <when>2025-12-21T04:31:47Z</when>
+          <when>2025-12-21T04:31:57Z</when>
+          <when>2025-12-21T04:32:07Z</when>
+          <when>2025-12-21T04:32:21Z</when>
+          <when>2025-12-21T04:32:33Z</when>
+          <when>2025-12-21T04:32:47Z</when>
+          <when>2025-12-21T04:33:01Z</when>
+          <when>2025-12-21T04:33:11Z</when>
+          <when>2025-12-21T04:33:19Z</when>
+          <when>2025-12-21T04:33:27Z</when>
+          <when>2025-12-21T04:33:37Z</when>
+          <when>2025-12-21T04:33:49Z</when>
+          <when>2025-12-21T04:33:59Z</when>
+          <when>2025-12-21T04:34:09Z</when>
+          <when>2025-12-21T04:34:21Z</when>
+          <when>2025-12-21T04:34:37Z</when>
+          <when>2025-12-21T04:34:55Z</when>
+          <when>2025-12-21T04:35:07Z</when>
+          <when>2025-12-21T04:35:17Z</when>
+          <when>2025-12-21T04:35:27Z</when>
+          <when>2025-12-21T04:35:37Z</when>
+          <when>2025-12-21T04:35:47Z</when>
+          <when>2025-12-21T04:35:57Z</when>
+          <when>2025-12-21T04:36:11Z</when>
+          <when>2025-12-21T04:36:29Z</when>
+          <when>2025-12-21T04:36:39Z</when>
+          <when>2025-12-21T04:36:53Z</when>
+          <when>2025-12-21T04:37:03Z</when>
+          <when>2025-12-21T04:37:13Z</when>
+          <when>2025-12-21T04:37:23Z</when>
+          <when>2025-12-21T04:37:31Z</when>
+          <when>2025-12-21T04:37:41Z</when>
+          <when>2025-12-21T04:37:51Z</when>
+          <when>2025-12-21T04:38:01Z</when>
+          <when>2025-12-21T04:38:11Z</when>
+          <when>2025-12-21T04:38:21Z</when>
+          <when>2025-12-21T04:38:31Z</when>
+          <when>2025-12-21T04:38:41Z</when>
+          <when>2025-12-21T04:38:51Z</when>
+          <when>2025-12-21T04:39:01Z</when>
+          <when>2025-12-21T04:39:11Z</when>
+          <when>2025-12-21T04:39:23Z</when>
+          <when>2025-12-21T04:39:33Z</when>
+          <when>2025-12-21T04:39:43Z</when>
+          <when>2025-12-21T04:39:53Z</when>
+          <when>2025-12-21T04:40:03Z</when>
+          <ExtendedData>
+            <Data name="GxTrackExtendedData">
+              <value>0.88,9.037872;0.88,9.037872;0.82,3.9634018;0.74,5.0573163;0.82,7.1182847;0.59,10.439268;0.62,9.935046;0.75,9.935046;0.32,9.935046;0.5,9.935046;0.59,9.935046;0.18,9.935046;0.82,9.935046;0.7,9.935046;0.68,9.935046;0.88,9.935046;0.8,3.7900925;0.59,3.7900925;0.84,9.935046;0.93,9.935046;0.78,3.7900925;0.69,3.7900925;0.75,3.7900925;0.92,3.7900925;0.83,3.7900925;0.76,3.7900925;0.78,3.7900925;0.71,3.7900925;0.85,3.7900925;0.89,3.7900925;0.87,3.7900925;0.79,3.7900925;0.94,3.7900925;0.91,3.7900925;0.78,3.7900925;0.81,3.7900925;0.93,3.7900925;0.96,3.7900925;0.95,3.7900925;0.97,3.7900925;1.13,3.7900925;1.09,3.7900925;1.04,3.7900925;0.98,3.7900925;0.95,3.7900925;0.85,3.7900925;0.89,3.7900925;0.99,3.7900925;0.99,3.7900925;0.88,9.935046;0.92,3.7900925;1.0,3.7900925;1.09,3.7900925;1.07,3.7900925;1.19,3.7900925;1.18,3.7900925;1.14,3.7900925;1.21,3.7900925;1.07,3.7900925;1.08,3.7900925;1.02,3.7900925;1.04,9.935046;0.95,9.935046;0.95,9.935046;0.59,3.7900925;0.78,3.7900925;0.79,3.7900925;0.41,3.7900925;0.0,3.7900925;1.25,3.7900925;0.99,3.7900925;1.03,3.7900925;1.08,3.7900925;0.8,3.7900925;1.36,3.7900925;1.06,3.7900925;0.97,3.7900925;0.91,3.7900925;1.39,3.7900925;0.0,3.7900925;1.49,3.7900925;0.0,3.7900925;0.78,9.935046;0.81,9.935046;0.75,9.935046;0.0,4.2245674;0.0,4.093639;0.31,3.7900925;0.0,3.7900925;0.93,3.7900925;0.69,3.7900925;1.12,9.935046;0.88,9.935046;0.85,9.935046;1.25,9.935046;0.0,9.935046;1.0,9.935046;0.68,9.935046;1.5,9.935046;0.88,9.935046;0.83,9.935046;1.06,9.935046;0.0,9.935046;0.72,9.935046;0.9,9.935046;0.47,9.935046;0.63,9.935046;0.94,9.935046;0.94,9.935046;0.0,9.935046;0.29,9.935046;1.19,9.935046;0.0,9.935046;0.79,9.935046;1.17,9.935046;0.0,9.935046;0.0,9.935046;0.59,9.935046;0.57,9.935046;0.75,9.935046;0.54,9.935046;0.52,9.935046;0.69,9.935046;0.75,9.935046;1.26,9.935046;0.0,9.935046;0.32,9.935046;0.81,9.935046;0.0,9.935046;0.18,9.935046;0.0,3.7900925;0.24,9.935046;0.46,3.7900925;0.71,3.7900925;0.56,3.7900925;1.24,9.935046;0.0,9.935046;0.9,9.935046;0.34,9.935046;0.64,9.935046;0.72,3.7900925;0.49,3.7900925;0.8,3.7900925;0.97,3.7900925;0.95,9.935046;0.66,9.935046;0.95,9.935046;0.76,9.935046;0.6,9.935046;0.43,3.7900925;0.53,3.7900925;0.58,3.7900925;0.42,3.7900925;0.37,3.7900925;0.86,3.7900925;0.0,3.7900925;0.3,3.7900925;0.64,9.935046;0.4,9.935046;1.94,9.935046;0.0,9.935046;0.0,9.935046;0.88,3.7900925;0.93,3.7900925;0.0,3.7900925;0.16,3.7900925;0.78,3.7900925;0.46,3.7900925;1.1,3.7900925;0.0,3.7900925;0.61,3.7900925;0.65,3.7900925;1.17,3.7900925;1.05,3.7900925;0.0,3.7900925;0.55,3.7900925;0.59,3.7900925;0.47,3.7900925;0.56,3.7900925;1.01,3.7900925;0.73,3.7900925;0.84,3.7900925;1.06,3.7900925;0.0,3.7900925;0.89,3.7900925;0.79,3.7900925;0.8,3.7900925;1.37,3.7900925;0.0,3.7900925;0.65,3.7900925;0.19,3.7900925;0.54,3.7900925;0.61,3.7900925;1.19,3.7900925;0.0,3.7900925;0.81,9.935046;0.0,9.935046;0.88,9.935046;0.95,3.7900925;1.1,3.7900925;0.82,3.7900925;0.77,3.7900925;0.54,9.935046;0.64,9.935046;0.22,9.935046;0.33,9.935046;1.11,9.935046;0.0,9.935046;0.58,3.7900925;0.81,3.7900925;0.66,3.7900925;0.52,3.7900925;0.84,3.7900925;1.04,3.7900925;0.0,3.7900925;1.16,3.7900925;0.0,3.7900925;1.08,9.935046;0.0,9.935046;0.74,9.935046;0.27,9.935046;0.66,9.935046;1.09,9.935046;0.93,9.935046;0.78,9.935046;1.57,9.935046;0.0,9.935046;0.4,9.935046;0.55,9.935046;1.21,9.935046;0.0,9.935046;0.78,9.935046;1.3,9.935046;1.2,9.935046;0.37,9.935046;0.78,9.935046;0.65,9.935046;0.38,3.7900925;0.3,3.7900925;0.51,3.7900925;0.48,3.7900925;0.68,3.7900925;0.0,3.7900925;0.0,3.7900925;0.0,3.7900925;0.0,9.935046;0.35,3.7900925;0.91,3.7900925;0.0,3.7900925;1.1,3.7900925;0.0,3.7900925;0.66,9.935046;0.4,3.7900925;0.66,3.7900925;0.71,3.7900925;1.11,3.7900925;0.46,3.7900925;0.93,3.7900925;0.67,3.7900925;0.68,9.935046;0.76,3.7900925;0.69,3.7900925;1.08,3.7900925;0.94,3.7900925;1.02,3.7900925;1.08,3.7900925;0.93,3.7900925;0.96,3.7900925;0.95,3.7900925;0.24,3.7900925;0.47,3.7900925;0.65,3.7900925;0.76,3.7900925;0.76,5.203429;0.57,3.7900925;0.88,3.7900925;0.79,3.7900925;0.82,3.7900925;0.52,9.935046;0.59,9.935046;0.86,9.935046;0.86,9.935046;0.81,9.935046;0.68,9.935046;0.59,9.935046;1.03,3.7900925;1.11,3.7900925;1.18,3.7900925;0.81,3.7900925;0.89,3.7900925;1.07,3.7900925;1.16,3.7900925;0.82,3.7900925;1.02,3.7900925;0.69,9.935046;0.99,9.935046;1.22,3.7900925;0.93,3.7900925;0.77,3.7900925;1.02,3.7900925;0.88,3.7900925;1.08,3.7900925;0.59,3.7900925;1.05,3.7900925;0.99,9.935046;1.28,9.935046;1.25,9.935046;1.21,9.935046;0.82,9.935046;0.87,3.7900925;0.98,3.7900925;1.14,3.7900925;0.0,4.7068386;0.95,4.472268;1.31,3.7900925;0.64,3.7900925;0.87,3.7900925;0.79,3.7900925;0.97,3.7900925;1.05,3.7900925;0.92,3.7900925;0.98,3.7900925;0.84,3.7900925;1.59,3.7900925;1.18,3.7900925;1.12,3.7900925;0.99,3.7900925;1.16,3.7900925;1.1,3.7900925;0.98,3.7900925;0.94,3.7900925;1.01,9.935046;0.9,9.935046;1.11,9.935046;1.06,9.935046;1.21,9.935046;1.08,9.935046;1.27,9.935046;1.17,9.935046;1.12,9.935046;0.81,9.935046;0.66,9.935046;1.44,9.935046;1.36,3.7900925;1.54,3.7900925;1.18,3.7900925;1.02,3.7900925;1.06,3.7900925;1.07,3.7900925;1.09,3.7900925;1.11,3.7900925;1.13,3.7900925;1.12,3.7900925;1.14,3.7900925;1.14,3.7900925;1.13,3.7900925;0.99,3.7900925;1.28,3.7900925;1.1,3.7900925;1.19,3.7900925;1.42,3.7900925;0.36,3.7900925;0.36,3.7900925;</value>
+            </Data>
+            <Data name="PauseTimes">
+              <value>1766292003750:pause</value>
+            </Data>
+          </ExtendedData>
+        </gx:Track>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

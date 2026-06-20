@@ -1,0 +1,33 @@
+﻿id,gpxStatus,gpxDownloadable,gpxFile,note
+FZ001,测试轨迹,true,./content/gpx/FZ001.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ002,测试轨迹,true,./content/gpx/FZ002.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ003,测试轨迹,true,./content/gpx/FZ003.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ004,无轨迹,false,,暂无可下载轨迹。
+FZ005,无轨迹,false,,暂无可下载轨迹。
+FZ006,无轨迹,false,,暂无可下载轨迹。
+FZ007,无轨迹,false,,暂无可下载轨迹。
+FZ008,无轨迹,false,,暂无可下载轨迹。
+FZ009,无轨迹,false,,暂无可下载轨迹。
+FZ010,无轨迹,false,,暂无可下载轨迹。
+FZ011,无轨迹,false,,暂无可下载轨迹。
+FZ012,无轨迹,false,,暂无可下载轨迹。
+FZ013,无轨迹,false,,暂无可下载轨迹。
+FZ014,无轨迹,false,,暂无可下载轨迹。
+FZ015,无轨迹,false,,暂无可下载轨迹。
+FZ016,无轨迹,false,,暂无可下载轨迹。
+FZ017,无轨迹,false,,暂无可下载轨迹。
+FZ018,无轨迹,false,,暂无可下载轨迹。
+FZ019,无轨迹,false,,暂无可下载轨迹。
+FZ020,无轨迹,false,,暂无可下载轨迹。
+FZ021,无轨迹,false,,暂无可下载轨迹。
+FZ022,无轨迹,false,,暂无可下载轨迹。
+FZ023,无轨迹,false,,暂无可下载轨迹。
+FZ024,无轨迹,false,,暂无可下载轨迹。
+FZ025,无轨迹,false,,暂无可下载轨迹。
+FZ026,无轨迹,false,,暂无可下载轨迹。
+FZ027,无轨迹,false,,暂无可下载轨迹。
+FZ028,无轨迹,false,,暂无可下载轨迹。
+FZ029,无轨迹,false,,暂无可下载轨迹。
+FZ030,无轨迹,false,,暂无可下载轨迹。
+FZ031,候选KML轨迹,true,./content/tracks/FZ031.kml,V1.4 导入轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ032,候选KML轨迹,true,./content/tracks/FZ032.kml,V1.4 导入轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。

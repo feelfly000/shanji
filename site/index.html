@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="山迹是福州徒步线路库和户外活动信息共享平台，提供福州周边候选徒步路线查询、轨迹地图预览、路线详情、轨迹下载和俱乐部活动聚合。">
+  <meta property="og:title" content="山迹｜福州徒步线路库">
+  <meta property="og:description" content="按区域、难度、风景和活动信息选择适合自己的福州周边徒步路线。">
+  <title>山迹｜福州徒步线路库</title>
+  <link rel="stylesheet" href="./assets/styles.css?v=1.4">
+</head>
+<body>
+<div class="app-shell">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>
+            <strong>山迹</strong>
+            <span>福州徒步线路库</span>
+          </div>
+        </div>
+        <label class="search">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
+          <input id="searchInput" type="search" placeholder="搜索路线、区域、风景，例如：鼓山、看海、新手">
+        </label>
+        <button class="small-button mobile-filter-toggle" id="mobileFilterButton">筛选</button>
+      <div class="status-chip">V1.4 路线复核版</div>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="filters" id="filters">
+        <div class="filter-title">
+          <h2>筛选路线</h2>
+          <button class="small-button" id="resetButton">重置</button>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">区域</span>
+          <div class="chips" data-filter="region"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">难度</span>
+          <div class="chips" data-filter="difficulty"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">风景/主题</span>
+          <div class="chips" data-filter="theme"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">适合人群</span>
+          <div class="chips" data-filter="audience"></div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">最大距离</span>
+          <div class="range-row">
+            <input id="distanceRange" type="range" min="5" max="25" value="25">
+            <span id="distanceValue">25km</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content">
+        <section class="intro">
+          <h1>福州周边最值得走的徒步路线，先从适合你的那一条开始</h1>
+          <p>山迹是福州徒步线路库和活动信息共享平台。V1.4 加入路线复核体系，把起终点、交通、补给、厕所、下撤、点位、轨迹和授权拆成可检查字段，帮助内测前集中补齐资料。</p>
+          <div class="quick-actions" id="quickActions"></div>
+        </section>
+
+        <section class="test-notice">
+          <strong>测试说明</strong>
+          <span>当前路线仍以资料整理和体验测试为主，出发前请再次确认天气、路况、交通、开放状态和自身能力。山迹不直接组织活动，也不代收任何费用。</span>
+          <a class="inline-link" href="./map.html">查看路线地图页</a>
+          <a class="inline-link" href="./review.html">查看复核看板</a>
+          <a class="inline-link" href="./tracks.html">查看轨迹库</a>
+          <a class="inline-link" href="./activities.html">查看活动聚合页</a>
+          <a class="inline-link" href="./safety.html">安全说明</a>
+          <a class="inline-link" href="./feedback.html">反馈入口</a>
+        </section>
+
+        <section class="entry-switch" aria-label="入口选择">
+          <button class="entry-card active" id="routeEntryButton">
+            <strong>自己选路线</strong>
+            <span>按区域、难度、距离、交通和风景筛选，查看路线详情、风险提示和轨迹文件。</span>
+          </button>
+          <button class="entry-card" id="clubEntryButton">
+            <strong>本周俱乐部活动</strong>
+            <span>集中查看各户外俱乐部发布的组织线路，比较时间、强度、费用和报名状态。</span>
+          </button>
+        </section>
+
+        <section class="club-panel" id="clubPanel">
+          <div class="panel-title">
+            <h2>本周俱乐部活动</h2>
+            <span class="status-chip">信息聚合 · 待审核</span>
+          </div>
+          <div class="club-toolbar" id="clubFilters"></div>
+          <div class="club-grid" id="clubList"></div>
+          <div class="club-note">活动列表展示来源、发布时间、报名截止、官方状态和独立聚合页；山迹不直接代收费用、不替代活动组织方的安全责任。</div>
+          <a class="inline-link" href="./activities.html">打开活动聚合页</a>
+        </section>
+
+        <section class="summary-row">
+          <div class="metric"><strong id="metricTotal">32</strong><span>候选路线</span></div>
+          <div class="metric"><strong id="metricEasy">0</strong><span>新手/轻松向</span></div>
+          <div class="metric"><strong id="metricTransit">0</strong><span>公共交通友好</span></div>
+          <div class="metric"><strong id="metricSea">0</strong><span>观景/摄影</span></div>
+        </section>
+
+        <div class="list-tools">
+          <div class="result-count" id="resultCount"></div>
+          <select class="sort" id="sortSelect" aria-label="排序">
+            <option value="recommended">推荐排序</option>
+            <option value="distanceAsc">距离从短到长</option>
+            <option value="timeAsc">用时从短到长</option>
+            <option value="difficultyAsc">难度从低到高</option>
+          </select>
+        </div>
+
+        <section class="route-list" id="routeList"></section>
+      </section>
+
+      <aside class="map-panel">
+        <div class="map-header">
+          <div class="panel-title">
+            <h2>路线分布</h2>
+            <span class="status-chip" id="mapCount">0条</span>
+          </div>
+        </div>
+        <div class="map-canvas" id="mapCanvas" aria-label="简化路线分布图"></div>
+        <div class="map-legend">
+          <p>这是原型用的简化分布图。正式版建议优先用开源地图验证；如使用谷歌地图，需要确认国内访问稳定性、Key、费用和域名限制。</p>
+        </div>
+        <div class="topics">
+          <div class="panel-title">
+            <h2>专题入口</h2>
+          </div>
+          <div class="topic-list" id="topicList"></div>
+          <div class="topic-page-list" aria-label="专题页面">
+            <a href="./topics/beginner.html">新手友好路线</a>
+            <a href="./topics/transit.html">公交地铁友好</a>
+            <a href="./topics/sea.html">观景与摄影</a>
+            <a href="./topics/family.html">亲子轻徒步</a>
+            <a href="./topics/advanced.html">进阶训练</a>
+            <a href="./topics/summer.html">夏季避暑</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <strong>山迹 V1.4 路线复核版</strong>
+      <span>仅用于路线选择体验测试。活动报名、保险、领队安排和安全责任以活动组织方说明为准；自行出行请自行判断风险并做好准备。</span>
+      <span><a class="inline-link" href="./about.html">关于山迹</a> <a class="inline-link" href="./safety.html">安全说明</a> <a class="inline-link" href="./feedback.html">反馈入口</a></span>
+    </footer>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer" aria-modal="true" aria-label="路线详情">
+    <div class="drawer-cover" id="drawerCover">
+      <button class="icon-button drawer-close" id="drawerClose" aria-label="关闭">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </aside>
+  <script src="./data/routes.js?v=1.4"></script>
+  <script src="./data/activities.js?v=1.4"></script>
+  <script src="./assets/app.js?v=1.4"></script>
+</body>
+</html>

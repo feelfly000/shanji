@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="shanji-v0.4-test" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>福道精华段 测试轨迹</name>
+    <desc>山迹 V0.4 测试 GPX，仅用于下载链路验证，非真实导航轨迹。</desc>
+  </metadata>
+  <trk>
+    <name>福道精华段</name>
+    <trkseg>
+      <trkpt lat="26.095" lon="119.278">
+        <ele>45</ele>
+      </trkpt>
+      <trkpt lat="26.098" lon="119.284">
+        <ele>68</ele>
+      </trkpt>
+      <trkpt lat="26.1015" lon="119.291">
+        <ele>120</ele>
+      </trkpt>
+      <trkpt lat="26.104" lon="119.298">
+        <ele>168</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

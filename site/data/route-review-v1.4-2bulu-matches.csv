@@ -1,0 +1,51 @@
+﻿route_id,route_name,match_status,confidence,candidate_title,candidate_url,distance_km,ascent_m,start_end_or_points,source_note,review_note
+FZ001,鼓楼 福道精华步道,found,高,2025-10-12 福州鼓楼区福道（往返）,https://www.2bulu.com/track/t-E%252B%252Bwl2RHFMLp%252FR2KBg5Tzw%253D%253D.htm,,,福道7号入口 -> 福道7号入口；20个标注点,公开搜索结果,福道往返轨迹；可作为备选
+FZ001,鼓楼 福道精华步道,found,高,2026-02-24 福州福道,https://www.2bulu.com/track/t-TDZBNM1XVo7p%252FR2KBg5Tzw%253D%253D.htm,,159.35,福道5号入口 -> 福道3号入口；21个标注点,公开搜索结果,名称和福道入口高度吻合；优先复核
+FZ001,鼓楼 福道精华步道,found,中,2025-05-04 福州鼓楼区 福道 左海公园到把白夜公园,https://www.2bulu.com/track/t-ine8f8dCdNbp%252FR2KBg5Tzw%253D%253D.htm,9.72,275,星光灿烂舞蹈中心 -> 福道6号入口；8个标注点,公开页面,覆盖福道和左海方向；终点名称需人工核对
+FZ002,鼓楼 福山-福道-冶山城市山线,found,低,文林山～福道～郊野公园～五凤公园2024-04-21福州鼓楼区,https://www.2bulu.com/track/t-mzFtXQSu0zTp%252FR2KBg5Tzw%253D%253D.htm,11.75,215,凤凰池社区居委会 -> 土伯祖传捞化；52个标注点,公开页面,包含福道但未命中福山或冶山；仅作弱候选
+FZ003,晋安 鼓山登山道-涌泉寺登山线,found,高,2025-11-22 08:45福州晋安区鼓山-勇敢者登山道-涌泉寺,https://www.2bulu.com/track/t-RrWMTuB29PXp%252FR2KBg5Tzw%253D%253D.htm,,,天亭 -> 鼓岭中队交警岗亭；4个标注点,公开搜索结果,名称直接命中鼓山登山道和涌泉寺
+FZ003,晋安 鼓山登山道-涌泉寺登山线,found,中,2024-10-26 09:04 樟林古道-西来院-涌泉寺-下院,https://app.2bulu.com/track/t-2%252Fhazk8onmjp%252FR2KBg5Tzw%253D%253D.htm,,,福州大米厂 -> 鼓山风景区索道下站；0个标注点,公开搜索结果,到达涌泉寺但线路偏穿越；备选
+FZ003,晋安 鼓山登山道-涌泉寺登山线,found,中,积翠庵到般若庵到涌泉寺,https://www.2bulu.com/track/t-llmsHZ%252FrKnc%253D.htm,,925,埠兴新苑 -> 鼓山十八景公园；0个标注点,公开搜索结果,鼓山区域到涌泉寺；年份较早
+FZ004,晋安 鼓山-十八景-喝水岩-白云顶穿越,found,中,2025-10-06 05:55福州白云洞-涌泉寺-鼓山十八景,https://www.2bulu.com/track/t-AejxiyzfmgXp%252FR2KBg5Tzw%253D%253D.htm,,,埠兴新苑 -> 达摩洞十八景停车场；36个标注点,公开搜索结果,命中鼓山十八景；未明确喝水岩和白云顶
+FZ004,晋安 鼓山-十八景-喝水岩-白云顶穿越,found,中,福州白云洞鼓山路线,https://www.2bulu.com/track/t-eFJvCREuRJXp%252FR2KBg5Tzw%253D%253D.htm,10.67,850,,公开搜索结果,命中白云洞/鼓山；可能覆盖白云顶方向，需看轨迹图
+FZ005,晋安 鼓山白云洞-凤池白云洞登山线,found,高,福州白云洞鼓山路线,https://www.2bulu.com/track/t-eFJvCREuRJXp%252FR2KBg5Tzw%253D%253D.htm,10.67,850,,公开搜索结果,名称直接命中白云洞和鼓山
+FZ005,晋安 鼓山白云洞-凤池白云洞登山线,found,中,2025-10-06 05:55福州白云洞-涌泉寺-鼓山十八景,https://www.2bulu.com/track/t-AejxiyzfmgXp%252FR2KBg5Tzw%253D%253D.htm,,,埠兴新苑 -> 达摩洞十八景停车场；36个标注点,公开搜索结果,可作为白云洞串联十八景备选
+FZ006,晋安 鼓山-鼓岭古道穿越,found,中,鼓岭古道。牛头寨。柱里公园，鼓山穿越,https://www.2bulu.com/track/t-7w3BhZfcRtE%253D.htm,23.81,3070,鳝溪风景区 -> 鼓山摩崖石刻；1个标注点,公开页面,鼓岭到鼓山穿越；爬升数据疑似偏高，需复核
+FZ006,晋安 鼓山-鼓岭古道穿越,found,低,2025-01-18福州恐龙线｜福州霸王龙｜鼓岭50,https://app.2bulu.com/track/t-f8mw1%252Bio7Mjp%252FR2KBg5Tzw%253D%253D.htm,50.71,,,公开搜索结果,包含鼓岭但距离远超目标；仅作路网参考
+FZ007,晋安 鼓岭柳杉王公园-鼓岭栈道步道,found,高,磨溪-柳杉王公园,https://www.2bulu.com/track/t-MNompEKlQvLp%252FR2KBg5Tzw%253D%253D.htm,,604,福州市马尾区 -> 麦当劳鼓岭梅园店；33个标注点,公开搜索结果,命中柳杉王公园；可能不是轻松栈道线
+FZ007,晋安 鼓岭柳杉王公园-鼓岭栈道步道,found,中,2025-10-18 08:42鼓岭古道-映月湖公园-万国公益社-柱里-柯坪水库-花溪谷-柳杉王公园,https://www.2bulu.com/track/t-SggWeGh3MF7p%252FR2KBg5Tzw%253D%253D.htm,,,福道小筑农庄 -> 鼓岭历史文化展示馆,公开搜索结果,覆盖柳杉王和鼓岭核心点；需确认是否过栈道
+FZ007,晋安 鼓岭柳杉王公园-鼓岭栈道步道,found,中,福州磨溪-茶洋山-青洋座-鼓岭2017-03-18,https://www.2bulu.com/track/track_detail.htm?trackId=Nc6gxx%252FAS0k%253D, ,,深坑里 -> 柳杉王公园,公开搜索结果,终点命中柳杉王公园；路线强度可能偏高
+FZ008,闽侯 五虎山-五灵岩寺往返,found,高,五虎山农家乐-五灵岩寺-回头虎-岐尾虎圈越,https://www.2bulu.com/track/t-GyIShuizNrPp%252FR2KBg5Tzw%253D%253D.htm,10.44,937,未知地点 -> 未知地点；0个标注点,公开页面,名称直接命中五虎山和五灵岩寺；但为圈越非折返
+FZ009,闽侯 五虎山-龙祥岛-旗山湖组合线,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议在两步路 App 内搜“五虎山 龙祥岛 旗山湖”或拆分搜“五虎山 旗山湖”
+FZ010,闽侯 旗山-万佛寺-博思软件园穿越,found,高,2026-03-14 旗山万佛寺-棋盘石-旗山顶-风车嘴山-旗山万佛寺,https://www.2bulu.com/track/t-yY5aoV379mrp%252FR2KBg5Tzw%253D%253D.htm,,,旗山万佛寺山门左侧 -> 旗山万佛寺山门左侧；50个标注点,公开搜索结果,旗山环线标注点多；优先复核
+FZ010,闽侯 旗山-万佛寺-博思软件园穿越,found,高,旗山万佛寺-棋盘石,https://www.2bulu.com/track/t-TFUNExuUBJbp%252FR2KBg5Tzw%253D%253D.htm,,376.26,万佛寺 -> 万佛寺；0个标注点,公开搜索结果,命中旗山万佛寺；短线候选
+FZ010,闽侯 旗山-万佛寺-博思软件园穿越,found,中,2026南屿旗山山径赛听涛25㎞,https://www.2bulu.com/track/t-i0qg61jROnPp%252FR2KBg5Tzw%253D%253D.htm,,990,旗山万佛寺 -> 旗山万佛寺；8个标注点,公开搜索结果,赛事路线；可参考路网但强度偏高
+FZ011,晋安 金鸡山公园环线,found,高,2026-03-02 15:39金鸡山公园闲逛,https://www.2bulu.com/track/t-WwpeQyM1LI3p%252FR2KBg5Tzw%253D%253D.htm,,129.48,城投·凤峦郡 -> 福州中德医院；5个标注点,公开搜索结果,名称直接命中金鸡山公园；适合复核轻松线
+FZ011,晋安 金鸡山公园环线,found,低,42fo_y8fhcvczyz5r59rgfjuwmbtf0,https://www.2bulu.com/track/t-o2cfw15Zvl4%253D.htm,,1440.35,金鸡山公园 -> 金鸡山公园；6个标注点,公开搜索结果,起终点命中但标题异常且爬升偏高；谨慎参考
+FZ012,鼓楼 于山-乌山-三坊七巷城市山线,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,城市步行线可能在两步路内收录较少；建议 App 内拆分搜“于山 乌山”
+FZ013,鼓楼 西湖-左海-梅峰山城市绿道,found,低,2025-05-04 福州鼓楼区 福道 左海公园到把白夜公园,https://www.2bulu.com/track/t-ine8f8dCdNbp%252FR2KBg5Tzw%253D%253D.htm,9.72,275,星光灿烂舞蹈中心 -> 福道6号入口；8个标注点,公开页面,包含左海和福道；未明确西湖/梅峰山
+FZ014,马尾 罗星塔-船政文化步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“罗星塔 船政”或用地图自建短线
+FZ015,长乐 下沙海岸线,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“长乐 下沙 海岸”
+FZ016,长乐 猴屿洞天岩步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“猴屿 洞天岩”
+FZ017,连江 黄岐古石村海岸线,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“黄岐 古石村”或“古石 海岸线”
+FZ018,连江 奇达旗冠顶看海线,found,高,2024-04-21 10:38福州连江县旗冠顶,https://www.2bulu.com/track/t-g%252FNpLzmHqqbp%252FR2KBg5Tzw%253D%253D.htm,2.02,330,奇达旗冠顶登山入口 -> 奇达旗冠顶登山入口；0个标注点,公开页面,旗冠顶短环线；适合轻量备选
+FZ018,连江 奇达旗冠顶看海线,found,高,奇达海岸线～旗冠顶,https://www.2bulu.com/track/t-sedXcm62pzTp%252FR2KBg5Tzw%253D%253D.htm,9.76,771,奇达观音座停车点 -> 奇达旗冠顶登山入口；47个标注点,公开页面,名称和看海线高度吻合；优先复核
+FZ019,平潭 北部湾生态廊道,found,高,平潭北部生态廊道,https://app.2bulu.com/share/share_track.htm?trackId=TBu6JlfHSsbp%252FR2KBg5Tzw%253D%253D,18.39,0,平潭听海语风居 -> 猫头墘；24个标注点,公开页面,名称直接命中；海拔爬升为0需复核轨迹质量
+FZ020,永泰 云顶溪谷避暑线,found,中,2024-12-15 08:48福州永泰县违平山—瑞云山—北溪峡谷,https://www.2bulu.com/track/t-3xmTFE8gdA%252Fp%252FR2KBg5Tzw%253D%253D.htm,,,云顶旅游度假区 -> 云顶旅游度假区,公开搜索结果,起终点命中云顶；标题为北溪峡谷，需确认和溪谷避暑线关系
+FZ020,永泰 云顶溪谷避暑线,found,中,2025-01-04 08:33 永泰青龙瀑布-云顶圈越,https://www.2bulu.com/share/share_track.htm?trackId=wZc%2BPJkuiJHp%2FR2KBg5Tzw%3D%3D,,,青云山·青龙瀑布景区西北门 -> 青云道观,公开搜索结果,覆盖青龙瀑布和云顶；更像中高强度圈越
+FZ021,永泰 青云山瀑布步道,found,高,2025-01-04 08:33 永泰青龙瀑布-云顶圈越,https://www.2bulu.com/share/share_track.htm?trackId=wZc%2BPJkuiJHp%2FR2KBg5Tzw%3D%3D,,,青云山·青龙瀑布景区西北门 -> 青云道观,公开搜索结果,命中青云山/青龙瀑布；需确认是否过目标瀑布步道
+FZ022,永泰 嵩口古镇田园步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“嵩口古镇”
+FZ023,福清 石竹山登山道,found,高,2025-12-31 福清石竹山,https://www.2bulu.com/track/t-4ymc%252BsHK6mPp%252FR2KBg5Tzw%253D%253D.htm,6.65,,,公开搜索结果,名称直接命中福清石竹山
+FZ024,福清 大姆山草场环线,found,高,2026-05-07 福清大姆山草场-旗山-崩山小圈,https://www.2bulu.com/track/t-ThYzVUzDHZPp%252FR2KBg5Tzw%253D%253D.htm,,,单斜埔 -> 单斜埔,公开搜索结果,名称直接命中大姆山草场；环线候选
+FZ025,福清 目屿岛海岸步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“目屿岛”或“野马岛”
+FZ026,闽侯 雪峰山寺周边步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“雪峰崇圣禅寺”或“闽侯 雪峰寺”
+FZ027,闽侯 十八重溪休闲步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“十八重溪”
+FZ028,连江 定海湾海岸观景线,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“定海湾 山海运动小镇”
+FZ029,平潭 坛南湾海岸漫步线,found,中,2025-01-31 07:39 平潭大福湾穿坛南湾，青观顶最美海岸线,https://www.2bulu.com/track/t-l%252FglJpv0jgbp%252FR2KBg5Tzw%253D%253D.htm,,168.66,149个标注点,公开搜索结果,命中坛南湾和海岸线；可能比轻松漫步线更长
+FZ030,罗源 罗源湾滨海观景步道,not_found,未找到,,,,,,公开搜索未找到稳定两步路候选,建议 App 内搜“罗源湾 滨海新城”或“罗源湾 滨海步道”
+FZ031,晋安 状元岭古道-小北岭古道环线,found,高,9.7状元岭古道-小北岭古道（本地已导入 KML）,./content/tracks/FZ031.kml,9.12,560,福建省直广厦幼儿园福峰分园 -> 岭下堂；849个抽样点,本地导入两步路KML,已关联现有线路 FZ031；授权仍待复核
+FZ032,平潭 大练岛环线,found,高,2025-10-31 09:45大练岛,https://www.2bulu.com/track/t-0RNCVzUEl6Tp%252FR2KBg5Tzw%253D%253D.htm,,,月举湾通天门停车点 -> 福州市平潭县；62个标注点,公开搜索结果,标注点较多；优先复核
+FZ032,平潭 大练岛环线,found,高,2026-05-02 07:53:46福建平潭大练岛环线,https://app.2bulu.com/track/t-4R%252FAB4dPRXjp%252FR2KBg5Tzw%253D%253D.htm,,525,平潭渔限学校 -> 平潭渔限学校；0个标注点,公开搜索结果,大练岛环线；较适合作为路线候选
+FZ032,平潭 大练岛环线,found,高,平潭大练岛,https://www.2bulu.com/track/t-XWz6bqVd95jp%252FR2KBg5Tzw%253D%253D.htm,,,月举湾通天门停车点 -> 月举湾通天门停车点；14个标注点,公开搜索结果,名称直接命中；优先复核
+FZ032,平潭 大练岛环线,found,高,平潭大练岛（本地已导入 KML）,./content/tracks/FZ032.kml,13.98,457,月举湾通天门停车点 -> 月举湾通天门停车点；815个抽样点,本地导入两步路KML,已关联现有线路 FZ032；授权仍待复核
+FZ032,平潭 大练岛环线,found,中,2024-04-20 10:28福州平潭大练岛通天门圈越,https://www.2bulu.com/share/share_track.htm?trackId=%2BOfhRy%2BuyEnp%2FR2KBg5Tzw%3D%3D,15.09,,,公开搜索结果,大练岛通天门圈越；备选

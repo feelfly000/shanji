@@ -1,0 +1,11 @@
+id,gpxStatus,gpxDownloadable,gpxFile,note
+FZ001,测试轨迹,true,./content/gpx/FZ001.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ002,测试轨迹,true,./content/gpx/FZ002.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ003,测试轨迹,true,./content/gpx/FZ003.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ004,无轨迹,false,,暂无可下载轨迹。
+FZ005,无轨迹,false,,暂无可下载轨迹。
+FZ006,无轨迹,false,,暂无可下载轨迹。
+FZ007,无轨迹,false,,暂无可下载轨迹。
+FZ008,无轨迹,false,,暂无可下载轨迹。
+FZ009,无轨迹,false,,暂无可下载轨迹。
+FZ010,无轨迹,false,,暂无可下载轨迹。

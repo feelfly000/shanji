@@ -1,0 +1,4 @@
+﻿track_id,track_name,track_file,route_id,route_name,association_status,confidence,distance_km,ascent_m,author,license_status,review_note
+REF001,2025-10-12 09:17莆田瑞云山,./content/tracks/REF001.kml,,,未关联，跨区参考,不关联,7.46,688,海狼王,待确认,莆田瑞云山属于福州周边/跨区参考，暂不挂到现有福州线路。
+FZ031,晋安 状元岭古道-小北岭古道环线,./content/tracks/FZ031.kml,FZ031,晋安 状元岭古道-小北岭古道环线,已关联现有线路,高,9.12,560,刘家有两千金,待确认,文件名/线路名与现有线路一致，页面已按 routeId 展示轨迹；仍需确认授权和实地路况。
+FZ032,平潭 大练岛环线,./content/tracks/FZ032.kml,FZ032,平潭 大练岛环线,已关联现有线路,高,13.98,457,旅行者99,待确认,文件名/线路名与现有线路一致，页面已按 routeId 展示轨迹；仍需确认授权和实地路况。

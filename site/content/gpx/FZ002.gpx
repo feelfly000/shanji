@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="shanji-v0.4-test" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>福山-福道-冶山历史风貌区 测试轨迹</name>
+    <desc>山迹 V0.4 测试 GPX，仅用于下载链路验证，非真实导航轨迹。</desc>
+  </metadata>
+  <trk>
+    <name>福山-福道-冶山历史风貌区</name>
+    <trkseg>
+      <trkpt lat="26.095" lon="119.305">
+        <ele>42</ele>
+      </trkpt>
+      <trkpt lat="26.099" lon="119.309">
+        <ele>66</ele>
+      </trkpt>
+      <trkpt lat="26.104" lon="119.312">
+        <ele>98</ele>
+      </trkpt>
+      <trkpt lat="26.108" lon="119.316">
+        <ele>134</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

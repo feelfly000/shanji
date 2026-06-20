@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx version="1.1" creator="shanji-v0.4-test" xmlns="http://www.topografix.com/GPX/1/1">
+  <metadata>
+    <name>鼓山登山道-涌泉寺 测试轨迹</name>
+    <desc>山迹 V0.4 测试 GPX，仅用于下载链路验证，非真实导航轨迹。</desc>
+  </metadata>
+  <trk>
+    <name>鼓山登山道-涌泉寺</name>
+    <trkseg>
+      <trkpt lat="26.07" lon="119.395">
+        <ele>60</ele>
+      </trkpt>
+      <trkpt lat="26.074" lon="119.4">
+        <ele>180</ele>
+      </trkpt>
+      <trkpt lat="26.079" lon="119.405">
+        <ele>330</ele>
+      </trkpt>
+      <trkpt lat="26.084" lon="119.411">
+        <ele>520</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>
