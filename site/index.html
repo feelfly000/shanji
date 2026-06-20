@@ -7,6 +7,7 @@
   <meta property="og:title" content="山迹｜福州徒步线路库">
   <meta property="og:description" content="按区域、难度、风景和活动信息选择适合自己的福州周边徒步路线。">
   <title>山迹｜福州徒步线路库</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="./assets/styles.css?v=1.5">
 </head>
 <body>
@@ -14,11 +15,7 @@
     <header class="topbar">
       <div class="topbar-inner">
         <div class="brand">
-          <div class="brand-mark" aria-hidden="true"></div>
-          <div>
-            <strong>山迹</strong>
-            <span>福州徒步线路库</span>
-          </div>
+          <img class="brand-logo" src="./assets/shanji-logo-header.png" alt="山迹 shanjimap.com">
         </div>
         <label class="search">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
@@ -73,13 +70,13 @@
         </section>
 
         <section class="test-notice">
-          <strong>测试说明</strong>
-          <span>当前路线仍以资料整理和体验测试为主，出发前请再次确认天气、路况、交通、开放状态和自身能力。山迹不直接组织活动，也不代收任何费用。</span>
-          <a class="inline-link" href="./map.html">查看路线分布</a>
-          <a class="inline-link" href="./tracks.html">查看轨迹库</a>
-          <a class="inline-link" href="./activities.html">查看活动聚合页</a>
-          <a class="inline-link" href="./safety.html">安全说明</a>
-          <a class="inline-link" href="./feedback.html">反馈入口</a>
+          <strong>出行提示</strong>
+          <span>出发前请确认天气、路况、交通和开放状态；山迹仅提供路线参考。</span>
+          <div class="notice-links">
+            <a class="inline-link" href="./map.html">路线分布</a>
+            <a class="inline-link" href="./tracks.html">轨迹库</a>
+            <a class="inline-link" href="./activities.html">活动聚合</a>
+          </div>
         </section>
 
         <section class="entry-switch" aria-label="入口选择">
@@ -131,9 +128,9 @@
             <span class="status-chip" id="mapCount">0条</span>
           </div>
         </div>
-        <div class="map-canvas" id="mapCanvas" aria-label="简化路线分布图"></div>
+        <div class="map-canvas" id="mapCanvas" aria-label="福州周边徒步路线开源地图"></div>
         <div class="map-legend">
-          <p>这是原型用的简化分布图。正式版建议优先用开源地图验证；如使用谷歌地图，需要确认国内访问稳定性、Key、费用和域名限制。</p>
+          <p>地图基于 OpenStreetMap 开源底图展示，点位来自路线起点或已整理坐标；实际出行仍请以现场路况和正规导航为准。</p>
         </div>
         <div class="topics">
           <div class="panel-title">
@@ -154,7 +151,7 @@
 
     <footer class="site-footer">
       <strong>山迹 福州徒步线路库</strong>
-      <span>仅用于路线选择体验测试。活动报名、保险、领队安排和安全责任以活动组织方说明为准；自行出行请自行判断风险并做好准备。</span>
+      <span>路线信息仅供出行前参考。活动报名、保险、领队安排和安全责任以活动组织方说明为准；自行出行请自行判断风险并做好准备。</span>
       <span><a class="inline-link" href="./about.html">关于山迹</a> <a class="inline-link" href="./safety.html">安全说明</a> <a class="inline-link" href="./feedback.html">反馈入口</a></span>
     </footer>
   </div>
@@ -170,6 +167,7 @@
   </aside>
   <script src="./data/routes.js?v=1.5"></script>
   <script src="./data/activities.js?v=1.5"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="./assets/app.js?v=1.5"></script>
 </body>
 </html>

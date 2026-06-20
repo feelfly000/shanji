@@ -36,6 +36,8 @@ const routes = window.SHANJI_ROUTES;
     const sortSelect = document.getElementById("sortSelect");
     const mapCanvas = document.getElementById("mapCanvas");
     const mapCount = document.getElementById("mapCount");
+    let routeMap = null;
+    let routeMarkerLayer = null;
     const drawer = document.getElementById("drawer");
     const drawerBackdrop = document.getElementById("drawerBackdrop");
     const drawerBody = document.getElementById("drawerBody");
@@ -228,17 +230,45 @@ const routes = window.SHANJI_ROUTES;
     }
 
     function renderMap(filtered) {
-      mapCanvas.innerHTML = "";
-      filtered.forEach(route => {
-        const point = document.createElement("button");
-        point.className = `map-point ${state.selectedId === route.id ? "active" : ""}`;
-        point.style.setProperty("--x", route.x);
-        point.style.setProperty("--y", route.y);
-        point.title = route.name;
-        point.setAttribute("aria-label", route.name);
-        point.addEventListener("click", () => openDrawer(route.id));
-        mapCanvas.appendChild(point);
+      const routesWithLocation = filtered.filter(route => route.location?.lat && route.location?.lng);
+      if (!window.L) {
+        mapCanvas.innerHTML = `<div class="map-fallback">开源地图资源暂时没有加载成功。当前筛选到 ${routesWithLocation.length} 条有坐标的路线，可先打开路线详情查看起终点信息。</div>`;
+        return;
+      }
+
+      if (!routeMap) {
+        routeMap = L.map(mapCanvas, {
+          scrollWheelZoom: false,
+          zoomControl: true
+        }).setView([26.08, 119.3], 9);
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 18,
+          attribution: "© OpenStreetMap contributors"
+        }).addTo(routeMap);
+        routeMarkerLayer = L.layerGroup().addTo(routeMap);
+      }
+
+      routeMarkerLayer.clearLayers();
+      routesWithLocation.forEach(route => {
+        const active = state.selectedId === route.id;
+        const marker = L.circleMarker([route.location.lat, route.location.lng], {
+          radius: active ? 8 : 6,
+          color: active ? "#f3b454" : "#1f6f5b",
+          weight: active ? 3 : 2,
+          fillColor: active ? "#f3b454" : "#1f6f5b",
+          fillOpacity: 0.86
+        }).addTo(routeMarkerLayer);
+        marker.bindTooltip(route.name, { direction: "top", offset: [0, -8] });
+        marker.on("click", () => openDrawer(route.id));
       });
+
+      window.requestAnimationFrame(() => routeMap.invalidateSize());
+      if (routesWithLocation.length) {
+        const bounds = L.latLngBounds(routesWithLocation.map(route => [route.location.lat, route.location.lng]));
+        routeMap.fitBounds(bounds, { padding: [28, 28], maxZoom: 12 });
+      } else {
+        routeMap.setView([26.08, 119.3], 9);
+      }
     }
 
     function renderTopics() {
