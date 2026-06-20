@@ -1,14 +1,14 @@
 ﻿id,gpxStatus,gpxDownloadable,gpxFile,note
-FZ001,测试轨迹,true,./content/gpx/FZ001.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
+FZ001,候选KML轨迹,true,./content/tracks/FZ001.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
 FZ002,测试轨迹,true,./content/gpx/FZ002.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
-FZ003,测试轨迹,true,./content/gpx/FZ003.gpx,V0.4 测试 GPX，仅用于验证下载链路，正式发布前必须替换为实地复核轨迹。
-FZ004,无轨迹,false,,暂无可下载轨迹。
+FZ003,候选KML轨迹,true,./content/tracks/FZ003.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ004,候选KML轨迹,true,./content/tracks/FZ004.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
 FZ005,无轨迹,false,,暂无可下载轨迹。
-FZ006,无轨迹,false,,暂无可下载轨迹。
+FZ006,候选KML轨迹,true,./content/tracks/FZ006.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
 FZ007,无轨迹,false,,暂无可下载轨迹。
 FZ008,无轨迹,false,,暂无可下载轨迹。
 FZ009,无轨迹,false,,暂无可下载轨迹。
-FZ010,无轨迹,false,,暂无可下载轨迹。
+FZ010,候选KML轨迹,true,./content/tracks/FZ010.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
 FZ011,无轨迹,false,,暂无可下载轨迹。
 FZ012,无轨迹,false,,暂无可下载轨迹。
 FZ013,无轨迹,false,,暂无可下载轨迹。
@@ -22,12 +22,68 @@ FZ020,无轨迹,false,,暂无可下载轨迹。
 FZ021,无轨迹,false,,暂无可下载轨迹。
 FZ022,无轨迹,false,,暂无可下载轨迹。
 FZ023,无轨迹,false,,暂无可下载轨迹。
-FZ024,无轨迹,false,,暂无可下载轨迹。
+FZ024,候选KML轨迹,true,./content/tracks/FZ024.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
 FZ025,无轨迹,false,,暂无可下载轨迹。
 FZ026,无轨迹,false,,暂无可下载轨迹。
 FZ027,无轨迹,false,,暂无可下载轨迹。
 FZ028,无轨迹,false,,暂无可下载轨迹。
 FZ029,无轨迹,false,,暂无可下载轨迹。
 FZ030,无轨迹,false,,暂无可下载轨迹。
-FZ031,候选KML轨迹,true,./content/tracks/FZ031.kml,V1.4 导入轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
-FZ032,候选KML轨迹,true,./content/tracks/FZ032.kml,V1.4 导入轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ031,候选KML轨迹,true,./content/tracks/FZ031.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ032,候选KML轨迹,true,./content/tracks/FZ032.kml,V1.4 关联候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ033,候选KML轨迹,true,./content/tracks/FZ033.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ034,候选KML轨迹,true,./content/tracks/FZ034.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ035,候选KML轨迹,true,./content/tracks/FZ035.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ036,候选KML轨迹,true,./content/tracks/FZ036.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ037,候选KML轨迹,true,./content/tracks/FZ037.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ038,候选KML轨迹,true,./content/tracks/FZ038.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ039,候选KML轨迹,true,./content/tracks/FZ039.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ040,候选KML轨迹,true,./content/tracks/FZ040.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ041,候选KML轨迹,true,./content/tracks/FZ041.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ042,候选KML轨迹,true,./content/tracks/FZ042.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ043,候选KML轨迹,true,./content/tracks/FZ043.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ044,候选KML轨迹,true,./content/tracks/FZ044.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ045,候选KML轨迹,true,./content/tracks/FZ045.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ046,候选KML轨迹,true,./content/tracks/FZ046.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ047,候选KML轨迹,true,./content/tracks/FZ047.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ048,候选KML轨迹,true,./content/tracks/FZ048.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ049,候选KML轨迹,true,./content/tracks/FZ049.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ050,候选KML轨迹,true,./content/tracks/FZ050.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ051,候选KML轨迹,true,./content/tracks/FZ051.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ052,候选KML轨迹,true,./content/tracks/FZ052.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ053,候选KML轨迹,true,./content/tracks/FZ053.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ054,候选KML轨迹,true,./content/tracks/FZ054.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ055,候选KML轨迹,true,./content/tracks/FZ055.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ056,候选KML轨迹,true,./content/tracks/FZ056.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ057,候选KML轨迹,true,./content/tracks/FZ057.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ058,候选KML轨迹,true,./content/tracks/FZ058.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ059,候选KML轨迹,true,./content/tracks/FZ059.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ060,候选KML轨迹,true,./content/tracks/FZ060.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ061,候选KML轨迹,true,./content/tracks/FZ061.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ062,候选KML轨迹,true,./content/tracks/FZ062.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ063,候选KML轨迹,true,./content/tracks/FZ063.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ064,候选KML轨迹,true,./content/tracks/FZ064.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ065,候选KML轨迹,true,./content/tracks/FZ065.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ066,候选KML轨迹,true,./content/tracks/FZ066.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ067,候选KML轨迹,true,./content/tracks/FZ067.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ068,候选KML轨迹,true,./content/tracks/FZ068.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ069,候选KML轨迹,true,./content/tracks/FZ069.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ070,候选KML轨迹,true,./content/tracks/FZ070.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ071,候选KML轨迹,true,./content/tracks/FZ071.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ072,候选KML轨迹,true,./content/tracks/FZ072.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ073,候选KML轨迹,true,./content/tracks/FZ073.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ074,候选KML轨迹,true,./content/tracks/FZ074.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ075,候选KML轨迹,true,./content/tracks/FZ075.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ076,候选KML轨迹,true,./content/tracks/FZ076.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ077,候选KML轨迹,true,./content/tracks/FZ077.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ078,候选KML轨迹,true,./content/tracks/FZ078.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ079,候选KML轨迹,true,./content/tracks/FZ079.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ080,候选KML轨迹,true,./content/tracks/FZ080.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ081,候选KML轨迹,true,./content/tracks/FZ081.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ082,候选KML轨迹,true,./content/tracks/FZ082.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ083,候选KML轨迹,true,./content/tracks/FZ083.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ084,候选KML轨迹,true,./content/tracks/FZ084.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ085,候选KML轨迹,true,./content/tracks/FZ085.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ086,候选KML轨迹,true,./content/tracks/FZ086.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ087,候选KML轨迹,true,./content/tracks/FZ087.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
+FZ088,候选KML轨迹,true,./content/tracks/FZ088.kml,V1.4 高匹配导入候选 KML 轨迹，仅用于路线预览和复核，正式发布前需确认授权并实地核验。
