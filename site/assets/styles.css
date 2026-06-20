@@ -516,8 +516,19 @@
       background:
         linear-gradient(145deg, rgba(255,255,255,.06), rgba(0,0,0,.22)),
         var(--thumb, #cad8cf);
+      background-size: cover;
+      background-position: center;
       position: relative;
       overflow: hidden;
+    }
+
+    .route-thumb.has-image {
+      background:
+        linear-gradient(145deg, rgba(12,28,24,.08), rgba(12,28,24,.32)),
+        var(--thumb-image),
+        var(--thumb, #cad8cf);
+      background-size: cover;
+      background-position: center;
     }
 
     .route-thumb::after {
@@ -784,8 +795,22 @@
       background:
         linear-gradient(135deg, rgba(15, 36, 30, .86), rgba(15, 36, 30, .5)),
         var(--detail-color, var(--forest));
+      background-size: cover;
+      background-position: center;
       color: #fff;
       padding: 28px;
+    }
+
+    .detail-hero.has-route-image {
+      min-height: 260px;
+      display: grid;
+      align-content: end;
+      background:
+        linear-gradient(135deg, rgba(11, 28, 24, .86), rgba(11, 28, 24, .36)),
+        var(--detail-image),
+        var(--detail-color, var(--forest));
+      background-size: cover;
+      background-position: center;
     }
 
     .detail-hero h1 {
@@ -1013,7 +1038,18 @@
       background:
         linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.34)),
         var(--drawer-thumb, #dbe8dd);
+      background-size: cover;
+      background-position: center;
       position: relative;
+    }
+
+    .drawer-cover.has-image {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.38)),
+        var(--drawer-image),
+        var(--drawer-thumb, #dbe8dd);
+      background-size: cover;
+      background-position: center;
     }
 
     .drawer-close {

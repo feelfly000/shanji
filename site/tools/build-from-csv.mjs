@@ -57,6 +57,20 @@ function number(value) {
   return Number(value);
 }
 
+function publicText(value) {
+  return String(value || "")
+    .replaceAll("，适合作为候选路线复核。", "，可作为出行前路线参考。")
+    .replaceAll("适合作为候选路线复核", "可作为出行前路线参考")
+    .replaceAll("正式发布前", "出发前")
+    .replaceAll("轨迹导入待复核", "轨迹预览")
+    .replaceAll("候选待复核", "出行前确认")
+    .replaceAll("待实地复核", "出行前请确认")
+    .replaceAll("待复核", "出行前确认")
+    .replaceAll("需复核", "请确认")
+    .replaceAll("复核", "确认")
+    .replaceAll("GPX", "轨迹");
+}
+
 function pct(value) {
   return `${Math.max(0, Math.min(100, Number(value) || 0))}%`;
 }
@@ -88,6 +102,21 @@ ${body}
 `;
 }
 
+function difficultyPct(difficulty) {
+  if (difficulty === "轻松") return "42%";
+  if (difficulty === "中等") return "68%";
+  if (difficulty === "较难") return "86%";
+  return "58%";
+}
+
+function routeTags(route) {
+  return [
+    ...(route.themes || []).slice(0, 3),
+    route.transitFriendly ? "公交可达" : "提前规划交通",
+    route.difficulty === "较难" ? "进阶谨慎" : "半日参考"
+  ].filter(Boolean).slice(0, 5);
+}
+
 const version = "V1.4";
 const routeRows = parseCsv(await fs.readFile(new URL("routes-v1.3.csv", dataDir), "utf8"));
 const activityRows = parseCsv(await fs.readFile(new URL("activities-v1.1.csv", dataDir), "utf8"));
@@ -95,6 +124,33 @@ const gpxRows = parseCsv(await fs.readFile(new URL("gpx-v1.3.csv", dataDir), "ut
 const gpxById = new Map(gpxRows.map(row => [row.id, row]));
 const reviewRows = parseCsv(await fs.readFile(new URL("route-review-v1.4.csv", dataDir), "utf8"));
 const reviewById = new Map(reviewRows.map(row => [row.id, row]));
+let imageRows = [];
+try {
+  imageRows = parseCsv(await fs.readFile(new URL("../docs/route-image-material-candidates.csv", root), "utf8"));
+} catch {
+  imageRows = [];
+}
+function commonsImageSrc(pageUrl) {
+  const marker = "/wiki/File:";
+  if (!pageUrl || !pageUrl.includes(marker)) return "";
+  const fileName = decodeURIComponent(pageUrl.slice(pageUrl.indexOf(marker) + marker.length)).replaceAll(" ", "_");
+  return `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(fileName)}`;
+}
+const imageCandidatesById = new Map();
+for (const row of imageRows) {
+  if (!row.id || !row.candidate_url) continue;
+  const candidate = {
+    rank: number(row.candidate_rank),
+    title: row.candidate_title,
+    pageUrl: row.candidate_url,
+    src: row.candidate_file_url || commonsImageSrc(row.candidate_url),
+    license: row.candidate_license,
+    note: row.candidate_note
+  };
+  if (!candidate.src) continue;
+  if (!imageCandidatesById.has(row.id)) imageCandidatesById.set(row.id, []);
+  imageCandidatesById.get(row.id).push(candidate);
+}
 
 const routes = routeRows.map((row, index) => {
   const gpx = gpxById.get(row.id) || {};
@@ -167,8 +223,9 @@ const routes = routeRows.map((row, index) => {
       downloadable: bool(gpx.gpxDownloadable),
       file: gpx.gpxFile ? `.${gpx.gpxFile}` : "",
       homeFile: gpx.gpxFile || "",
-      note: gpx.note || "暂无可下载轨迹。"
-    }
+      note: publicText(gpx.note || "暂无可预览轨迹。")
+    },
+    imageCandidates: imageCandidatesById.get(row.id) || []
   };
 });
 
@@ -202,51 +259,42 @@ const activities = activityRows.map(row => ({
 }));
 
 function routePage(route) {
-  const gpxBlock = route.gpx.downloadable
-    ? `<p>${route.gpx.note}</p><p><a class="download-link" href="${route.gpx.file}" download>下载轨迹文件</a></p>`
-    : `<p>${route.gpx.note}</p>`;
-  const trackBlock = route.gpx.downloadable && route.gpx.status.includes("KML")
-    ? `        <h2>轨迹预览</h2>
+  const trackBlock = route.gpx.homeFile && route.gpx.homeFile.endsWith(".kml")
+    ? `        <h2>线路轨迹</h2>
         <div class="track-map" data-track-route="${route.id}"></div>
-        <p class="route-desc">轨迹线来自导入文件，仅用于桌面复核和路线理解，不代表已完成实地验证。</p>`
+        <p class="route-desc">轨迹线用于帮助理解大致走向，本页仅展示线路预览，不开放原始轨迹文件。出行时请结合正规地图、现场指示和自身判断。</p>`
     : "";
-  return pageShell(`${route.name}｜山迹`, `    <section class="detail-hero" style="--detail-color:${route.color}">
-      <span class="status-chip">${route.id} · ${route.status}</span>
+  return pageShell(`${route.name}｜山迹`, `    <section class="detail-hero" data-route-hero="${route.id}" style="--detail-color:${route.color}">
+      <span class="status-chip">${route.id} · ${route.region}</span>
       <h1>${route.name}</h1>
-      <p>${route.summary}</p>
+      <p>${publicText(route.summary)}</p>
     </section>
     <section class="detail-page-grid">
       <article class="detail-page-main">
-        <h2>复核状态</h2>
+        <h2>路线概览</h2>
         <div class="review-panel">
-          <div class="review-score"><strong>${route.review.score}</strong><span>复核完成度</span></div>
-          <div class="review-progress"><span style="width:${pct(route.review.score)}"></span></div>
-          <p>当前等级：${route.review.level}。阻塞项：${route.review.blockers}。下一步：${route.review.nextAction}。</p>
+          <div class="review-score"><strong>${route.difficulty}</strong><span>路线强度</span></div>
+          <div class="review-progress"><span style="width:${difficultyPct(route.difficulty)}"></span></div>
+          <p>约 ${route.distance}km，累计爬升约 ${route.ascent}m，预计用时 ${route.time}h。出行前请结合天气、体力和现场路况调整计划。</p>
         </div>
         <div class="review-check-grid">
-          ${route.review.checks.map(([label, status]) => `<span class="${status === "已完成" ? "review-ok" : "review-wait"}">${label}：${status}</span>`).join("")}
+          ${routeTags(route).map(label => `<span class="review-ok">${label}</span>`).join("")}
         </div>
         <h2>路线亮点</h2>
-        <p>${route.highlight}</p>
-        <h2>地图点位</h2>
-        <p>当前点位：${route.location.lat}, ${route.location.lng}（${route.location.accuracy}）。${version} 数据由 CSV 自动生成，正式发布前需要复核。</p>
-        <p><a class="inline-link" href="${osmUrl(route)}" target="_blank" rel="noreferrer">在 OpenStreetMap 查看近似点位</a></p>
-        <h2>风险提示</h2>
-        <p>${route.warning}</p>
-        <h2>发布前复核</h2>
-        <p>${route.verify}</p>
-        <h2>维护字段</h2>
-        <p>起点：${route.ops.startPoint}</p>
-        <p>终点：${route.ops.endPoint}</p>
-        <p>停车：${route.ops.parking}</p>
-        <p>公共交通：${route.ops.publicTransit}</p>
-        <p>厕所：${route.ops.toilet}</p>
-        <p>补给：${route.ops.supply}</p>
-        <p>下撤：${route.ops.exitPoints}</p>
-        <p>适合季节：${route.ops.bestSeason.join("、")}</p>
+        <p>${publicText(route.highlight)}</p>
+        <p>${publicText(route.summary)}</p>
+        <h2>交通与补给</h2>
+        <p>建议起点：${publicText(route.ops.startPoint)}。终点或返回点：${publicText(route.ops.endPoint)}。</p>
+        <p>公共交通：${publicText(route.ops.publicTransit || route.transit)}。</p>
+        <p>停车：${publicText(route.ops.parking)}</p>
+        <p>厕所：${publicText(route.ops.toilet)}</p>
+        <p>补给：${publicText(route.ops.supply)}</p>
+        <h2>出行提醒</h2>
+        <p>${publicText(route.warning)}</p>
+        <p>下撤参考：${publicText(route.ops.exitPoints)}</p>
+        <p>适合季节：${publicText(route.ops.bestSeason.join("、") || "全年，避开极端天气")}。</p>
+        <p>路线信息仅供出行前参考，实际通行请以现场路况、天气变化和管理要求为准。</p>
 ${trackBlock}
-        <h2>轨迹文件</h2>
-        ${gpxBlock}
       </article>
       <aside class="detail-page-side">
         <div class="detail-stat"><strong>${route.region}</strong><span>区域</span></div>
@@ -254,13 +302,24 @@ ${trackBlock}
         <div class="detail-stat"><strong>${route.distance}km</strong><span>距离</span></div>
         <div class="detail-stat"><strong>${route.time}h</strong><span>预计用时</span></div>
         <div class="detail-stat"><strong>${route.ascent}m</strong><span>累计爬升</span></div>
-        <div class="detail-stat"><strong>${route.gpx.status}</strong><span>GPX状态</span></div>
-        <div class="detail-stat"><strong>${route.ops.publicStatus}</strong><span>公开状态</span></div>
-        <div class="detail-stat"><strong>${route.ops.routeStatus}</strong><span>资料状态</span></div>
-        <div class="detail-stat"><strong>${route.review.level}</strong><span>复核等级</span></div>
-        <div class="detail-stat"><strong>${route.review.score}分</strong><span>复核完成度</span></div>
+        <div class="detail-stat"><strong>${trackBlock ? "可预览" : "暂无"}</strong><span>轨迹线路</span></div>
+        <div class="detail-stat"><strong>${route.transit}</strong><span>推荐到达</span></div>
+        <div class="detail-stat"><strong>${route.ops.bestSeason[0] || "全年"}</strong><span>适合季节</span></div>
+        <div class="detail-stat"><strong>${route.difficulty === "较难" ? "进阶谨慎" : "雨后谨慎"}</strong><span>关键提醒</span></div>
       </aside>
-    </section>`);
+    </section>
+    <script>
+      (() => {
+        const candidates = ${JSON.stringify(route.imageCandidates)};
+        const picks = JSON.parse(localStorage.getItem("shanji-route-image-picks-v1") || "{}");
+        const pick = picks["${route.id}"];
+        const selected = pick?.type === "preview" ? candidates[pick.index] : null;
+        if (!selected?.src) return;
+        const hero = document.querySelector("[data-route-hero='${route.id}']");
+        hero.classList.add("has-route-image");
+        hero.style.setProperty("--detail-image", "url('" + selected.src.replaceAll("'", "%27") + "')");
+      })();
+    </script>`);
 }
 
 function activityPage(activity) {

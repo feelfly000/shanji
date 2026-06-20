@@ -77,7 +77,6 @@
           <p class="route-desc">来源：${track.platform}｜作者：${track.author || "待补充"}｜授权：${track.sourceLicense}</p>
           <p>
             ${track.routeId ? `<a class="inline-link" href="./routes/${track.routeId}.html">打开路线详情</a>` : '<span class="club-status closed">跨区参考，不自动入库</span>'}
-            <a class="inline-link" href="${track.downloadFile}" download>下载原始KML</a>
           </p>
         </div>
       </article>

@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>山迹路线图片候选挑选板</title>
+<style>
+:root{color-scheme:light;--ink:#1f2933;--muted:#657487;--line:#d9e1e8;--bg:#f6f8f6;--card:#fff;--green:#2f6f55;--amber:#946a21;--blue:#356f8f;}
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}.top{position:sticky;top:0;z-index:10;background:rgba(246,248,246,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(10px)}.top-inner{max-width:1180px;margin:0 auto;padding:18px 20px}.top h1{margin:0;font-size:24px}.top p{margin:6px 0 0;color:var(--muted);font-size:14px}.wrap{max-width:1180px;margin:0 auto;padding:22px 20px 60px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.toolbar input,.toolbar select,.preview-link{height:38px;border:1px solid var(--line);border-radius:8px;padding:0 12px;background:white;font-size:14px}.toolbar input{min-width:260px;flex:1}.preview-link{display:inline-flex;align-items:center;text-decoration:none;background:#1f6f5b;color:white;border-color:#1f6f5b;font-weight:700}.route{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:14px 0;overflow:hidden}.route.is-picked{border-color:#8fc2a8;box-shadow:0 0 0 2px rgba(47,111,85,.08)}.route-head{display:grid;grid-template-columns:96px 1fr auto;gap:14px;align-items:start;padding:16px 16px 12px;border-bottom:1px solid var(--line)}.rid{font-weight:700;color:var(--green)}.name{font-size:18px;font-weight:700}.meta{font-size:13px;color:var(--muted);margin-top:4px}.badge{font-size:12px;border:1px solid var(--line);border-radius:999px;padding:4px 9px;color:var(--muted);white-space:nowrap}.route.is-picked .badge{background:#e9f4ef;border-color:#8fc2a8;color:#245f48;font-weight:700}.body{padding:14px 16px 16px}.note{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.note div{background:#f8faf9;border:1px solid #e2e8ee;border-radius:8px;padding:10px 12px;font-size:13px;color:#40505f}.note b{display:block;color:#25313c;margin-bottom:3px}.imgs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.img-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fbfcfb;min-height:230px;display:flex;flex-direction:column}.img-card.is-selected{border-color:#2f6f55;box-shadow:0 0 0 2px rgba(47,111,85,.18)}.img-card img{width:100%;height:170px;object-fit:cover;background:#edf1f3}.img-card .cap{padding:9px 10px;font-size:13px}.img-card .cap a{color:var(--blue);text-decoration:none;font-weight:600}.pick-row{display:flex;gap:8px;flex-wrap:wrap;padding:0 10px 10px}.pick-btn,.clear-btn{height:34px;border:1px solid #cdd8e0;border-radius:7px;background:white;color:#244a5f;padding:0 11px;font-size:13px;cursor:pointer}.pick-btn{background:#e9f4ef;border-color:#bdd8ca;color:#245f48;font-weight:700}.clear-btn{background:#fff;color:#7a4b18}.picked-note{margin-top:10px;font-size:13px;color:#245f48;font-weight:700}.empty{border:1px dashed #c8d2dc;border-radius:8px;padding:18px;background:#fbfcfb}.empty-title{font-weight:700;margin-bottom:8px}.links{display:flex;gap:8px;flex-wrap:wrap}.links a{display:inline-flex;align-items:center;height:34px;padding:0 11px;border-radius:7px;text-decoration:none;font-size:13px;border:1px solid #cdd8e0;background:white;color:#244a5f}.links a.primary{background:#e9f4ef;border-color:#bdd8ca;color:#245f48}.risk{margin-top:12px;color:var(--amber);font-size:13px}.hidden{display:none}@media(max-width:780px){.route-head{grid-template-columns:1fr}.note,.imgs{grid-template-columns:1fr}.toolbar input{min-width:100%}}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-inner"><h1>山迹路线图片候选挑选板</h1><p>用于内部挑选确认。显示图不等于已获得授权；上线前仍需核验作者、许可证、是否允许商用和裁剪。</p></div></div>
+<div class="wrap">
+<div class="toolbar"><input id="q" placeholder="搜索线路、地区、主题，例如 鼓山 / 看海 / FZ032"><select id="status"><option value="all">全部线路</option><option value="picked">已挑选</option><option value="unpicked">待挑选</option><option value="with">已有可预览图</option><option value="search">需打开图库挑选</option></select><a class="preview-link" id="previewSiteLink" href="../site/index.html">打开网站预览</a></div>
+
+<section class="route" data-search="fz001 鼓楼 福道精华步道 鼓楼区 城市森林|栈道|亲子" data-has="with">
+<div class="route-head">
+<div class="rid">FZ001</div>
+<div><div class="name">鼓楼 福道精华步道</div><div class="meta">鼓楼区 · 城市森林|栈道|亲子 · 搜索词：福州 福道精华步道 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找栈道、城市天际线、林下步道，真实识别度比纯树林更重要。</div>
+<div><b>素材优先级</b>Wikimedia/Openverse 城市地标图 &gt; 真实授权照片 &gt; 官方公园/景区授权 &gt; 示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fu_Forest_Trail_view.jpg" alt="Fu Forest Trail view.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:Fu_Forest_Trail_view.jpg" target="_blank">Fu Forest Trail view.jpg</a><br>CC BY-SA 4.0<br>福道栈道/城市森林，可用于福道相关线路</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" alt="20181221福州福道（梅峰山地公园） 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" target="_blank">20181221福州福道（梅峰山地公园） 01.jpg</a><br>CC BY-SA 4.0<br>福道梅峰山地公园段</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz002 鼓楼 福山-福道-冶山城市山线 鼓楼区 城市森林|历史人文" data-has="with">
+<div class="route-head">
+<div class="rid">FZ002</div>
+<div><div class="name">鼓楼 福山-福道-冶山城市山线</div><div class="meta">鼓楼区 · 城市森林|历史人文 · 搜索词：福州 福山-福道-冶山城市山线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找栈道、城市天际线、林下步道，真实识别度比纯树林更重要。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fu_Forest_Trail_view.jpg" alt="Fu Forest Trail view.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:Fu_Forest_Trail_view.jpg" target="_blank">Fu Forest Trail view.jpg</a><br>CC BY-SA 4.0<br>福道栈道/城市森林，可用于福道相关线路</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" alt="20181221福州福道（梅峰山地公园） 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" target="_blank">20181221福州福道（梅峰山地公园） 01.jpg</a><br>CC BY-SA 4.0<br>福道梅峰山地公园段</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz003 晋安 鼓山登山道-涌泉寺登山线 晋安区 古道|寺庙|城市观景" data-has="with">
+<div class="route-head">
+<div class="rid">FZ003</div>
+<div><div class="name">晋安 鼓山登山道-涌泉寺登山线</div><div class="meta">晋安区 · 古道|寺庙|城市观景 · 搜索词：福州 鼓山登山道-涌泉寺登山线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz004 晋安 鼓山-十八景-喝水岩-白云顶穿越 晋安区 古道|观景|训练" data-has="with">
+<div class="route-head">
+<div class="rid">FZ004</div>
+<div><div class="name">晋安 鼓山-十八景-喝水岩-白云顶穿越</div><div class="meta">晋安区 · 古道|观景|训练 · 搜索词：福州 鼓山-十八景-喝水岩-白云顶穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz005 晋安 鼓山白云洞-凤池白云洞登山线 晋安区 观景|寺庙|训练" data-has="with">
+<div class="route-head">
+<div class="rid">FZ005</div>
+<div><div class="name">晋安 鼓山白云洞-凤池白云洞登山线</div><div class="meta">晋安区 · 观景|寺庙|训练 · 搜索词：福州 鼓山白云洞-凤池白云洞登山线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz006 晋安 鼓山-鼓岭古道穿越 晋安区 古道|避暑|历史人文" data-has="with">
+<div class="route-head">
+<div class="rid">FZ006</div>
+<div><div class="name">晋安 鼓山-鼓岭古道穿越</div><div class="meta">晋安区 · 古道|避暑|历史人文 · 搜索词：福州 鼓山-鼓岭古道穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz007 晋安 鼓岭柳杉王公园-鼓岭栈道步道 晋安区 森林|避暑|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ007</div>
+<div><div class="name">晋安 鼓岭柳杉王公园-鼓岭栈道步道</div><div class="meta">晋安区 · 森林|避暑|亲子 · 搜索词：福州 鼓岭柳杉王公园-鼓岭栈道步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>Wikimedia/Openverse 城市地标图 &gt; 真实授权照片 &gt; 官方公园/景区授权 &gt; 示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E6%A0%88%E9%81%93%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E6%A0%88%E9%81%93%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E6%A0%88%E9%81%93%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E6%A0%88%E9%81%93%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz008 闽侯 五虎山-五灵岩寺往返 闽侯县 名山|寺庙|训练" data-has="search">
+<div class="route-head">
+<div class="rid">FZ008</div>
+<div><div class="name">闽侯 五虎山-五灵岩寺往返</div><div class="meta">闽侯县 · 名山|寺庙|训练 · 搜索词：福州 五虎山-五灵岩寺往返 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA%E5%BE%80%E8%BF%94%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA%E5%BE%80%E8%BF%94%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA%E5%BE%80%E8%BF%94%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA%E5%BE%80%E8%BF%94%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz009 闽侯 五虎山-龙祥岛-旗山湖组合线 闽侯县 名山|湖景|亲水" data-has="search">
+<div class="route-head">
+<div class="rid">FZ009</div>
+<div><div class="name">闽侯 五虎山-龙祥岛-旗山湖组合线</div><div class="meta">闽侯县 · 名山|湖景|亲水 · 搜索词：福州 五虎山-龙祥岛-旗山湖组合线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E9%BE%99%E7%A5%A5%E5%B2%9B-%E6%97%97%E5%B1%B1%E6%B9%96%E7%BB%84%E5%90%88%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E9%BE%99%E7%A5%A5%E5%B2%9B-%E6%97%97%E5%B1%B1%E6%B9%96%E7%BB%84%E5%90%88%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E9%BE%99%E7%A5%A5%E5%B2%9B-%E6%97%97%E5%B1%B1%E6%B9%96%E7%BB%84%E5%90%88%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1-%E9%BE%99%E7%A5%A5%E5%B2%9B-%E6%97%97%E5%B1%B1%E6%B9%96%E7%BB%84%E5%90%88%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz010 闽侯 旗山-万佛寺-博思软件园穿越 闽侯县/高新区 名山|寺庙|森林" data-has="search">
+<div class="route-head">
+<div class="rid">FZ010</div>
+<div><div class="name">闽侯 旗山-万佛寺-博思软件园穿越</div><div class="meta">闽侯县/高新区 · 名山|寺庙|森林 · 搜索词：福州 旗山-万佛寺-博思软件园穿越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1-%E4%B8%87%E4%BD%9B%E5%AF%BA-%E5%8D%9A%E6%80%9D%E8%BD%AF%E4%BB%B6%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1-%E4%B8%87%E4%BD%9B%E5%AF%BA-%E5%8D%9A%E6%80%9D%E8%BD%AF%E4%BB%B6%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1-%E4%B8%87%E4%BD%9B%E5%AF%BA-%E5%8D%9A%E6%80%9D%E8%BD%AF%E4%BB%B6%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1-%E4%B8%87%E4%BD%9B%E5%AF%BA-%E5%8D%9A%E6%80%9D%E8%BD%AF%E4%BB%B6%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz011 晋安 金鸡山公园环线 晋安区 城市森林|观景|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ011</div>
+<div><div class="name">晋安 金鸡山公园环线</div><div class="meta">晋安区 · 城市森林|观景|亲子 · 搜索词：福州 金鸡山公园环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找栈道、城市天际线、林下步道，真实识别度比纯树林更重要。</div>
+<div><b>素材优先级</b>Wikimedia/Openverse 城市地标图 &gt; 真实授权照片 &gt; 官方公园/景区授权 &gt; 示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%87%91%E9%B8%A1%E5%B1%B1%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%87%91%E9%B8%A1%E5%B1%B1%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%87%91%E9%B8%A1%E5%B1%B1%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%87%91%E9%B8%A1%E5%B1%B1%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz012 鼓楼 于山-乌山-三坊七巷城市山线 鼓楼区 历史人文|城市观景|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ012</div>
+<div><div class="name">鼓楼 于山-乌山-三坊七巷城市山线</div><div class="meta">鼓楼区 · 历史人文|城市观景|亲子 · 搜索词：福州 于山-乌山-三坊七巷城市山线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%8E%E5%B1%B1-%E4%B9%8C%E5%B1%B1-%E4%B8%89%E5%9D%8A%E4%B8%83%E5%B7%B7%E5%9F%8E%E5%B8%82%E5%B1%B1%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%8E%E5%B1%B1-%E4%B9%8C%E5%B1%B1-%E4%B8%89%E5%9D%8A%E4%B8%83%E5%B7%B7%E5%9F%8E%E5%B8%82%E5%B1%B1%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%8E%E5%B1%B1-%E4%B9%8C%E5%B1%B1-%E4%B8%89%E5%9D%8A%E4%B8%83%E5%B7%B7%E5%9F%8E%E5%B8%82%E5%B1%B1%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%8E%E5%B1%B1-%E4%B9%8C%E5%B1%B1-%E4%B8%89%E5%9D%8A%E4%B8%83%E5%B7%B7%E5%9F%8E%E5%B8%82%E5%B1%B1%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz013 鼓楼 西湖-左海-梅峰山城市绿道 鼓楼区 湖景|城市森林|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ013</div>
+<div><div class="name">鼓楼 西湖-左海-梅峰山城市绿道</div><div class="meta">鼓楼区 · 湖景|城市森林|亲子 · 搜索词：福州 西湖-左海-梅峰山城市绿道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找栈道、城市天际线、林下步道，真实识别度比纯树林更重要。</div>
+<div><b>素材优先级</b>Wikimedia/Openverse 城市地标图 &gt; 真实授权照片 &gt; 官方公园/景区授权 &gt; 示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E8%A5%BF%E6%B9%96-%E5%B7%A6%E6%B5%B7-%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9F%8E%E5%B8%82%E7%BB%BF%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E8%A5%BF%E6%B9%96-%E5%B7%A6%E6%B5%B7-%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9F%8E%E5%B8%82%E7%BB%BF%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E8%A5%BF%E6%B9%96-%E5%B7%A6%E6%B5%B7-%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9F%8E%E5%B8%82%E7%BB%BF%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E8%A5%BF%E6%B9%96-%E5%B7%A6%E6%B5%B7-%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9F%8E%E5%B8%82%E7%BB%BF%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz014 马尾 罗星塔-船政文化步道 马尾区 历史人文|江景|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ014</div>
+<div><div class="name">马尾 罗星塔-船政文化步道</div><div class="meta">马尾区 · 历史人文|江景|亲子 · 搜索词：福州 罗星塔-船政文化步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%98%9F%E5%A1%94-%E8%88%B9%E6%94%BF%E6%96%87%E5%8C%96%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%98%9F%E5%A1%94-%E8%88%B9%E6%94%BF%E6%96%87%E5%8C%96%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%98%9F%E5%A1%94-%E8%88%B9%E6%94%BF%E6%96%87%E5%8C%96%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%98%9F%E5%A1%94-%E8%88%B9%E6%94%BF%E6%96%87%E5%8C%96%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz015 长乐 下沙海岸线 长乐区 看海|海岸|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ015</div>
+<div><div class="name">长乐 下沙海岸线</div><div class="meta">长乐区 · 看海|海岸|摄影 · 搜索词：福州 下沙海岸线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%B8%8B%E6%B2%99%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8B%E6%B2%99%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8B%E6%B2%99%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8B%E6%B2%99%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz016 长乐 猴屿洞天岩步道 长乐区 观景|寺庙|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ016</div>
+<div><div class="name">长乐 猴屿洞天岩步道</div><div class="meta">长乐区 · 观景|寺庙|摄影 · 搜索词：福州 猴屿洞天岩步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8C%B4%E5%B1%BF%E6%B4%9E%E5%A4%A9%E5%B2%A9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%B4%E5%B1%BF%E6%B4%9E%E5%A4%A9%E5%B2%A9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%B4%E5%B1%BF%E6%B4%9E%E5%A4%A9%E5%B2%A9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%B4%E5%B1%BF%E6%B4%9E%E5%A4%A9%E5%B2%A9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz017 连江 黄岐古石村海岸线 连江县 看海|海岸|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ017</div>
+<div><div class="name">连江 黄岐古石村海岸线</div><div class="meta">连江县 · 看海|海岸|摄影 · 搜索词：福州 黄岐古石村海岸线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BB%84%E5%B2%90%E5%8F%A4%E7%9F%B3%E6%9D%91%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BB%84%E5%B2%90%E5%8F%A4%E7%9F%B3%E6%9D%91%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BB%84%E5%B2%90%E5%8F%A4%E7%9F%B3%E6%9D%91%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BB%84%E5%B2%90%E5%8F%A4%E7%9F%B3%E6%9D%91%E6%B5%B7%E5%B2%B8%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz018 连江 奇达旗冠顶看海线 连江县 看海|观景|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ018</div>
+<div><div class="name">连江 奇达旗冠顶看海线</div><div class="meta">连江县 · 看海|观景|摄影 · 搜索词：福州 奇达旗冠顶看海线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%A5%87%E8%BE%BE%E6%97%97%E5%86%A0%E9%A1%B6%E7%9C%8B%E6%B5%B7%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%A5%87%E8%BE%BE%E6%97%97%E5%86%A0%E9%A1%B6%E7%9C%8B%E6%B5%B7%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A5%87%E8%BE%BE%E6%97%97%E5%86%A0%E9%A1%B6%E7%9C%8B%E6%B5%B7%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A5%87%E8%BE%BE%E6%97%97%E5%86%A0%E9%A1%B6%E7%9C%8B%E6%B5%B7%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz019 平潭 北部湾生态廊道 平潭县 看海|海岸|摄影" data-has="with">
+<div class="route-head">
+<div class="rid">FZ019</div>
+<div><div class="name">平潭 北部湾生态廊道</div><div class="meta">平潭县 · 看海|海岸|摄影 · 搜索词：福州 北部湾生态廊道 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="imgs">
+<div class="empty"><div class="empty-title">Commons 分类页</div>
+<div class="links"><a class="primary" target="_blank" href="https://commons.wikimedia.org/wiki/Category:Pingtan_County">打开分类筛图</a></div><div class="risk">分类页需逐张打开核验授权。</div></div>
+</div>
+</div></section>
+<section class="route" data-search="fz020 永泰 云顶溪谷避暑线 永泰县 溪谷|避暑|森林" data-has="search">
+<div class="route-head">
+<div class="rid">FZ020</div>
+<div><div class="name">永泰 云顶溪谷避暑线</div><div class="meta">永泰县 · 溪谷|避暑|森林 · 搜索词：福州 云顶溪谷避暑线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%91%E9%A1%B6%E6%BA%AA%E8%B0%B7%E9%81%BF%E6%9A%91%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%91%E9%A1%B6%E6%BA%AA%E8%B0%B7%E9%81%BF%E6%9A%91%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%91%E9%A1%B6%E6%BA%AA%E8%B0%B7%E9%81%BF%E6%9A%91%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%91%E9%A1%B6%E6%BA%AA%E8%B0%B7%E9%81%BF%E6%9A%91%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz021 永泰 青云山瀑布步道 永泰县 瀑布|森林|避暑" data-has="search">
+<div class="route-head">
+<div class="rid">FZ021</div>
+<div><div class="name">永泰 青云山瀑布步道</div><div class="meta">永泰县 · 瀑布|森林|避暑 · 搜索词：福州 青云山瀑布步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%9D%92%E4%BA%91%E5%B1%B1%E7%80%91%E5%B8%83%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%9D%92%E4%BA%91%E5%B1%B1%E7%80%91%E5%B8%83%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%9D%92%E4%BA%91%E5%B1%B1%E7%80%91%E5%B8%83%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%9D%92%E4%BA%91%E5%B1%B1%E7%80%91%E5%B8%83%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz022 永泰 嵩口古镇田园步道 永泰县 历史人文|田园|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ022</div>
+<div><div class="name">永泰 嵩口古镇田园步道</div><div class="meta">永泰县 · 历史人文|田园|亲子 · 搜索词：福州 嵩口古镇田园步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%B5%A9%E5%8F%A3%E5%8F%A4%E9%95%87%E7%94%B0%E5%9B%AD%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%B5%A9%E5%8F%A3%E5%8F%A4%E9%95%87%E7%94%B0%E5%9B%AD%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%B5%A9%E5%8F%A3%E5%8F%A4%E9%95%87%E7%94%B0%E5%9B%AD%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%B5%A9%E5%8F%A3%E5%8F%A4%E9%95%87%E7%94%B0%E5%9B%AD%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz023 福清 石竹山登山道 福清市 名山|寺庙|湖景" data-has="search">
+<div class="route-head">
+<div class="rid">FZ023</div>
+<div><div class="name">福清 石竹山登山道</div><div class="meta">福清市 · 名山|寺庙|湖景 · 搜索词：福州 石竹山登山道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%9F%B3%E7%AB%B9%E5%B1%B1%E7%99%BB%E5%B1%B1%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%9F%B3%E7%AB%B9%E5%B1%B1%E7%99%BB%E5%B1%B1%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%9F%B3%E7%AB%B9%E5%B1%B1%E7%99%BB%E5%B1%B1%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%9F%B3%E7%AB%B9%E5%B1%B1%E7%99%BB%E5%B1%B1%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz024 福清 大姆山草场环线 福清市 草场|观景|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ024</div>
+<div><div class="name">福清 大姆山草场环线</div><div class="meta">福清市 · 草场|观景|摄影 · 搜索词：福州 大姆山草场环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找草坡、牛羊/山脊、开阔天空，横图效果最好。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz025 福清 目屿岛海岸步道 福清市 看海|海岛|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ025</div>
+<div><div class="name">福清 目屿岛海岸步道</div><div class="meta">福清市 · 看海|海岛|摄影 · 搜索词：福州 目屿岛海岸步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%9B%AE%E5%B1%BF%E5%B2%9B%E6%B5%B7%E5%B2%B8%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%9B%AE%E5%B1%BF%E5%B2%9B%E6%B5%B7%E5%B2%B8%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%9B%AE%E5%B1%BF%E5%B2%9B%E6%B5%B7%E5%B2%B8%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%9B%AE%E5%B1%BF%E5%B2%9B%E6%B5%B7%E5%B2%B8%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz026 闽侯 雪峰山寺周边步道 闽侯县 森林|寺庙|避暑" data-has="search">
+<div class="route-head">
+<div class="rid">FZ026</div>
+<div><div class="name">闽侯 雪峰山寺周边步道</div><div class="meta">闽侯县 · 森林|寺庙|避暑 · 搜索词：福州 雪峰山寺周边步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%9B%AA%E5%B3%B0%E5%B1%B1%E5%AF%BA%E5%91%A8%E8%BE%B9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%9B%AA%E5%B3%B0%E5%B1%B1%E5%AF%BA%E5%91%A8%E8%BE%B9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%9B%AA%E5%B3%B0%E5%B1%B1%E5%AF%BA%E5%91%A8%E8%BE%B9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%9B%AA%E5%B3%B0%E5%B1%B1%E5%AF%BA%E5%91%A8%E8%BE%B9%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz027 闽侯 十八重溪休闲步道 闽侯县 溪谷|亲水|亲子" data-has="search">
+<div class="route-head">
+<div class="rid">FZ027</div>
+<div><div class="name">闽侯 十八重溪休闲步道</div><div class="meta">闽侯县 · 溪谷|亲水|亲子 · 搜索词：福州 十八重溪休闲步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%8D%81%E5%85%AB%E9%87%8D%E6%BA%AA%E4%BC%91%E9%97%B2%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%81%E5%85%AB%E9%87%8D%E6%BA%AA%E4%BC%91%E9%97%B2%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%81%E5%85%AB%E9%87%8D%E6%BA%AA%E4%BC%91%E9%97%B2%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%81%E5%85%AB%E9%87%8D%E6%BA%AA%E4%BC%91%E9%97%B2%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz028 连江 定海湾海岸观景线 连江县 看海|海岸|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ028</div>
+<div><div class="name">连江 定海湾海岸观景线</div><div class="meta">连江县 · 看海|海岸|摄影 · 搜索词：福州 定海湾海岸观景线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%AE%9A%E6%B5%B7%E6%B9%BE%E6%B5%B7%E5%B2%B8%E8%A7%82%E6%99%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%AE%9A%E6%B5%B7%E6%B9%BE%E6%B5%B7%E5%B2%B8%E8%A7%82%E6%99%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%AE%9A%E6%B5%B7%E6%B9%BE%E6%B5%B7%E5%B2%B8%E8%A7%82%E6%99%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%AE%9A%E6%B5%B7%E6%B9%BE%E6%B5%B7%E5%B2%B8%E8%A7%82%E6%99%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz029 平潭 坛南湾海岸漫步线 平潭县 看海|海岸|亲子" data-has="with">
+<div class="route-head">
+<div class="rid">FZ029</div>
+<div><div class="name">平潭 坛南湾海岸漫步线</div><div class="meta">平潭县 · 看海|海岸|亲子 · 搜索词：福州 坛南湾海岸漫步线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="imgs">
+<div class="empty"><div class="empty-title">Commons 分类页</div>
+<div class="links"><a class="primary" target="_blank" href="https://commons.wikimedia.org/wiki/Category:Pingtan_County">打开分类筛图</a></div><div class="risk">分类页需逐张打开核验授权。</div></div>
+</div>
+</div></section>
+<section class="route" data-search="fz030 罗源 罗源湾滨海观景步道 罗源县 看海|海岸|摄影" data-has="search">
+<div class="route-head">
+<div class="rid">FZ030</div>
+<div><div class="name">罗源 罗源湾滨海观景步道</div><div class="meta">罗源县 · 看海|海岸|摄影 · 搜索词：福州 罗源湾滨海观景步道 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%BA%90%E6%B9%BE%E6%BB%A8%E6%B5%B7%E8%A7%82%E6%99%AF%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%BA%90%E6%B9%BE%E6%BB%A8%E6%B5%B7%E8%A7%82%E6%99%AF%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%BA%90%E6%B9%BE%E6%BB%A8%E6%B5%B7%E8%A7%82%E6%99%AF%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%BD%97%E6%BA%90%E6%B9%BE%E6%BB%A8%E6%B5%B7%E8%A7%82%E6%99%AF%E6%AD%A5%E9%81%93%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz031 晋安 状元岭古道-小北岭古道环线 晋安区 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ031</div>
+<div><div class="name">晋安 状元岭古道-小北岭古道环线</div><div class="meta">晋安区 · 古道|历史人文|环线 · 搜索词：福州 状元岭古道-小北岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz032 平潭 大练岛环线 平潭县 看海|海岸|摄影|环线" data-has="with">
+<div class="route-head">
+<div class="rid">FZ032</div>
+<div><div class="name">平潭 大练岛环线</div><div class="meta">平潭县 · 看海|海岸|摄影|环线 · 搜索词：福州 大练岛环线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_02.jpg" alt="大练岛上看平潭公铁大桥 02.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_02.jpg" target="_blank">大练岛上看平潭公铁大桥 02.jpg</a><br>需打开页面核验<br>大练岛视角，可用于大练岛环线</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_01.jpg" alt="大练岛上看平潭公铁大桥 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_01.jpg" target="_blank">大练岛上看平潭公铁大桥 01.jpg</a><br>需打开页面核验<br>大练岛视角，可用于大练岛环线</div>
+</div>
+<div class="empty"><div class="empty-title">Commons 分类页</div>
+<div class="links"><a class="primary" target="_blank" href="https://commons.wikimedia.org/wiki/Category:Pingtan_County">打开分类筛图</a></div><div class="risk">分类页需逐张打开核验授权。</div></div>
+</div>
+</div></section>
+<section class="route" data-search="fz033 晋安 龙门-般若苑-涌泉寺-鼓山古道 晋安区 古道|历史人文|寺庙" data-has="with">
+<div class="route-head">
+<div class="rid">FZ033</div>
+<div><div class="name">晋安 龙门-般若苑-涌泉寺-鼓山古道</div><div class="meta">晋安区 · 古道|历史人文|寺庙 · 搜索词：福州 龙门-般若苑-涌泉寺-鼓山古道 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz034 福清 福川古道-榕树王-台岭村-西溪水库环线 福清市 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ034</div>
+<div><div class="name">福清 福川古道-榕树王-台岭村-西溪水库环线</div><div class="meta">福清市 · 观景|环线 · 搜索词：福州 福川古道-榕树王-台岭村-西溪水库环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%A6%8F%E5%B7%9D%E5%8F%A4%E9%81%93-%E6%A6%95%E6%A0%91%E7%8E%8B-%E5%8F%B0%E5%B2%AD%E6%9D%91-%E8%A5%BF%E6%BA%AA%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%A6%8F%E5%B7%9D%E5%8F%A4%E9%81%93-%E6%A6%95%E6%A0%91%E7%8E%8B-%E5%8F%B0%E5%B2%AD%E6%9D%91-%E8%A5%BF%E6%BA%AA%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%A6%8F%E5%B7%9D%E5%8F%A4%E9%81%93-%E6%A6%95%E6%A0%91%E7%8E%8B-%E5%8F%B0%E5%B2%AD%E6%9D%91-%E8%A5%BF%E6%BA%AA%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%A6%8F%E5%B7%9D%E5%8F%A4%E9%81%93-%E6%A6%95%E6%A0%91%E7%8E%8B-%E5%8F%B0%E5%B2%AD%E6%9D%91-%E8%A5%BF%E6%BA%AA%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz035 闽侯 仁洲村-三叠井圈越 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ035</div>
+<div><div class="name">闽侯 仁洲村-三叠井圈越</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 仁洲村-三叠井圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E6%B4%B2%E6%9D%91-%E4%B8%89%E5%8F%A0%E4%BA%95%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E6%B4%B2%E6%9D%91-%E4%B8%89%E5%8F%A0%E4%BA%95%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E6%B4%B2%E6%9D%91-%E4%B8%89%E5%8F%A0%E4%BA%95%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E6%B4%B2%E6%9D%91-%E4%B8%89%E5%8F%A0%E4%BA%95%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz036 晋安 状元岭古道-状元坊-象峰古道环线 晋安区 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ036</div>
+<div><div class="name">晋安 状元岭古道-状元坊-象峰古道环线</div><div class="meta">晋安区 · 古道|历史人文|环线 · 搜索词：福州 状元岭古道-状元坊-象峰古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8A%B6%E5%85%83%E5%9D%8A-%E8%B1%A1%E5%B3%B0%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8A%B6%E5%85%83%E5%9D%8A-%E8%B1%A1%E5%B3%B0%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8A%B6%E5%85%83%E5%9D%8A-%E8%B1%A1%E5%B3%B0%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8A%B6%E5%85%83%E5%9D%8A-%E8%B1%A1%E5%B3%B0%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz037 晋安 白云洞-涌泉寺-鼓山十八景穿越 晋安区 寺庙" data-has="with">
+<div class="route-head">
+<div class="rid">FZ037</div>
+<div><div class="name">晋安 白云洞-涌泉寺-鼓山十八景穿越</div><div class="meta">晋安区 · 寺庙 · 搜索词：福州 白云洞-涌泉寺-鼓山十八景穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz038 鼓楼 福道7号口往返线 福州周边 观景|环线" data-has="with">
+<div class="route-head">
+<div class="rid">FZ038</div>
+<div><div class="name">鼓楼 福道7号口往返线</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 福道7号口往返线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fu_Forest_Trail_view.jpg" alt="Fu Forest Trail view.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:Fu_Forest_Trail_view.jpg" target="_blank">Fu Forest Trail view.jpg</a><br>CC BY-SA 4.0<br>福道栈道/城市森林，可用于福道相关线路</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" alt="20181221福州福道（梅峰山地公园） 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" target="_blank">20181221福州福道（梅峰山地公园） 01.jpg</a><br>CC BY-SA 4.0<br>福道梅峰山地公园段</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz039 长乐 芦际潭森林公园圈越 福州周边 森林|避暑" data-has="search">
+<div class="route-head">
+<div class="rid">FZ039</div>
+<div><div class="name">长乐 芦际潭森林公园圈越</div><div class="meta">福州周边 · 森林|避暑 · 搜索词：福州 芦际潭森林公园圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E8%8A%A6%E9%99%85%E6%BD%AD%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E8%8A%A6%E9%99%85%E6%BD%AD%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E8%8A%A6%E9%99%85%E6%BD%AD%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E8%8A%A6%E9%99%85%E6%BD%AD%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz040 晋安 鼓岭古道-映月湖-柱里-柳杉王公园穿越 福州周边 观景" data-has="search">
+<div class="route-head">
+<div class="rid">FZ040</div>
+<div><div class="name">晋安 鼓岭古道-映月湖-柱里-柳杉王公园穿越</div><div class="meta">福州周边 · 观景 · 搜索词：福州 鼓岭古道-映月湖-柱里-柳杉王公园穿越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93-%E6%98%A0%E6%9C%88%E6%B9%96-%E6%9F%B1%E9%87%8C-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93-%E6%98%A0%E6%9C%88%E6%B9%96-%E6%9F%B1%E9%87%8C-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93-%E6%98%A0%E6%9C%88%E6%B9%96-%E6%9F%B1%E9%87%8C-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93-%E6%98%A0%E6%9C%88%E6%B9%96-%E6%9F%B1%E9%87%8C-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz041 晋安 鼓山勇敢者登山道-涌泉寺登山线 晋安区 寺庙" data-has="with">
+<div class="route-head">
+<div class="rid">FZ041</div>
+<div><div class="name">晋安 鼓山勇敢者登山道-涌泉寺登山线</div><div class="meta">晋安区 · 寺庙 · 搜索词：福州 鼓山勇敢者登山道-涌泉寺登山线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz042 闽侯 五虎山圈越 闽侯县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ042</div>
+<div><div class="name">闽侯 五虎山圈越</div><div class="meta">闽侯县 · 观景|环线 · 搜索词：福州 五虎山圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz043 福州 贡院岭古道-鹅鼻岭-泉头古道环线 福州周边 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ043</div>
+<div><div class="name">福州 贡院岭古道-鹅鼻岭-泉头古道环线</div><div class="meta">福州周边 · 古道|历史人文|环线 · 搜索词：福州 贡院岭古道-鹅鼻岭-泉头古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E8%B4%A1%E9%99%A2%E5%B2%AD%E5%8F%A4%E9%81%93-%E9%B9%85%E9%BC%BB%E5%B2%AD-%E6%B3%89%E5%A4%B4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E8%B4%A1%E9%99%A2%E5%B2%AD%E5%8F%A4%E9%81%93-%E9%B9%85%E9%BC%BB%E5%B2%AD-%E6%B3%89%E5%A4%B4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E8%B4%A1%E9%99%A2%E5%B2%AD%E5%8F%A4%E9%81%93-%E9%B9%85%E9%BC%BB%E5%B2%AD-%E6%B3%89%E5%A4%B4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E8%B4%A1%E9%99%A2%E5%B2%AD%E5%8F%A4%E9%81%93-%E9%B9%85%E9%BC%BB%E5%B2%AD-%E6%B3%89%E5%A4%B4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz044 晋安 白云洞-鼓山穿越 晋安区 观景" data-has="with">
+<div class="route-head">
+<div class="rid">FZ044</div>
+<div><div class="name">晋安 白云洞-鼓山穿越</div><div class="meta">晋安区 · 观景 · 搜索词：福州 白云洞-鼓山穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz045 马尾 君山小桂林-旺岐楼水库环线 马尾区 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ045</div>
+<div><div class="name">马尾 君山小桂林-旺岐楼水库环线</div><div class="meta">马尾区 · 观景|环线 · 搜索词：福州 君山小桂林-旺岐楼水库环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97-%E6%97%BA%E5%B2%90%E6%A5%BC%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97-%E6%97%BA%E5%B2%90%E6%A5%BC%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97-%E6%97%BA%E5%B2%90%E6%A5%BC%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97-%E6%97%BA%E5%B2%90%E6%A5%BC%E6%B0%B4%E5%BA%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz046 闽侯 水项古道小圈越 福州周边 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ046</div>
+<div><div class="name">闽侯 水项古道小圈越</div><div class="meta">福州周边 · 古道|历史人文|环线 · 搜索词：福州 水项古道小圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93%E5%B0%8F%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93%E5%B0%8F%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93%E5%B0%8F%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93%E5%B0%8F%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz047 马尾 上德古道圈越 马尾区 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ047</div>
+<div><div class="name">马尾 上德古道圈越</div><div class="meta">马尾区 · 观景|环线 · 搜索词：福州 上德古道圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%B8%8A%E5%BE%B7%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8A%E5%BE%B7%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8A%E5%BE%B7%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%8A%E5%BE%B7%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz048 福清 南少林-南岭古道-猛犸岩圈越 福清市 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ048</div>
+<div><div class="name">福清 南少林-南岭古道-猛犸岩圈越</div><div class="meta">福清市 · 观景|环线 · 搜索词：福州 南少林-南岭古道-猛犸岩圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B0%91%E6%9E%97-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8C%9B%E7%8A%B8%E5%B2%A9%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B0%91%E6%9E%97-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8C%9B%E7%8A%B8%E5%B2%A9%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B0%91%E6%9E%97-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8C%9B%E7%8A%B8%E5%B2%A9%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B0%91%E6%9E%97-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93-%E7%8C%9B%E7%8A%B8%E5%B2%A9%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz049 罗源 小笔架圈越 罗源县 观景" data-has="search">
+<div class="route-head">
+<div class="rid">FZ049</div>
+<div><div class="name">罗源 小笔架圈越</div><div class="meta">罗源县 · 观景 · 搜索词：福州 小笔架圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%B0%8F%E7%AC%94%E6%9E%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%B0%8F%E7%AC%94%E6%9E%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%B0%8F%E7%AC%94%E6%9E%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%B0%8F%E7%AC%94%E6%9E%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz050 福清 南岭古道环线 福清市 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ050</div>
+<div><div class="name">福清 南岭古道环线</div><div class="meta">福清市 · 古道|历史人文|环线 · 搜索词：福州 南岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz051 福清 灵石山森林公园环线 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ051</div>
+<div><div class="name">福清 灵石山森林公园环线</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 灵石山森林公园环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%81%B5%E7%9F%B3%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%81%B5%E7%9F%B3%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%81%B5%E7%9F%B3%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%81%B5%E7%9F%B3%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz052 长乐 风洞山环线 长乐区 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ052</div>
+<div><div class="name">长乐 风洞山环线</div><div class="meta">长乐区 · 观景|环线 · 搜索词：福州 风洞山环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%A3%8E%E6%B4%9E%E5%B1%B1%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%A3%8E%E6%B4%9E%E5%B1%B1%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%A3%8E%E6%B4%9E%E5%B1%B1%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%A3%8E%E6%B4%9E%E5%B1%B1%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz053 晋安 鼓山情人谷圈越 晋安区 溪谷|避暑|环线" data-has="with">
+<div class="route-head">
+<div class="rid">FZ053</div>
+<div><div class="name">晋安 鼓山情人谷圈越</div><div class="meta">晋安区 · 溪谷|避暑|环线 · 搜索词：福州 鼓山情人谷圈越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz054 永泰 望仙谷-五奇仙君殿圈越 永泰县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ054</div>
+<div><div class="name">永泰 望仙谷-五奇仙君殿圈越</div><div class="meta">永泰县 · 观景|环线 · 搜索词：福州 望仙谷-五奇仙君殿圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%9C%9B%E4%BB%99%E8%B0%B7-%E4%BA%94%E5%A5%87%E4%BB%99%E5%90%9B%E6%AE%BF%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%9C%9B%E4%BB%99%E8%B0%B7-%E4%BA%94%E5%A5%87%E4%BB%99%E5%90%9B%E6%AE%BF%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%9C%9B%E4%BB%99%E8%B0%B7-%E4%BA%94%E5%A5%87%E4%BB%99%E5%90%9B%E6%AE%BF%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%9C%9B%E4%BB%99%E8%B0%B7-%E4%BA%94%E5%A5%87%E4%BB%99%E5%90%9B%E6%AE%BF%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz055 福清 龙凤古道圈越 福清市 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ055</div>
+<div><div class="name">福清 龙凤古道圈越</div><div class="meta">福清市 · 古道|历史人文|环线 · 搜索词：福州 龙凤古道圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz056 福州 康坂溪右支-地下河穿越 福州周边 溪谷|避暑" data-has="search">
+<div class="route-head">
+<div class="rid">FZ056</div>
+<div><div class="name">福州 康坂溪右支-地下河穿越</div><div class="meta">福州周边 · 溪谷|避暑 · 搜索词：福州 康坂溪右支-地下河穿越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%BA%B7%E5%9D%82%E6%BA%AA%E5%8F%B3%E6%94%AF-%E5%9C%B0%E4%B8%8B%E6%B2%B3%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%BA%B7%E5%9D%82%E6%BA%AA%E5%8F%B3%E6%94%AF-%E5%9C%B0%E4%B8%8B%E6%B2%B3%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%BA%B7%E5%9D%82%E6%BA%AA%E5%8F%B3%E6%94%AF-%E5%9C%B0%E4%B8%8B%E6%B2%B3%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%BA%B7%E5%9D%82%E6%BA%AA%E5%8F%B3%E6%94%AF-%E5%9C%B0%E4%B8%8B%E6%B2%B3%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz057 福清 龙凤古驿道环线 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ057</div>
+<div><div class="name">福清 龙凤古驿道环线</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 龙凤古驿道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%A9%BF%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%A9%BF%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%A9%BF%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%A9%BF%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz058 鼓楼 福道5号口-3号口穿越 福州周边 观景" data-has="with">
+<div class="route-head">
+<div class="rid">FZ058</div>
+<div><div class="name">鼓楼 福道5号口-3号口穿越</div><div class="meta">福州周边 · 观景 · 搜索词：福州 福道5号口-3号口穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Fu_Forest_Trail_view.jpg" alt="Fu Forest Trail view.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:Fu_Forest_Trail_view.jpg" target="_blank">Fu Forest Trail view.jpg</a><br>CC BY-SA 4.0<br>福道栈道/城市森林，可用于福道相关线路</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" alt="20181221福州福道（梅峰山地公园） 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:20181221%E7%A6%8F%E5%B7%9E%E7%A6%8F%E9%81%93%EF%BC%88%E6%A2%85%E5%B3%B0%E5%B1%B1%E5%9C%B0%E5%85%AC%E5%9B%AD%EF%BC%89_01.jpg" target="_blank">20181221福州福道（梅峰山地公园） 01.jpg</a><br>CC BY-SA 4.0<br>福道梅峰山地公园段</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz059 闽侯 旗山万佛寺-棋盘石-旗山顶环线 闽侯县 寺庙|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ059</div>
+<div><div class="name">闽侯 旗山万佛寺-棋盘石-旗山顶环线</div><div class="meta">闽侯县 · 寺庙|环线 · 搜索词：福州 旗山万佛寺-棋盘石-旗山顶环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1%E4%B8%87%E4%BD%9B%E5%AF%BA-%E6%A3%8B%E7%9B%98%E7%9F%B3-%E6%97%97%E5%B1%B1%E9%A1%B6%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1%E4%B8%87%E4%BD%9B%E5%AF%BA-%E6%A3%8B%E7%9B%98%E7%9F%B3-%E6%97%97%E5%B1%B1%E9%A1%B6%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1%E4%B8%87%E4%BD%9B%E5%AF%BA-%E6%A3%8B%E7%9B%98%E7%9F%B3-%E6%97%97%E5%B1%B1%E9%A1%B6%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%97%97%E5%B1%B1%E4%B8%87%E4%BD%9B%E5%AF%BA-%E6%A3%8B%E7%9B%98%E7%9F%B3-%E6%97%97%E5%B1%B1%E9%A1%B6%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz060 福清 大姆山草场-旗山-崩山小圈 福清市 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ060</div>
+<div><div class="name">福清 大姆山草场-旗山-崩山小圈</div><div class="meta">福清市 · 观景|环线 · 搜索词：福州 大姆山草场-旗山-崩山小圈 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA-%E6%97%97%E5%B1%B1-%E5%B4%A9%E5%B1%B1%E5%B0%8F%E5%9C%88%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA-%E6%97%97%E5%B1%B1-%E5%B4%A9%E5%B1%B1%E5%B0%8F%E5%9C%88%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA-%E6%97%97%E5%B1%B1-%E5%B4%A9%E5%B1%B1%E5%B0%8F%E5%9C%88%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%A7%86%E5%B1%B1%E8%8D%89%E5%9C%BA-%E6%97%97%E5%B1%B1-%E5%B4%A9%E5%B1%B1%E5%B0%8F%E5%9C%88%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz061 晋安 状元岭古道-小北岭古道环线 晋安区 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ061</div>
+<div><div class="name">晋安 状元岭古道-小北岭古道环线</div><div class="meta">晋安区 · 古道|历史人文|环线 · 搜索词：福州 状元岭古道-小北岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8A%B6%E5%85%83%E5%B2%AD%E5%8F%A4%E9%81%93-%E5%B0%8F%E5%8C%97%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz062 永泰 万石村-天门山圈越 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ062</div>
+<div><div class="name">永泰 万石村-天门山圈越</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 万石村-天门山圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%B8%87%E7%9F%B3%E6%9D%91-%E5%A4%A9%E9%97%A8%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%87%E7%9F%B3%E6%9D%91-%E5%A4%A9%E9%97%A8%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%87%E7%9F%B3%E6%9D%91-%E5%A4%A9%E9%97%A8%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%87%E7%9F%B3%E6%9D%91-%E5%A4%A9%E9%97%A8%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz063 永泰 东湖尖环线 永泰县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ063</div>
+<div><div class="name">永泰 东湖尖环线</div><div class="meta">永泰县 · 观景|环线 · 搜索词：福州 东湖尖环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%B8%9C%E6%B9%96%E5%B0%96%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%9C%E6%B9%96%E5%B0%96%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%9C%E6%B9%96%E5%B0%96%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%B8%9C%E6%B9%96%E5%B0%96%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz064 闽侯 五虎山农家乐-五灵岩寺-回头虎圈越 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ064</div>
+<div><div class="name">闽侯 五虎山农家乐-五灵岩寺-回头虎圈越</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 五虎山农家乐-五灵岩寺-回头虎圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%86%9C%E5%AE%B6%E4%B9%90-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA-%E5%9B%9E%E5%A4%B4%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%86%9C%E5%AE%B6%E4%B9%90-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA-%E5%9B%9E%E5%A4%B4%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%86%9C%E5%AE%B6%E4%B9%90-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA-%E5%9B%9E%E5%A4%B4%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E5%86%9C%E5%AE%B6%E4%B9%90-%E4%BA%94%E7%81%B5%E5%B2%A9%E5%AF%BA-%E5%9B%9E%E5%A4%B4%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz065 闽侯 仁宅登山道-鸾峰寺-旗山顶圈越 闽侯县 寺庙|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ065</div>
+<div><div class="name">闽侯 仁宅登山道-鸾峰寺-旗山顶圈越</div><div class="meta">闽侯县 · 寺庙|环线 · 搜索词：福州 仁宅登山道-鸾峰寺-旗山顶圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E5%AE%85%E7%99%BB%E5%B1%B1%E9%81%93-%E9%B8%BE%E5%B3%B0%E5%AF%BA-%E6%97%97%E5%B1%B1%E9%A1%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E5%AE%85%E7%99%BB%E5%B1%B1%E9%81%93-%E9%B8%BE%E5%B3%B0%E5%AF%BA-%E6%97%97%E5%B1%B1%E9%A1%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E5%AE%85%E7%99%BB%E5%B1%B1%E9%81%93-%E9%B8%BE%E5%B3%B0%E5%AF%BA-%E6%97%97%E5%B1%B1%E9%A1%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%81%E5%AE%85%E7%99%BB%E5%B1%B1%E9%81%93-%E9%B8%BE%E5%B3%B0%E5%AF%BA-%E6%97%97%E5%B1%B1%E9%A1%B6%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz066 晋安 升山寺-湖顶山-福州国家森林公园环线 福州周边 森林|避暑|寺庙|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ066</div>
+<div><div class="name">晋安 升山寺-湖顶山-福州国家森林公园环线</div><div class="meta">福州周边 · 森林|避暑|寺庙|环线 · 搜索词：福州 升山寺-湖顶山-福州国家森林公园环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%8D%87%E5%B1%B1%E5%AF%BA-%E6%B9%96%E9%A1%B6%E5%B1%B1-%E7%A6%8F%E5%B7%9E%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%87%E5%B1%B1%E5%AF%BA-%E6%B9%96%E9%A1%B6%E5%B1%B1-%E7%A6%8F%E5%B7%9E%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%87%E5%B1%B1%E5%AF%BA-%E6%B9%96%E9%A1%B6%E5%B1%B1-%E7%A6%8F%E5%B7%9E%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%8D%87%E5%B1%B1%E5%AF%BA-%E6%B9%96%E9%A1%B6%E5%B1%B1-%E7%A6%8F%E5%B7%9E%E5%9B%BD%E5%AE%B6%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz067 平潭 大练岛环线 平潭县 看海|海岸|摄影|环线" data-has="with">
+<div class="route-head">
+<div class="rid">FZ067</div>
+<div><div class="name">平潭 大练岛环线</div><div class="meta">平潭县 · 看海|海岸|摄影|环线 · 搜索词：福州 大练岛环线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找能看出海岸线/渔村/岛屿的开阔横图，适合做路线主图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方文旅/景区授权 &gt; Wikimedia/Openverse 海岸地标图 &gt; 付费图库海岸示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_02.jpg" alt="大练岛上看平潭公铁大桥 02.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_02.jpg" target="_blank">大练岛上看平潭公铁大桥 02.jpg</a><br>需打开页面核验<br>大练岛视角，可用于大练岛环线</div>
+</div>
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_01.jpg" alt="大练岛上看平潭公铁大桥 01.jpg">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E5%A4%A7%E7%BB%83%E5%B2%9B%E4%B8%8A%E7%9C%8B%E5%B9%B3%E6%BD%AD%E5%85%AC%E9%93%81%E5%A4%A7%E6%A1%A5_01.jpg" target="_blank">大练岛上看平潭公铁大桥 01.jpg</a><br>需打开页面核验<br>大练岛视角，可用于大练岛环线</div>
+</div>
+<div class="empty"><div class="empty-title">Commons 分类页</div>
+<div class="links"><a class="primary" target="_blank" href="https://commons.wikimedia.org/wiki/Category:Pingtan_County">打开分类筛图</a></div><div class="risk">分类页需逐张打开核验授权。</div></div>
+</div>
+</div></section>
+<section class="route" data-search="fz068 晋安 樟林古道-柳杉王公园-鼓岭古道环线 晋安区 古道|历史人文|森林|避暑|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ068</div>
+<div><div class="name">晋安 樟林古道-柳杉王公园-鼓岭古道环线</div><div class="meta">晋安区 · 古道|历史人文|森林|避暑|环线 · 搜索词：福州 樟林古道-柳杉王公园-鼓岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93-%E6%9F%B3%E6%9D%89%E7%8E%8B%E5%85%AC%E5%9B%AD-%E9%BC%93%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz069 闽侯 水项古道-旗山森林公园长线 闽侯县 古道|历史人文|森林|避暑|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ069</div>
+<div><div class="name">闽侯 水项古道-旗山森林公园长线</div><div class="meta">闽侯县 · 古道|历史人文|森林|避暑|环线 · 搜索词：福州 水项古道-旗山森林公园长线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93-%E6%97%97%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E9%95%BF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93-%E6%97%97%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E9%95%BF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93-%E6%97%97%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E9%95%BF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%B0%B4%E9%A1%B9%E5%8F%A4%E9%81%93-%E6%97%97%E5%B1%B1%E6%A3%AE%E6%9E%97%E5%85%AC%E5%9B%AD%E9%95%BF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz070 永泰 横串古道环线 永泰县 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ070</div>
+<div><div class="name">永泰 横串古道环线</div><div class="meta">永泰县 · 古道|历史人文|环线 · 搜索词：福州 横串古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz071 永泰 漈上-横串古村-横串古道小环线 福州周边 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ071</div>
+<div><div class="name">永泰 漈上-横串古村-横串古道小环线</div><div class="meta">福州周边 · 古道|历史人文|环线 · 搜索词：福州 漈上-横串古村-横串古道小环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E6%BC%88%E4%B8%8A-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E6%9D%91-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E5%B0%8F%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E6%BC%88%E4%B8%8A-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E6%9D%91-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E5%B0%8F%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E6%BC%88%E4%B8%8A-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E6%9D%91-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E5%B0%8F%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E6%BC%88%E4%B8%8A-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E6%9D%91-%E6%A8%AA%E4%B8%B2%E5%8F%A4%E9%81%93%E5%B0%8F%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz072 福清 猛犸岩-南岭古道圈越 福州周边 古道|历史人文|寺庙|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ072</div>
+<div><div class="name">福清 猛犸岩-南岭古道圈越</div><div class="meta">福州周边 · 古道|历史人文|寺庙|环线 · 搜索词：福州 猛犸岩-南岭古道圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找寺庙入口、古道石阶、山林和远眺城市组合图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8C%9B%E7%8A%B8%E5%B2%A9-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%9B%E7%8A%B8%E5%B2%A9-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%9B%E7%8A%B8%E5%B2%A9-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8C%9B%E7%8A%B8%E5%B2%A9-%E5%8D%97%E5%B2%AD%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz073 晋安 白云洞-积翠庵圈越 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ073</div>
+<div><div class="name">晋安 白云洞-积翠庵圈越</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 白云洞-积翠庵圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%99%BD%E4%BA%91%E6%B4%9E-%E7%A7%AF%E7%BF%A0%E5%BA%B5%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%99%BD%E4%BA%91%E6%B4%9E-%E7%A7%AF%E7%BF%A0%E5%BA%B5%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%99%BD%E4%BA%91%E6%B4%9E-%E7%A7%AF%E7%BF%A0%E5%BA%B5%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%99%BD%E4%BA%91%E6%B4%9E-%E7%A7%AF%E7%BF%A0%E5%BA%B5%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz074 晋安 磨溪-绝顶峰-鼓山穿越 晋安区 溪谷|避暑" data-has="with">
+<div class="route-head">
+<div class="rid">FZ074</div>
+<div><div class="name">晋安 磨溪-绝顶峰-鼓山穿越</div><div class="meta">晋安区 · 溪谷|避暑 · 搜索词：福州 磨溪-绝顶峰-鼓山穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz075 晋安 白云洞-鼓山穿越线 福州周边 观景" data-has="with">
+<div class="route-head">
+<div class="rid">FZ075</div>
+<div><div class="name">晋安 白云洞-鼓山穿越线</div><div class="meta">福州周边 · 观景 · 搜索词：福州 白云洞-鼓山穿越线 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz076 长乐 龙潭晓瀑-六平山穿越 长乐区 溪谷|避暑" data-has="search">
+<div class="route-head">
+<div class="rid">FZ076</div>
+<div><div class="name">长乐 龙潭晓瀑-六平山穿越</div><div class="meta">长乐区 · 溪谷|避暑 · 搜索词：福州 龙潭晓瀑-六平山穿越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E6%BD%AD%E6%99%93%E7%80%91-%E5%85%AD%E5%B9%B3%E5%B1%B1%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E6%BD%AD%E6%99%93%E7%80%91-%E5%85%AD%E5%B9%B3%E5%B1%B1%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E6%BD%AD%E6%99%93%E7%80%91-%E5%85%AD%E5%B9%B3%E5%B1%B1%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E6%BD%AD%E6%99%93%E7%80%91-%E5%85%AD%E5%B9%B3%E5%B1%B1%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz077 闽侯 五虎山五虎圈越 闽侯县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ077</div>
+<div><div class="name">闽侯 五虎山五虎圈越</div><div class="meta">闽侯县 · 观景|环线 · 搜索词：福州 五虎山五虎圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E4%BA%94%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E4%BA%94%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E4%BA%94%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BA%94%E8%99%8E%E5%B1%B1%E4%BA%94%E8%99%8E%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz078 福清 大化山圈越 福清市 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ078</div>
+<div><div class="name">福清 大化山圈越</div><div class="meta">福清市 · 观景|环线 · 搜索词：福州 大化山圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%8C%96%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%8C%96%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%8C%96%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%A4%A7%E5%8C%96%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz079 罗源 凤凰山圈越 罗源县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ079</div>
+<div><div class="name">罗源 凤凰山圈越</div><div class="meta">罗源县 · 观景|环线 · 搜索词：福州 凤凰山圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%87%A4%E5%87%B0%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%87%A4%E5%87%B0%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%87%A4%E5%87%B0%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%87%A4%E5%87%B0%E5%B1%B1%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz080 罗源 仙茅山-飞鸾岭古道环线 罗源县 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ080</div>
+<div><div class="name">罗源 仙茅山-飞鸾岭古道环线</div><div class="meta">罗源县 · 古道|历史人文|环线 · 搜索词：福州 仙茅山-飞鸾岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E4%BB%99%E8%8C%85%E5%B1%B1-%E9%A3%9E%E9%B8%BE%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%99%E8%8C%85%E5%B1%B1-%E9%A3%9E%E9%B8%BE%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%99%E8%8C%85%E5%B1%B1-%E9%A3%9E%E9%B8%BE%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E4%BB%99%E8%8C%85%E5%B1%B1-%E9%A3%9E%E9%B8%BE%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz081 晋安 莲花峰-鳝溪古道圈越 福州周边 古道|历史人文|溪谷|避暑|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ081</div>
+<div><div class="name">晋安 莲花峰-鳝溪古道圈越</div><div class="meta">福州周边 · 古道|历史人文|溪谷|避暑|环线 · 搜索词：福州 莲花峰-鳝溪古道圈越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E8%8E%B2%E8%8A%B1%E5%B3%B0-%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E8%8E%B2%E8%8A%B1%E5%B3%B0-%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E8%8E%B2%E8%8A%B1%E5%B3%B0-%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E8%8E%B2%E8%8A%B1%E5%B3%B0-%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93%E5%9C%88%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz082 晋安 蛇山古道-恩顶村-竹园岭古道环线 福州周边 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ082</div>
+<div><div class="name">晋安 蛇山古道-恩顶村-竹园岭古道环线</div><div class="meta">福州周边 · 古道|历史人文|环线 · 搜索词：福州 蛇山古道-恩顶村-竹园岭古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E8%9B%87%E5%B1%B1%E5%8F%A4%E9%81%93-%E6%81%A9%E9%A1%B6%E6%9D%91-%E7%AB%B9%E5%9B%AD%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E8%9B%87%E5%B1%B1%E5%8F%A4%E9%81%93-%E6%81%A9%E9%A1%B6%E6%9D%91-%E7%AB%B9%E5%9B%AD%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E8%9B%87%E5%B1%B1%E5%8F%A4%E9%81%93-%E6%81%A9%E9%A1%B6%E6%9D%91-%E7%AB%B9%E5%9B%AD%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E8%9B%87%E5%B1%B1%E5%8F%A4%E9%81%93-%E6%81%A9%E9%A1%B6%E6%9D%91-%E7%AB%B9%E5%9B%AD%E5%B2%AD%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz083 马尾 君山小桂林环线 福州周边 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ083</div>
+<div><div class="name">马尾 君山小桂林环线</div><div class="meta">福州周边 · 观景|环线 · 搜索词：福州 君山小桂林环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E5%90%9B%E5%B1%B1%E5%B0%8F%E6%A1%82%E6%9E%97%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz084 晋安 鳝溪古道-樟林古道穿越 福州周边 古道|历史人文|溪谷|避暑|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ084</div>
+<div><div class="name">晋安 鳝溪古道-樟林古道穿越</div><div class="meta">福州周边 · 古道|历史人文|溪谷|避暑|环线 · 搜索词：福州 鳝溪古道-樟林古道穿越 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93-%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93-%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93-%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%B3%9D%E6%BA%AA%E5%8F%A4%E9%81%93-%E6%A8%9F%E6%9E%97%E5%8F%A4%E9%81%93%E7%A9%BF%E8%B6%8A%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz085 晋安 鼓岭古道-牛头寨-柱里公园-鼓山穿越 晋安区 古道|历史人文|森林|避暑" data-has="with">
+<div class="route-head">
+<div class="rid">FZ085</div>
+<div><div class="name">晋安 鼓岭古道-牛头寨-柱里公园-鼓山穿越</div><div class="meta">晋安区 · 古道|历史人文|森林|避暑 · 搜索词：福州 鼓岭古道-牛头寨-柱里公园-鼓山穿越 徒步 风景</div></div>
+<div class="badge">已有预览图</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="imgs">
+<div class="img-card">
+<img loading="lazy" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain" alt="从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain">
+<div class="cap"><a href="https://commons.wikimedia.org/wiki/File:%E4%BB%8E%E9%BC%93%E5%B1%B1%E7%9C%8B%E7%A6%8F%E5%B7%9E_-_Fuzhou_City_Viewed_from_Gushan_Mountain_-_2010.08_-_panoramio.jpg" target="_blank">从鼓山看福州 - Fuzhou City Viewed from Gushan Mountain</a><br>需打开页面核验<br>鼓山俯瞰福州，可用于鼓山观景/穿越线</div>
+</div>
+</div>
+</div></section>
+<section class="route" data-search="fz086 福清 龙凤古道环线 福州周边 古道|历史人文|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ086</div>
+<div><div class="name">福清 龙凤古道环线</div><div class="meta">福州周边 · 古道|历史人文|环线 · 搜索词：福州 龙凤古道环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找石阶古道、林下路径、古村/古寺节点，避免只用纯山景。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia Commons 地标/古道图 &gt; 官方文旅授权 &gt; 普通搜索仅作联系作者线索</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%BE%99%E5%87%A4%E5%8F%A4%E9%81%93%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz087 连江 王庄村-睡狐狸-老虎厝环线 连江县 观景|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ087</div>
+<div><div class="name">连江 王庄村-睡狐狸-老虎厝环线</div><div class="meta">连江县 · 观景|环线 · 搜索词：福州 王庄村-睡狐狸-老虎厝环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找路线地标或能体现实际路况的横图。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; Wikimedia/Openverse &gt; 官方授权 &gt; 付费图库/示意图</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E7%8E%8B%E5%BA%84%E6%9D%91-%E7%9D%A1%E7%8B%90%E7%8B%B8-%E8%80%81%E8%99%8E%E5%8E%9D%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E7%8E%8B%E5%BA%84%E6%9D%91-%E7%9D%A1%E7%8B%90%E7%8B%B8-%E8%80%81%E8%99%8E%E5%8E%9D%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8E%8B%E5%BA%84%E6%9D%91-%E7%9D%A1%E7%8B%90%E7%8B%B8-%E8%80%81%E8%99%8E%E5%8E%9D%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E7%8E%8B%E5%BA%84%E6%9D%91-%E7%9D%A1%E7%8B%90%E7%8B%B8-%E8%80%81%E8%99%8E%E5%8E%9D%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+<section class="route" data-search="fz088 闽侯 鸿尾举口村-畲家厝-穆源溪瀑布环线 永泰县 溪谷|避暑|环线" data-has="search">
+<div class="route-head">
+<div class="rid">FZ088</div>
+<div><div class="name">闽侯 鸿尾举口村-畲家厝-穆源溪瀑布环线</div><div class="meta">永泰县 · 溪谷|避暑|环线 · 搜索词：福州 鸿尾举口村-畲家厝-穆源溪瀑布环线 徒步 风景</div></div>
+<div class="badge">待挑选</div>
+</div><div class="body">
+<div class="note">
+<div><b>建议画面</b>优先找溪谷水线、瀑布、湿滑岩石环境，方便表达避暑和风险。</div>
+<div><b>素材优先级</b>真实授权照片 &gt; 官方景区授权 &gt; Wikimedia/Openverse 溪谷瀑布图 &gt; 示意图需标注</div>
+</div>
+<div class="empty"><div class="empty-title">这条线路暂未找到可直接预览的开放图，先从图库/搜索页挑候选</div>
+<div class="links">
+<a class="primary" target="_blank" href="https://commons.wikimedia.org/w/index.php?search=%E7%A6%8F%E5%B7%9E%20%E9%B8%BF%E5%B0%BE%E4%B8%BE%E5%8F%A3%E6%9D%91-%E7%95%B2%E5%AE%B6%E5%8E%9D-%E7%A9%86%E6%BA%90%E6%BA%AA%E7%80%91%E5%B8%83%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF&amp;title=Special:MediaSearch&amp;type=image">Wikimedia</a>
+<a target="_blank" href="https://openverse.org/search/image?q=%E7%A6%8F%E5%B7%9E%20%E9%B8%BF%E5%B0%BE%E4%B8%BE%E5%8F%A3%E6%9D%91-%E7%95%B2%E5%AE%B6%E5%8E%9D-%E7%A9%86%E6%BA%90%E6%BA%AA%E7%80%91%E5%B8%83%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">Openverse</a>
+<a target="_blank" href="https://www.bing.com/images/search?q=%E7%A6%8F%E5%B7%9E%20%E9%B8%BF%E5%B0%BE%E4%B8%BE%E5%8F%A3%E6%9D%91-%E7%95%B2%E5%AE%B6%E5%8E%9D-%E7%A9%86%E6%BA%90%E6%BA%AA%E7%80%91%E5%B8%83%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF">图片搜索</a>
+<a target="_blank" href="https://www.bing.com/search?q=%E7%A6%8F%E5%B7%9E%20%E9%B8%BF%E5%B0%BE%E4%B8%BE%E5%8F%A3%E6%9D%91-%E7%95%B2%E5%AE%B6%E5%8E%9D-%E7%A9%86%E6%BA%90%E6%BA%AA%E7%80%91%E5%B8%83%E7%8E%AF%E7%BA%BF%20%E5%BE%92%E6%AD%A5%20%E9%A3%8E%E6%99%AF%20%E6%B8%B8%E8%AE%B0%20%E6%91%84%E5%BD%B1%20%E4%BD%9C%E8%80%85%20%E6%8E%88%E6%9D%83">找作者授权</a>
+</div><div class="risk">普通搜索只用来找来源和作者，不建议直接搬图。</div></div>
+</div></section>
+</div>
+<script>
+const q=document.getElementById('q');
+const status=document.getElementById('status');
+const previewSiteLink=document.getElementById('previewSiteLink');
+const routes=[...document.querySelectorAll('.route')];
+const storageKey='shanji-route-image-picks-v1';
+const picks=JSON.parse(localStorage.getItem(storageKey)||'{}');
+
+function routeId(route){
+  return route.querySelector('.rid').textContent.trim();
+}
+
+function save(){
+  localStorage.setItem(storageKey,JSON.stringify(picks));
+  updatePreviewLink();
+}
+
+function updatePreviewLink(){
+  previewSiteLink.href='../site/index.html#routeImagePicks='+encodeURIComponent(JSON.stringify(picks));
+}
+
+function setPicked(route,value){
+  const id=routeId(route);
+  if(value){
+    picks[id]=value;
+  }else{
+    delete picks[id];
+  }
+  save();
+  renderRoute(route);
+  apply();
+}
+
+function renderRoute(route){
+  const id=routeId(route);
+  const picked=picks[id];
+  const badge=route.querySelector('.badge');
+  route.classList.toggle('is-picked',Boolean(picked));
+  route.dataset.picked=picked?'yes':'no';
+  badge.textContent=picked?'已挑选':'待挑选';
+  route.querySelectorAll('.img-card').forEach((card,index)=>{
+    const selected=picked&&picked.type==='preview'&&picked.index===index;
+    card.classList.toggle('is-selected',Boolean(selected));
+    const btn=card.querySelector('.pick-btn');
+    if(btn) btn.textContent=selected?'已选这张':'选这张';
+  });
+  route.querySelectorAll('.picked-note').forEach(node=>node.remove());
+  if(picked){
+    const note=document.createElement('div');
+    note.className='picked-note';
+    note.textContent=picked.type==='preview'?'已记录：使用当前选中的预览图。':'已记录：已在外部图库挑好，后续需要补图源链接。';
+    route.querySelector('.body').appendChild(note);
+  }
+}
+
+function enhance(){
+  routes.forEach(route=>{
+    route.dataset.picked='no';
+    route.querySelectorAll('.img-card').forEach((card,index)=>{
+      if(card.querySelector('.pick-row')) return;
+      const link=card.querySelector('.cap a');
+      const row=document.createElement('div');
+      row.className='pick-row';
+      const pick=document.createElement('button');
+      pick.type='button';
+      pick.className='pick-btn';
+      pick.textContent='选这张';
+      pick.addEventListener('click',()=>{
+        setPicked(route,{type:'preview',index,title:link?link.textContent.trim():'预览图',url:link?link.href:''});
+      });
+      const clear=document.createElement('button');
+      clear.type='button';
+      clear.className='clear-btn';
+      clear.textContent='取消选择';
+      clear.addEventListener('click',()=>setPicked(route,null));
+      row.append(pick,clear);
+      card.appendChild(row);
+    });
+    if(!route.querySelector('.img-card')&&!route.querySelector('.external-pick')){
+      const empty=route.querySelector('.empty');
+      const row=document.createElement('div');
+      row.className='pick-row external-pick';
+      const mark=document.createElement('button');
+      mark.type='button';
+      mark.className='pick-btn';
+      mark.textContent='标记已挑选';
+      mark.addEventListener('click',()=>setPicked(route,{type:'external'}));
+      const clear=document.createElement('button');
+      clear.type='button';
+      clear.className='clear-btn';
+      clear.textContent='取消选择';
+      clear.addEventListener('click',()=>setPicked(route,null));
+      row.append(mark,clear);
+      empty.appendChild(row);
+    }
+    renderRoute(route);
+  });
+}
+
+function apply(){
+  const term=q.value.trim().toLowerCase();
+  const st=status.value;
+  routes.forEach(route=>{
+    const okText=!term||route.dataset.search.includes(term);
+    let okStatus=true;
+    if(st==='picked') okStatus=route.dataset.picked==='yes';
+    if(st==='unpicked') okStatus=route.dataset.picked!=='yes';
+    if(st==='with'||st==='search') okStatus=route.dataset.has===st;
+    route.classList.toggle('hidden',!(okText&&okStatus));
+  });
+}
+
+enhance();
+updatePreviewLink();
+q.addEventListener('input',apply);
+status.addEventListener('change',apply);
+</script>
+</body></html>

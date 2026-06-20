@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="山迹是福州徒步线路库和户外活动信息共享平台，提供福州周边候选徒步路线查询、轨迹地图预览、路线详情、轨迹下载和俱乐部活动聚合。">
+  <meta name="description" content="山迹是福州徒步线路库和户外活动信息共享平台，提供福州周边徒步路线查询、线路轨迹预览、出行提醒和俱乐部活动聚合。">
   <meta property="og:title" content="山迹｜福州徒步线路库">
   <meta property="og:description" content="按区域、难度、风景和活动信息选择适合自己的福州周边徒步路线。">
   <title>山迹｜福州徒步线路库</title>
-  <link rel="stylesheet" href="./assets/styles.css?v=1.4">
+  <link rel="stylesheet" href="./assets/styles.css?v=1.5">
 </head>
 <body>
 <div class="app-shell">
@@ -25,7 +25,7 @@
           <input id="searchInput" type="search" placeholder="搜索路线、区域、风景，例如：鼓山、看海、新手">
         </label>
         <button class="small-button mobile-filter-toggle" id="mobileFilterButton">筛选</button>
-      <div class="status-chip">V1.4 路线复核版</div>
+      <div class="status-chip">福州路线库</div>
       </div>
     </header>
 
@@ -68,15 +68,14 @@
       <section class="content">
         <section class="intro">
           <h1>福州周边最值得走的徒步路线，先从适合你的那一条开始</h1>
-          <p>山迹是福州徒步线路库和活动信息共享平台。V1.4 加入路线复核体系，把起终点、交通、补给、厕所、下撤、点位、轨迹和授权拆成可检查字段，帮助内测前集中补齐资料。</p>
+          <p>山迹整理福州周边徒步路线、交通补给、出行提醒和线路轨迹预览，帮助你按区域、难度、距离和风景主题找到更适合自己的路线。</p>
           <div class="quick-actions" id="quickActions"></div>
         </section>
 
         <section class="test-notice">
           <strong>测试说明</strong>
           <span>当前路线仍以资料整理和体验测试为主，出发前请再次确认天气、路况、交通、开放状态和自身能力。山迹不直接组织活动，也不代收任何费用。</span>
-          <a class="inline-link" href="./map.html">查看路线地图页</a>
-          <a class="inline-link" href="./review.html">查看复核看板</a>
+          <a class="inline-link" href="./map.html">查看路线分布</a>
           <a class="inline-link" href="./tracks.html">查看轨迹库</a>
           <a class="inline-link" href="./activities.html">查看活动聚合页</a>
           <a class="inline-link" href="./safety.html">安全说明</a>
@@ -86,7 +85,7 @@
         <section class="entry-switch" aria-label="入口选择">
           <button class="entry-card active" id="routeEntryButton">
             <strong>自己选路线</strong>
-            <span>按区域、难度、距离、交通和风景筛选，查看路线详情、风险提示和轨迹文件。</span>
+            <span>按区域、难度、距离、交通和风景筛选，查看路线详情、出行提醒和线路轨迹。</span>
           </button>
           <button class="entry-card" id="clubEntryButton">
             <strong>本周俱乐部活动</strong>
@@ -154,7 +153,7 @@
     </main>
 
     <footer class="site-footer">
-      <strong>山迹 V1.4 路线复核版</strong>
+      <strong>山迹 福州徒步线路库</strong>
       <span>仅用于路线选择体验测试。活动报名、保险、领队安排和安全责任以活动组织方说明为准；自行出行请自行判断风险并做好准备。</span>
       <span><a class="inline-link" href="./about.html">关于山迹</a> <a class="inline-link" href="./safety.html">安全说明</a> <a class="inline-link" href="./feedback.html">反馈入口</a></span>
     </footer>
@@ -169,8 +168,8 @@
     </div>
     <div class="drawer-body" id="drawerBody"></div>
   </aside>
-  <script src="./data/routes.js?v=1.4"></script>
-  <script src="./data/activities.js?v=1.4"></script>
-  <script src="./assets/app.js?v=1.4"></script>
+  <script src="./data/routes.js?v=1.5"></script>
+  <script src="./data/activities.js?v=1.5"></script>
+  <script src="./assets/app.js?v=1.5"></script>
 </body>
 </html>
