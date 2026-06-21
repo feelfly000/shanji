@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="山迹是福州徒步线路库和户外活动信息共享平台，提供福州周边徒步路线查询、线路轨迹预览、出行提醒和俱乐部活动聚合。">
+  <meta name="description" content="山迹是福州徒步线路库和户外活动信息共享平台，提供福州周边徒步路线查询、线路轨迹预览、出行提醒和俱乐部活动信息聚合。">
   <meta property="og:title" content="山迹｜福州徒步线路库">
   <meta property="og:description" content="按区域、难度、风景和活动信息选择适合自己的福州周边徒步路线。">
   <title>山迹｜福州徒步线路库</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="./assets/styles.css?v=1.5">
+  <link rel="stylesheet" href="./assets/styles.css?v=1.9">
 </head>
 <body>
 <div class="app-shell">
@@ -17,12 +17,12 @@
         <div class="brand">
           <img class="brand-logo" src="./assets/shanji-logo-header.png" alt="山迹 shanjimap.com">
         </div>
-        <label class="search">
+        <form class="search" id="searchForm" role="search">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path></svg>
           <input id="searchInput" type="search" placeholder="搜索路线、区域、风景，例如：鼓山、看海、新手">
-        </label>
+          <button class="search-submit" type="submit">搜索</button>
+        </form>
         <button class="small-button mobile-filter-toggle" id="mobileFilterButton">筛选</button>
-      <div class="status-chip">福州路线库</div>
       </div>
     </header>
 
@@ -75,7 +75,7 @@
           <div class="notice-links">
             <a class="inline-link" href="./map.html">路线分布</a>
             <a class="inline-link" href="./tracks.html">轨迹库</a>
-            <a class="inline-link" href="./activities.html">活动聚合</a>
+            <a class="inline-link" href="./activities.html">活动线索</a>
           </div>
         </section>
 
@@ -85,20 +85,20 @@
             <span>按区域、难度、距离、交通和风景筛选，查看路线详情、出行提醒和线路轨迹。</span>
           </button>
           <button class="entry-card" id="clubEntryButton">
-            <strong>本周俱乐部活动</strong>
-            <span>集中查看各户外俱乐部发布的组织线路，比较时间、强度、费用和报名状态。</span>
+            <strong>活动线索找路线</strong>
+            <span>收集各俱乐部公开活动信息，标出来源、时效和关联本地线路，不在山迹报名。</span>
           </button>
         </section>
 
         <section class="club-panel" id="clubPanel">
           <div class="panel-title">
-            <h2>本周俱乐部活动</h2>
-            <span class="status-chip">信息聚合 · 待审核</span>
+            <h2>近期活动线索</h2>
+            <span class="status-chip">只收集 · 只关联</span>
           </div>
           <div class="club-toolbar" id="clubFilters"></div>
           <div class="club-grid" id="clubList"></div>
-          <div class="club-note">活动列表展示来源、发布时间、报名截止、官方状态和独立聚合页；山迹不直接代收费用、不替代活动组织方的安全责任。</div>
-          <a class="inline-link" href="./activities.html">打开活动聚合页</a>
+          <div class="club-note">这里把俱乐部公开活动整理成线索，方便回到山迹线路库看距离、强度、交通和风险提醒。活动是否成行、费用、保险和人员安排请以组织方原始来源为准。</div>
+          <a class="inline-link" href="./activities.html">打开活动线索页</a>
         </section>
 
         <section class="summary-row">
@@ -131,6 +131,7 @@
         <div class="map-canvas" id="mapCanvas" aria-label="福州周边徒步路线开源地图"></div>
         <div class="map-legend">
           <p>地图基于 OpenStreetMap 开源底图展示，点位来自路线起点或已整理坐标；实际出行仍请以现场路况和正规导航为准。</p>
+          <a class="map-panel-link" href="./map.html">打开完整线路分布图</a>
         </div>
         <div class="topics">
           <div class="panel-title">
@@ -151,7 +152,7 @@
 
     <footer class="site-footer">
       <strong>山迹 福州徒步线路库</strong>
-      <span>路线信息仅供出行前参考。活动报名、保险、领队安排和安全责任以活动组织方说明为准；自行出行请自行判断风险并做好准备。</span>
+      <span>路线信息仅供出行前参考。活动信息仅作公开线索收集和本地线路关联；是否参与、保险、领队安排和安全责任以活动组织方说明为准。</span>
       <span><a class="inline-link" href="./about.html">关于山迹</a> <a class="inline-link" href="./safety.html">安全说明</a> <a class="inline-link" href="./feedback.html">反馈入口</a></span>
     </footer>
   </div>
@@ -168,6 +169,6 @@
   <script src="./data/routes.js?v=1.5"></script>
   <script src="./data/activities.js?v=1.5"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="./assets/app.js?v=1.5"></script>
+  <script src="./assets/app.js?v=1.9"></script>
 </body>
 </html>

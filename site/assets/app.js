@@ -10,8 +10,11 @@ const routes = window.SHANJI_ROUTES;
       maxDistance: 25,
       sort: "recommended",
       selectedId: null,
-      clubFilter: "全部"
+      clubFilter: "全部",
+      routesExpanded: false
     };
+
+    const homeRoutePreviewCount = 8;
 
     const filterDefs = {
       region: ["鼓楼区", "晋安区", "闽侯县", "马尾区", "连江县", "长乐区", "永泰县", "福清市", "平潭县", "罗源县"],
@@ -152,6 +155,7 @@ const routes = window.SHANJI_ROUTES;
           button.textContent = item;
           button.addEventListener("click", () => {
             state.filters[key] = state.filters[key] === item ? null : item;
+            state.routesExpanded = false;
             render();
           });
           container.appendChild(button);
@@ -175,6 +179,7 @@ const routes = window.SHANJI_ROUTES;
           } else {
             state.filters.theme = item;
           }
+          state.routesExpanded = false;
           render();
         });
         container.appendChild(button);
@@ -186,7 +191,10 @@ const routes = window.SHANJI_ROUTES;
       document.getElementById("metricEasy").textContent = routes.filter(r => difficultyRank(r) === 1 || r.audience.includes("新手")).length;
       document.getElementById("metricTransit").textContent = routes.filter(r => r.transitFriendly).length;
       document.getElementById("metricSea").textContent = routes.filter(r => r.themes.includes("观景") || r.themes.includes("看海") || r.audience.includes("摄影")).length;
-      resultCount.textContent = `当前显示 ${filtered.length} 条路线`;
+      const visibleCount = Math.min(filtered.length, state.routesExpanded ? filtered.length : homeRoutePreviewCount);
+      resultCount.textContent = filtered.length > homeRoutePreviewCount
+        ? `当前显示 ${visibleCount} / ${filtered.length} 条路线`
+        : `当前显示 ${filtered.length} 条路线`;
       mapCount.textContent = `${filtered.length}条`;
     }
 
@@ -197,7 +205,8 @@ const routes = window.SHANJI_ROUTES;
         return;
       }
 
-      filtered.forEach(route => {
+      const visibleRoutes = state.routesExpanded ? filtered : filtered.slice(0, homeRoutePreviewCount);
+      visibleRoutes.forEach(route => {
         const card = document.createElement("article");
         card.className = `route-card ${state.selectedId === route.id ? "active" : ""}`;
         card.tabIndex = 0;
@@ -227,6 +236,23 @@ const routes = window.SHANJI_ROUTES;
         });
         routeList.appendChild(card);
       });
+
+      if (filtered.length > homeRoutePreviewCount) {
+        const actions = document.createElement("div");
+        actions.className = "route-list-actions";
+        const toggleButton = document.createElement("button");
+        toggleButton.className = "small-button route-list-toggle";
+        toggleButton.type = "button";
+        toggleButton.textContent = state.routesExpanded
+          ? "收起路线"
+          : `查看更多路线（剩余 ${filtered.length - homeRoutePreviewCount} 条）`;
+        toggleButton.addEventListener("click", () => {
+          state.routesExpanded = !state.routesExpanded;
+          render();
+        });
+        actions.appendChild(toggleButton);
+        routeList.appendChild(actions);
+      }
     }
 
     function renderMap(filtered) {
@@ -293,6 +319,7 @@ const routes = window.SHANJI_ROUTES;
           if (topic.filter) {
             state.filters = { ...state.filters, ...topic.filter };
           }
+          state.routesExpanded = false;
           render();
         });
         container.appendChild(button);
@@ -301,20 +328,20 @@ const routes = window.SHANJI_ROUTES;
 
     function activityMatches(activity) {
       if (state.clubFilter === "全部") return true;
-      if (state.clubFilter === "报名中") return activity.status === "报名中";
-      if (state.clubFilter === "即将满员") return activity.status === "余位紧张";
-      if (state.clubFilter === "已审核") return activity.audit === "已审核";
+      if (state.clubFilter === "已关联线路") return Boolean(activity.routeId);
+      if (state.clubFilter === "已核验来源") return activity.audit === "已审核";
+      if (state.clubFilter === "待确认") return activity.status === "待确认" || activity.audit === "待审核" || String(activity.officialStatus || "").includes("确认");
       return activity.tags.includes(state.clubFilter) || activity.difficulty === state.clubFilter;
     }
 
     function statusClass(status) {
-      if (status === "余位紧张") return "hot";
-      if (status === "已截止" || status === "已满员") return "closed";
+      if (status === "重点关注") return "hot";
+      if (status === "待确认") return "closed";
       return "";
     }
 
     function renderClubFilters() {
-      const filters = ["全部", "报名中", "即将满员", "已审核", "新手", "亲子", "看海", "进阶", "避暑"];
+      const filters = ["全部", "已关联线路", "已核验来源", "待确认", "新手", "亲子", "看海", "进阶", "避暑"];
       const container = document.getElementById("clubFilters");
       container.innerHTML = "";
       filters.forEach(item => {
@@ -344,8 +371,10 @@ const routes = window.SHANJI_ROUTES;
         const card = document.createElement("article");
         card.className = "club-card";
         card.innerHTML = `
-          <strong>${activity.title}</strong>
-          <span class="club-status ${statusClass(activity.status)}">${activity.status}</span>
+          <div class="club-card-head">
+            <strong>${activity.title}</strong>
+            <span class="club-status ${statusClass(activity.status)}">${activity.status}</span>
+          </div>
           <div class="club-meta">
             <span class="meta-pill">${activity.date}</span>
             <span class="meta-pill">${activity.club}</span>
@@ -354,14 +383,14 @@ const routes = window.SHANJI_ROUTES;
             <span class="meta-pill">${activity.distance}km</span>
             <span class="meta-pill">爬升${activity.ascent}m</span>
           </div>
-          <p>${activity.meeting}｜${activity.transport}｜费用：${activity.fee}</p>
+          <p>${activity.meeting}｜${activity.transport}｜原文费用：${activity.fee}</p>
           <p>${activity.note}</p>
-          <p>来源：${activity.sourceName || "待补充"}｜发布：${activity.publishedAt || "待补充"}｜截止：${activity.deadline || "待补充"}</p>
+          <p>来源：${activity.sourceName || "待补充"}｜发布：${activity.publishedAt || "待补充"}｜时效：${activity.deadline || "待补充"}</p>
           <div class="club-actions">
             <span class="club-status">${activity.officialStatus || activity.audit}</span>
-            <a href="./activities/${activity.id}.html" aria-label="${activity.title}详情页">活动详情页</a>
+            <a href="./activities/${activity.id}.html" aria-label="${activity.title}线索详情页">线索详情</a>
           </div>
-          ${linkedRoute ? `<p style="margin-top:8px">关联路线：${linkedRoute.name}</p>` : ""}
+          ${linkedRoute ? `<a class="club-route-link" href="./routes/${linkedRoute.id}.html">关联线路：${linkedRoute.name}</a>` : ""}
         `;
         container.appendChild(card);
       });
@@ -450,17 +479,28 @@ const routes = window.SHANJI_ROUTES;
 
     searchInput.addEventListener("input", event => {
       state.query = event.target.value;
+      state.routesExpanded = false;
       render();
+    });
+
+    document.getElementById("searchForm").addEventListener("submit", event => {
+      event.preventDefault();
+      state.query = searchInput.value;
+      state.routesExpanded = false;
+      render();
+      document.getElementById("resultCount").scrollIntoView({ behavior: "smooth", block: "center" });
     });
 
     sortSelect.addEventListener("change", event => {
       state.sort = event.target.value;
+      state.routesExpanded = false;
       render();
     });
 
     document.getElementById("distanceRange").addEventListener("input", event => {
       state.maxDistance = Number(event.target.value);
       document.getElementById("distanceValue").textContent = `${state.maxDistance}km`;
+      state.routesExpanded = false;
       render();
     });
 
@@ -473,6 +513,7 @@ const routes = window.SHANJI_ROUTES;
       document.getElementById("distanceValue").textContent = "25km";
       state.sort = "recommended";
       sortSelect.value = "recommended";
+      state.routesExpanded = false;
       render();
     });
 

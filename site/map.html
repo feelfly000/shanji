@@ -3,466 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>山迹路线地图｜V1.4</title>
-  <link rel="stylesheet" href="./assets/styles.css?v=1.4">
+  <meta name="description" content="山迹路线分布图，查看福州周边徒步路线在地图上的位置、区域、难度和距离。">
+  <title>路线分布图｜山迹</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="./assets/styles.css?v=1.6">
 </head>
 <body>
-  <main class="detail-page">
+  <main class="detail-page map-page">
     <a class="back-link" href="./index.html">返回山迹首页</a>
-    <section class="detail-hero" style="--detail-color:#5f9e78">
-      <span class="status-chip">V1.4 地图页</span>
-      <h1>路线地图</h1>
-      <p>路线点位由 CSV 自动生成，当前仍为近似坐标，正式发布前需要复核。</p>
-    </section>
-    <section class="osm-panel">
-      <iframe title="OpenStreetMap 福州周边视图" src="https://www.openstreetmap.org/export/embed.html?bbox=118.65%2C25.25%2C120.05%2C26.65&amp;layer=mapnik" loading="lazy"></iframe>
-      <div class="coordinate-board" aria-label="路线近似点位图">
 
-          <a class="coordinate-pin" href="./routes/FZ001.html" style="left:53.09%;top:43.50%" title="鼓楼 福道精华步道">001</a>
-          <a class="coordinate-pin" href="./routes/FZ002.html" style="left:56.96%;top:42.93%" title="鼓楼 福山-福道-冶山城市山线">002</a>
-          <a class="coordinate-pin" href="./routes/FZ003.html" style="left:62.04%;top:46.04%" title="晋安 鼓山登山道-涌泉寺登山线">003</a>
-          <a class="coordinate-pin" href="./routes/FZ004.html" style="left:61.65%;top:44.61%" title="晋安 鼓山-十八景-喝水岩-白云顶穿越">004</a>
-          <a class="coordinate-pin" href="./routes/FZ005.html" style="left:63.32%;top:44.12%" title="晋安 鼓山白云洞-凤池白云洞登山线">005</a>
-          <a class="coordinate-pin" href="./routes/FZ006.html" style="left:61.49%;top:43.79%" title="晋安 鼓山-鼓岭古道穿越">006</a>
-          <a class="coordinate-pin" href="./routes/FZ007.html" style="left:65.94%;top:39.97%" title="晋安 鼓岭柳杉王公园-鼓岭栈道步道">007</a>
-          <a class="coordinate-pin" href="./routes/FZ008.html" style="left:50.97%;top:55.30%" title="闽侯 五虎山-五灵岩寺往返">008</a>
-          <a class="coordinate-pin" href="./routes/FZ009.html" style="left:49.47%;top:54.10%" title="闽侯 五虎山-龙祥岛-旗山湖组合线">009</a>
-          <a class="coordinate-pin" href="./routes/FZ010.html" style="left:49.80%;top:51.36%" title="闽侯 旗山-万佛寺-博思软件园穿越">010</a>
-          <a class="coordinate-pin" href="./routes/FZ011.html" style="left:58.98%;top:42.37%" title="晋安 金鸡山公园环线">011</a>
-          <a class="coordinate-pin" href="./routes/FZ012.html" style="left:56.59%;top:43.89%" title="鼓楼 于山-乌山-三坊七巷城市山线">012</a>
-          <a class="coordinate-pin" href="./routes/FZ013.html" style="left:55.46%;top:42.85%" title="鼓楼 西湖-左海-梅峰山城市绿道">013</a>
-          <a class="coordinate-pin" href="./routes/FZ014.html" style="left:67.81%;top:50.51%" title="马尾 罗星塔-船政文化步道">014</a>
-          <a class="coordinate-pin" href="./routes/FZ015.html" style="left:82.78%;top:61.69%" title="长乐 下沙海岸线">015</a>
-          <a class="coordinate-pin" href="./routes/FZ016.html" style="left:76.80%;top:53.70%" title="长乐 猴屿洞天岩步道">016</a>
-          <a class="coordinate-pin" href="./routes/FZ017.html" style="left:96.26%;top:24.17%" title="连江 黄岐古石村海岸线">017</a>
-          <a class="coordinate-pin" href="./routes/FZ018.html" style="left:92.51%;top:20.98%" title="连江 奇达旗冠顶看海线">018</a>
-          <a class="coordinate-pin" href="./routes/FZ019.html" style="left:93.26%;top:80.84%" title="平潭 北部湾生态廊道">019</a>
-          <a class="coordinate-pin" href="./routes/FZ020.html" style="left:28.14%;top:68.07%" title="永泰 云顶溪谷避暑线">020</a>
-          <a class="coordinate-pin" href="./routes/FZ021.html" style="left:32.63%;top:68.87%" title="永泰 青云山瀑布步道">021</a>
-          <a class="coordinate-pin" href="./routes/FZ022.html" style="left:16.17%;top:60.89%" title="永泰 嵩口古镇田园步道">022</a>
-          <a class="coordinate-pin" href="./routes/FZ023.html" style="left:60.33%;top:72.86%" title="福清 石竹山登山道">023</a>
-          <a class="coordinate-pin" href="./routes/FZ024.html" style="left:72.36%;top:67.80%" title="福清 大姆山草场环线">024</a>
-          <a class="coordinate-pin" href="./routes/FZ025.html" style="left:69.31%;top:89.62%" title="福清 目屿岛海岸步道">025</a>
-          <a class="coordinate-pin" href="./routes/FZ026.html" style="left:30.39%;top:31.35%" title="闽侯 雪峰山寺周边步道">026</a>
-          <a class="coordinate-pin" href="./routes/FZ027.html" style="left:37.87%;top:57.69%" title="闽侯 十八重溪休闲步道">027</a>
-          <a class="coordinate-pin" href="./routes/FZ028.html" style="left:85.03%;top:32.95%" title="连江 定海湾海岸观景线">028</a>
-          <a class="coordinate-pin" href="./routes/FZ029.html" style="left:92.51%;top:96.01%" title="平潭 坛南湾海岸漫步线">029</a>
-          <a class="coordinate-pin" href="./routes/FZ030.html" style="left:75.30%;top:11.40%" title="罗源 罗源湾滨海观景步道">030</a>
-          <a class="coordinate-pin" href="./routes/FZ031.html" style="left:58.85%;top:38.25%" title="晋安 状元岭古道-小北岭古道环线">031</a>
-          <a class="coordinate-pin" href="./routes/FZ032.html" style="left:84.29%;top:78.73%" title="平潭 大练岛环线">032</a>
-          <a class="coordinate-pin" href="./routes/FZ033.html" style="left:64.42%;top:47.92%" title="晋安 龙门-般若苑-涌泉寺-鼓山古道">033</a>
-          <a class="coordinate-pin" href="./routes/FZ034.html" style="left:60.97%;top:67.93%" title="福清 福川古道-榕树王-台岭村-西溪水库环线">034</a>
-          <a class="coordinate-pin" href="./routes/FZ035.html" style="left:46.44%;top:31.40%" title="闽侯 仁洲村-三叠井圈越">035</a>
-          <a class="coordinate-pin" href="./routes/FZ036.html" style="left:58.74%;top:38.25%" title="晋安 状元岭古道-状元坊-象峰古道环线">036</a>
-          <a class="coordinate-pin" href="./routes/FZ037.html" style="left:61.65%;top:44.61%" title="晋安 白云洞-涌泉寺-鼓山十八景穿越">037</a>
-          <a class="coordinate-pin" href="./routes/FZ038.html" style="left:52.81%;top:43.81%" title="鼓楼 福道7号口往返线">038</a>
-          <a class="coordinate-pin" href="./routes/FZ039.html" style="left:72.76%;top:50.57%" title="长乐 芦际潭森林公园圈越">039</a>
-          <a class="coordinate-pin" href="./routes/FZ040.html" style="left:61.51%;top:42.67%" title="晋安 鼓岭古道-映月湖-柱里-柳杉王公园穿越">040</a>
-          <a class="coordinate-pin" href="./routes/FZ041.html" style="left:62.04%;top:46.04%" title="晋安 鼓山勇敢者登山道-涌泉寺登山线">041</a>
-          <a class="coordinate-pin" href="./routes/FZ042.html" style="left:58.81%;top:56.81%" title="闽侯 五虎山圈越">042</a>
-          <a class="coordinate-pin" href="./routes/FZ043.html" style="left:59.20%;top:38.48%" title="福州 贡院岭古道-鹅鼻岭-泉头古道环线">043</a>
-          <a class="coordinate-pin" href="./routes/FZ044.html" style="left:61.68%;top:44.59%" title="晋安 白云洞-鼓山穿越">044</a>
-          <a class="coordinate-pin" href="./routes/FZ045.html" style="left:67.62%;top:49.74%" title="马尾 君山小桂林-旺岐楼水库环线">045</a>
-          <a class="coordinate-pin" href="./routes/FZ046.html" style="left:46.61%;top:50.42%" title="闽侯 水项古道小圈越">046</a>
-          <a class="coordinate-pin" href="./routes/FZ047.html" style="left:65.62%;top:48.33%" title="马尾 上德古道圈越">047</a>
-          <a class="coordinate-pin" href="./routes/FZ048.html" style="left:45.64%;top:71.87%" title="福清 南少林-南岭古道-猛犸岩圈越">048</a>
-          <a class="coordinate-pin" href="./routes/FZ049.html" style="left:92.91%;top:14.72%" title="罗源 小笔架圈越">049</a>
-          <a class="coordinate-pin" href="./routes/FZ050.html" style="left:45.66%;top:71.90%" title="福清 南岭古道环线">050</a>
-          <a class="coordinate-pin" href="./routes/FZ051.html" style="left:51.14%;top:75.58%" title="福清 灵石山森林公园环线">051</a>
-          <a class="coordinate-pin" href="./routes/FZ052.html" style="left:76.39%;top:68.97%" title="长乐 风洞山环线">052</a>
-          <a class="coordinate-pin" href="./routes/FZ053.html" style="left:61.99%;top:46.02%" title="晋安 鼓山情人谷圈越">053</a>
-          <a class="coordinate-pin" href="./routes/FZ054.html" style="left:32.28%;top:29.43%" title="永泰 望仙谷-五奇仙君殿圈越">054</a>
-          <a class="coordinate-pin" href="./routes/FZ055.html" style="left:71.07%;top:71.22%" title="福清 龙凤古道圈越">055</a>
-          <a class="coordinate-pin" href="./routes/FZ056.html" style="left:69.51%;top:44.95%" title="福州 康坂溪右支-地下河穿越">056</a>
-          <a class="coordinate-pin" href="./routes/FZ057.html" style="left:71.16%;top:71.11%" title="福清 龙凤古驿道环线">057</a>
-          <a class="coordinate-pin" href="./routes/FZ058.html" style="left:53.09%;top:43.50%" title="鼓楼 福道5号口-3号口穿越">058</a>
-          <a class="coordinate-pin" href="./routes/FZ059.html" style="left:49.80%;top:51.36%" title="闽侯 旗山万佛寺-棋盘石-旗山顶环线">059</a>
-          <a class="coordinate-pin" href="./routes/FZ060.html" style="left:72.36%;top:67.80%" title="福清 大姆山草场-旗山-崩山小圈">060</a>
-          <a class="coordinate-pin" href="./routes/FZ061.html" style="left:58.85%;top:38.25%" title="晋安 状元岭古道-小北岭古道环线">061</a>
-          <a class="coordinate-pin" href="./routes/FZ062.html" style="left:36.03%;top:64.78%" title="永泰 万石村-天门山圈越">062</a>
-          <a class="coordinate-pin" href="./routes/FZ063.html" style="left:3.74%;top:73.13%" title="永泰 东湖尖环线">063</a>
-          <a class="coordinate-pin" href="./routes/FZ064.html" style="left:58.84%;top:56.01%" title="闽侯 五虎山农家乐-五灵岩寺-回头虎圈越">064</a>
-          <a class="coordinate-pin" href="./routes/FZ065.html" style="left:46.60%;top:45.66%" title="闽侯 仁宅登山道-鸾峰寺-旗山顶圈越">065</a>
-          <a class="coordinate-pin" href="./routes/FZ066.html" style="left:55.42%;top:39.54%" title="晋安 升山寺-湖顶山-福州国家森林公园环线">066</a>
-          <a class="coordinate-pin" href="./routes/FZ067.html" style="left:84.29%;top:78.73%" title="平潭 大练岛环线">067</a>
-          <a class="coordinate-pin" href="./routes/FZ068.html" style="left:61.49%;top:43.79%" title="晋安 樟林古道-柳杉王公园-鼓岭古道环线">068</a>
-          <a class="coordinate-pin" href="./routes/FZ069.html" style="left:46.59%;top:50.42%" title="闽侯 水项古道-旗山森林公园长线">069</a>
-          <a class="coordinate-pin" href="./routes/FZ070.html" style="left:42.10%;top:58.32%" title="永泰 横串古道环线">070</a>
-          <a class="coordinate-pin" href="./routes/FZ071.html" style="left:44.09%;top:57.69%" title="永泰 漈上-横串古村-横串古道小环线">071</a>
-          <a class="coordinate-pin" href="./routes/FZ072.html" style="left:45.63%;top:71.87%" title="福清 猛犸岩-南岭古道圈越">072</a>
-          <a class="coordinate-pin" href="./routes/FZ073.html" style="left:61.64%;top:44.61%" title="晋安 白云洞-积翠庵圈越">073</a>
-          <a class="coordinate-pin" href="./routes/FZ074.html" style="left:64.83%;top:47.95%" title="晋安 磨溪-绝顶峰-鼓山穿越">074</a>
-          <a class="coordinate-pin" href="./routes/FZ075.html" style="left:61.70%;top:44.45%" title="晋安 白云洞-鼓山穿越线">075</a>
-          <a class="coordinate-pin" href="./routes/FZ076.html" style="left:75.00%;top:54.07%" title="长乐 龙潭晓瀑-六平山穿越">076</a>
-          <a class="coordinate-pin" href="./routes/FZ077.html" style="left:58.84%;top:56.01%" title="闽侯 五虎山五虎圈越">077</a>
-          <a class="coordinate-pin" href="./routes/FZ078.html" style="left:55.11%;top:64.75%" title="福清 大化山圈越">078</a>
-          <a class="coordinate-pin" href="./routes/FZ079.html" style="left:73.20%;top:3.99%" title="罗源 凤凰山圈越">079</a>
-          <a class="coordinate-pin" href="./routes/FZ080.html" style="left:74.59%;top:8.05%" title="罗源 仙茅山-飞鸾岭古道环线">080</a>
-          <a class="coordinate-pin" href="./routes/FZ081.html" style="left:61.74%;top:43.07%" title="晋安 莲花峰-鳝溪古道圈越">081</a>
-          <a class="coordinate-pin" href="./routes/FZ082.html" style="left:60.00%;top:40.50%" title="晋安 蛇山古道-恩顶村-竹园岭古道环线">082</a>
-          <a class="coordinate-pin" href="./routes/FZ083.html" style="left:67.57%;top:49.76%" title="马尾 君山小桂林环线">083</a>
-          <a class="coordinate-pin" href="./routes/FZ084.html" style="left:61.58%;top:43.80%" title="晋安 鳝溪古道-樟林古道穿越">084</a>
-          <a class="coordinate-pin" href="./routes/FZ085.html" style="left:61.50%;top:42.86%" title="晋安 鼓岭古道-牛头寨-柱里公园-鼓山穿越">085</a>
-          <a class="coordinate-pin" href="./routes/FZ086.html" style="left:71.15%;top:71.07%" title="福清 龙凤古道环线">086</a>
-          <a class="coordinate-pin" href="./routes/FZ087.html" style="left:76.52%;top:33.26%" title="连江 王庄村-睡狐狸-老虎厝环线">087</a>
-          <a class="coordinate-pin" href="./routes/FZ088.html" style="left:28.20%;top:43.30%" title="闽侯 鸿尾举口村-畲家厝-穆源溪瀑布环线">088</a>
-      </div>
+    <section class="detail-hero map-hero" style="--detail-color:#5f9e78">
+      <span class="status-chip">路线分布图</span>
+      <h1>福州周边徒步路线分布</h1>
+      <p>路线点位直接叠加在开源地图上。当前为路线起点或近似坐标，正式出行前请复核天气、交通、开放状态和现场路况。</p>
     </section>
-    <section class="map-list">
 
-        <a class="map-list-item" href="./routes/FZ001.html">
-          <strong>鼓楼 福道精华步道</strong>
-          <span>鼓楼区｜轻松｜5.8km｜轨迹起点坐标，靠近福道5号入口/金牛山体育公园一带</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ002.html">
-          <strong>鼓楼 福山-福道-冶山城市山线</strong>
-          <span>鼓楼区｜轻松｜6.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ003.html">
-          <strong>晋安 鼓山登山道-涌泉寺登山线</strong>
-          <span>晋安区｜中等｜7.5km｜轨迹起点坐标，靠近鼓山天亭/登山道一带</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ004.html">
-          <strong>晋安 鼓山-十八景-喝水岩-白云顶穿越</strong>
-          <span>晋安区｜较难｜11.5km｜轨迹起点坐标，靠近埠兴新苑/白云洞登山入口一带</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ005.html">
-          <strong>晋安 鼓山白云洞-凤池白云洞登山线</strong>
-          <span>晋安区｜较难｜9.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ006.html">
-          <strong>晋安 鼓山-鼓岭古道穿越</strong>
-          <span>晋安区｜较难｜13.5km｜轨迹起点坐标，靠近樟林吴氏宗祠/樟林古道入口一带</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ007.html">
-          <strong>晋安 鼓岭柳杉王公园-鼓岭栈道步道</strong>
-          <span>晋安区｜轻松｜5.6km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ008.html">
-          <strong>闽侯 五虎山-五灵岩寺往返</strong>
-          <span>闽侯县｜中等｜8.4km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ009.html">
-          <strong>闽侯 五虎山-龙祥岛-旗山湖组合线</strong>
-          <span>闽侯县｜中等｜12km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ010.html">
-          <strong>闽侯 旗山-万佛寺-博思软件园穿越</strong>
-          <span>闽侯县/高新区｜中等｜10.8km｜轨迹起点坐标，靠近旗山万佛寺山门左侧</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ011.html">
-          <strong>晋安 金鸡山公园环线</strong>
-          <span>晋安区｜轻松｜4.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ012.html">
-          <strong>鼓楼 于山-乌山-三坊七巷城市山线</strong>
-          <span>鼓楼区｜轻松｜5.1km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ013.html">
-          <strong>鼓楼 西湖-左海-梅峰山城市绿道</strong>
-          <span>鼓楼区｜轻松｜6.8km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ014.html">
-          <strong>马尾 罗星塔-船政文化步道</strong>
-          <span>马尾区｜轻松｜6.5km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ015.html">
-          <strong>长乐 下沙海岸线</strong>
-          <span>长乐区｜轻松｜6.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ016.html">
-          <strong>长乐 猴屿洞天岩步道</strong>
-          <span>长乐区｜中等｜7.4km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ017.html">
-          <strong>连江 黄岐古石村海岸线</strong>
-          <span>连江县｜中等｜8.8km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ018.html">
-          <strong>连江 奇达旗冠顶看海线</strong>
-          <span>连江县｜中等｜6.8km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ019.html">
-          <strong>平潭 北部湾生态廊道</strong>
-          <span>平潭县｜轻松｜7.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ020.html">
-          <strong>永泰 云顶溪谷避暑线</strong>
-          <span>永泰县｜较难｜12km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ021.html">
-          <strong>永泰 青云山瀑布步道</strong>
-          <span>永泰县｜中等｜7.8km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ022.html">
-          <strong>永泰 嵩口古镇田园步道</strong>
-          <span>永泰县｜轻松｜6.4km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ023.html">
-          <strong>福清 石竹山登山道</strong>
-          <span>福清市｜中等｜6.5km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ024.html">
-          <strong>福清 大姆山草场环线</strong>
-          <span>福清市｜中等｜9.5km｜轨迹起点坐标，靠近单斜埔/大姆山草场登山路一带</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ025.html">
-          <strong>福清 目屿岛海岸步道</strong>
-          <span>福清市｜中等｜8.2km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ026.html">
-          <strong>闽侯 雪峰山寺周边步道</strong>
-          <span>闽侯县｜中等｜8.6km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ027.html">
-          <strong>闽侯 十八重溪休闲步道</strong>
-          <span>闽侯县｜轻松｜5.5km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ028.html">
-          <strong>连江 定海湾海岸观景线</strong>
-          <span>连江县｜轻松｜6.6km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ029.html">
-          <strong>平潭 坛南湾海岸漫步线</strong>
-          <span>平潭县｜轻松｜5.8km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ030.html">
-          <strong>罗源 罗源湾滨海观景步道</strong>
-          <span>罗源县｜轻松｜6.9km｜近似点位，出行前确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ031.html">
-          <strong>晋安 状元岭古道-小北岭古道环线</strong>
-          <span>晋安区｜中等｜9.12km｜内部确认坐标，不在公开详情页展示</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ032.html">
-          <strong>平潭 大练岛环线</strong>
-          <span>平潭县｜中等｜13.98km｜轨迹起点坐标，靠近月举湾通天门停车点</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ033.html">
-          <strong>晋安 龙门-般若苑-涌泉寺-鼓山古道</strong>
-          <span>晋安区｜中等｜8.96km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ034.html">
-          <strong>福清 福川古道-榕树王-台岭村-西溪水库环线</strong>
-          <span>福清市｜较难｜14.9km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ035.html">
-          <strong>闽侯 仁洲村-三叠井圈越</strong>
-          <span>福州周边｜较难｜12.26km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ036.html">
-          <strong>晋安 状元岭古道-状元坊-象峰古道环线</strong>
-          <span>晋安区｜中等｜6.75km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ037.html">
-          <strong>晋安 白云洞-涌泉寺-鼓山十八景穿越</strong>
-          <span>晋安区｜较难｜8.16km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ038.html">
-          <strong>鼓楼 福道7号口往返线</strong>
-          <span>福州周边｜中等｜8.65km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ039.html">
-          <strong>长乐 芦际潭森林公园圈越</strong>
-          <span>福州周边｜中等｜10.87km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ040.html">
-          <strong>晋安 鼓岭古道-映月湖-柱里-柳杉王公园穿越</strong>
-          <span>福州周边｜较难｜9.39km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ041.html">
-          <strong>晋安 鼓山勇敢者登山道-涌泉寺登山线</strong>
-          <span>晋安区｜中等｜5.15km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ042.html">
-          <strong>闽侯 五虎山圈越</strong>
-          <span>闽侯县｜较难｜13.78km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ043.html">
-          <strong>福州 贡院岭古道-鹅鼻岭-泉头古道环线</strong>
-          <span>福州周边｜较难｜10.89km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ044.html">
-          <strong>晋安 白云洞-鼓山穿越</strong>
-          <span>晋安区｜较难｜10.72km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ045.html">
-          <strong>马尾 君山小桂林-旺岐楼水库环线</strong>
-          <span>马尾区｜较难｜7.73km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ046.html">
-          <strong>闽侯 水项古道小圈越</strong>
-          <span>福州周边｜较难｜12.71km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ047.html">
-          <strong>马尾 上德古道圈越</strong>
-          <span>马尾区｜中等｜5.7km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ048.html">
-          <strong>福清 南少林-南岭古道-猛犸岩圈越</strong>
-          <span>福清市｜较难｜16.82km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ049.html">
-          <strong>罗源 小笔架圈越</strong>
-          <span>罗源县｜较难｜8.98km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ050.html">
-          <strong>福清 南岭古道环线</strong>
-          <span>福清市｜中等｜8.31km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ051.html">
-          <strong>福清 灵石山森林公园环线</strong>
-          <span>福州周边｜较难｜11.94km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ052.html">
-          <strong>长乐 风洞山环线</strong>
-          <span>长乐区｜中等｜4.87km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ053.html">
-          <strong>晋安 鼓山情人谷圈越</strong>
-          <span>晋安区｜中等｜5.85km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ054.html">
-          <strong>永泰 望仙谷-五奇仙君殿圈越</strong>
-          <span>永泰县｜较难｜9.6km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ055.html">
-          <strong>福清 龙凤古道圈越</strong>
-          <span>福清市｜中等｜11.55km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ056.html">
-          <strong>福州 康坂溪右支-地下河穿越</strong>
-          <span>福州周边｜较难｜10.63km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ057.html">
-          <strong>福清 龙凤古驿道环线</strong>
-          <span>福州周边｜较难｜11.12km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ058.html">
-          <strong>鼓楼 福道5号口-3号口穿越</strong>
-          <span>福州周边｜中等｜6.1km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ059.html">
-          <strong>闽侯 旗山万佛寺-棋盘石-旗山顶环线</strong>
-          <span>闽侯县｜较难｜11.85km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ060.html">
-          <strong>福清 大姆山草场-旗山-崩山小圈</strong>
-          <span>福清市｜较难｜9.87km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ061.html">
-          <strong>晋安 状元岭古道-小北岭古道环线</strong>
-          <span>晋安区｜中等｜9.12km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ062.html">
-          <strong>永泰 万石村-天门山圈越</strong>
-          <span>福州周边｜较难｜9.61km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ063.html">
-          <strong>永泰 东湖尖环线</strong>
-          <span>永泰县｜较难｜7.95km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ064.html">
-          <strong>闽侯 五虎山农家乐-五灵岩寺-回头虎圈越</strong>
-          <span>福州周边｜较难｜10.1km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ065.html">
-          <strong>闽侯 仁宅登山道-鸾峰寺-旗山顶圈越</strong>
-          <span>闽侯县｜较难｜9.3km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ066.html">
-          <strong>晋安 升山寺-湖顶山-福州国家森林公园环线</strong>
-          <span>福州周边｜较难｜10.04km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ067.html">
-          <strong>平潭 大练岛环线</strong>
-          <span>平潭县｜中等｜13.98km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ068.html">
-          <strong>晋安 樟林古道-柳杉王公园-鼓岭古道环线</strong>
-          <span>晋安区｜较难｜12.61km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ069.html">
-          <strong>闽侯 水项古道-旗山森林公园长线</strong>
-          <span>闽侯县｜较难｜22.48km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ070.html">
-          <strong>永泰 横串古道环线</strong>
-          <span>永泰县｜较难｜12.48km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ071.html">
-          <strong>永泰 漈上-横串古村-横串古道小环线</strong>
-          <span>福州周边｜轻松｜5.96km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ072.html">
-          <strong>福清 猛犸岩-南岭古道圈越</strong>
-          <span>福州周边｜较难｜17.23km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ073.html">
-          <strong>晋安 白云洞-积翠庵圈越</strong>
-          <span>福州周边｜较难｜5.91km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ074.html">
-          <strong>晋安 磨溪-绝顶峰-鼓山穿越</strong>
-          <span>晋安区｜较难｜9.87km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ075.html">
-          <strong>晋安 白云洞-鼓山穿越线</strong>
-          <span>福州周边｜较难｜10.37km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ076.html">
-          <strong>长乐 龙潭晓瀑-六平山穿越</strong>
-          <span>长乐区｜较难｜13.16km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ077.html">
-          <strong>闽侯 五虎山五虎圈越</strong>
-          <span>闽侯县｜较难｜15.6km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ078.html">
-          <strong>福清 大化山圈越</strong>
-          <span>福清市｜较难｜11.42km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ079.html">
-          <strong>罗源 凤凰山圈越</strong>
-          <span>罗源县｜较难｜11.2km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ080.html">
-          <strong>罗源 仙茅山-飞鸾岭古道环线</strong>
-          <span>罗源县｜较难｜14.18km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ081.html">
-          <strong>晋安 莲花峰-鳝溪古道圈越</strong>
-          <span>福州周边｜较难｜7.64km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ082.html">
-          <strong>晋安 蛇山古道-恩顶村-竹园岭古道环线</strong>
-          <span>福州周边｜较难｜8.54km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ083.html">
-          <strong>马尾 君山小桂林环线</strong>
-          <span>福州周边｜较难｜7.25km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ084.html">
-          <strong>晋安 鳝溪古道-樟林古道穿越</strong>
-          <span>福州周边｜较难｜8.94km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ085.html">
-          <strong>晋安 鼓岭古道-牛头寨-柱里公园-鼓山穿越</strong>
-          <span>晋安区｜较难｜20.9km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ086.html">
-          <strong>福清 龙凤古道环线</strong>
-          <span>福州周边｜较难｜12.22km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ087.html">
-          <strong>连江 王庄村-睡狐狸-老虎厝环线</strong>
-          <span>连江县｜轻松｜6.81km｜轨迹起点坐标，出行前请确认</span>
-        </a>
-        <a class="map-list-item" href="./routes/FZ088.html">
-          <strong>闽侯 鸿尾举口村-畲家厝-穆源溪瀑布环线</strong>
-          <span>永泰县｜中等｜6.84km｜轨迹起点坐标，出行前请确认</span>
-        </a>
+    <section class="map-summary-bar" aria-label="路线统计">
+      <div><strong id="distributionTotal">0</strong><span>可查看路线</span></div>
+      <div><strong id="distributionTransit">0</strong><span>公共交通较方便</span></div>
+      <div><strong id="distributionEasy">0</strong><span>轻松 / 新手友好</span></div>
+      <div><strong id="distributionShown">0</strong><span>当前显示</span></div>
+    </section>
+
+    <section class="distribution-shell distribution-shell-wide">
+      <aside class="distribution-tools" aria-label="地图筛选">
+        <label class="distribution-search">
+          <span>搜索路线</span>
+          <input id="distributionSearch" type="search" placeholder="鼓山、看海、福清、新手">
+        </label>
+
+        <label class="distribution-field">
+          <span>区域</span>
+          <select id="distributionRegion">
+            <option value="">全部区域</option>
+          </select>
+        </label>
+
+        <label class="distribution-field">
+          <span>难度</span>
+          <select id="distributionDifficulty">
+            <option value="">全部难度</option>
+          </select>
+        </label>
+
+        <label class="distribution-field">
+          <span>风景 / 主题</span>
+          <select id="distributionGroupBy">
+            <option value="">全部风景 / 主题</option>
+          </select>
+        </label>
+
+        <div class="distribution-actions">
+          <button class="small-button" id="distributionReset" type="button">重置</button>
+          <button class="small-button" id="distributionFit" type="button">查看全部点位</button>
+        </div>
+      </aside>
+
+      <section class="distribution-map-card" aria-label="路线地图">
+        <div class="distribution-map" id="routeDistributionMap"></div>
+        <div class="map-legend distribution-legend">
+          <span><b class="legend-dot easy"></b>轻松</span>
+          <span><b class="legend-dot medium"></b>中等</span>
+          <span><b class="legend-dot hard"></b>较难</span>
+          <span>点击点位可打开路线卡片，同一区域密集时可放大地图查看。</span>
+        </div>
+      </section>
+
+      <section class="distribution-list-panel" aria-label="路线列表">
+        <div class="panel-title">
+          <h2>当前路线</h2>
+          <span class="status-chip" id="distributionListCount">0条</span>
+        </div>
+        <div class="distribution-list" id="distributionList"></div>
+      </section>
     </section>
   </main>
+
+  <script src="./data/routes.js?v=1.6"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="./assets/map-page.js?v=1.8"></script>
 </body>
 </html>

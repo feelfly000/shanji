@@ -3,52 +3,221 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="山迹户外俱乐部活动聚合页，集中展示福州周边每周徒步活动信息。">
-  <title>俱乐部活动｜山迹</title>
-  <link rel="stylesheet" href="./assets/styles.css?v=1.4">
+  <meta name="description" content="山迹活动线索页，收集福州周边俱乐部公开活动信息，并关联本地徒步线路参考。">
+  <title>活动线索｜山迹</title>
+  <link rel="stylesheet" href="./assets/styles.css?v=1.10">
 </head>
 <body>
   <main class="detail-page">
     <a class="back-link" href="./index.html">返回山迹首页</a>
-    <section class="detail-hero" style="--detail-color:#4f9071">
-      <span class="status-chip">V1.4 活动聚合</span>
-      <h1>本周俱乐部活动</h1>
-      <p>集中查看户外俱乐部发布的组织线路。山迹只做信息聚合，不代收费用，不替代组织方安全责任。</p>
+    <section class="detail-hero activity-hub-hero" style="--detail-color:#4f9071">
+      <span class="status-chip">活动线索 · 本地线路关联</span>
+      <h1>近期俱乐部活动线索</h1>
+      <p>这里收集各俱乐部公开发布的活动信息，并关联到山迹本地线路库，方便你先看路线强度、交通、风险和轨迹参考。山迹不做报名，不代收费用，也不替代组织方安全责任。</p>
     </section>
     <section class="topic-summary">
-      <div class="metric"><strong>5</strong><span>活动数量</span></div>
-      <div class="metric"><strong>3</strong><span>报名中</span></div>
-      <div class="metric"><strong>3</strong><span>已审核</span></div>
+      <div class="metric"><strong>5</strong><span>公开活动线索</span></div>
+      <div class="metric"><strong>5</strong><span>已关联本地线路</span></div>
+      <div class="metric"><strong>3</strong><span>来源已初步核验</span></div>
     </section>
     <section class="test-notice">
-      <strong>活动说明</strong>
-      <span>报名、费用、保险、领队、集合点和变更通知以俱乐部官方说明为准。山迹当前只展示摘要和跳转入口。</span>
+      <strong>页面定位</strong>
+      <span>这是活动信息收集页，不是报名页。费用、成行、保险、领队、集合点和变更通知，请以俱乐部原始来源为准。</span>
     </section>
-    <section class="map-list">
-        <a class="map-list-item activity-list-item" href="./activities/A202607001.html">
-          <strong>周五鼓山夜爬轻徒步</strong>
-          <span>周五晚｜示例户外A｜晋安区｜报名中｜待二次确认</span>
-          <span>来源：示例户外A公众号｜报名截止：周五 18:00｜关联路线：晋安 鼓山登山道-涌泉寺登山线</span>
+    <section class="activity-hub-guide" aria-label="活动线索使用方式">
+      <div>
+        <strong>先看线索</strong>
+        <span>时间、来源、原文费用、集合方式和时效状态集中展示。</span>
+      </div>
+      <div>
+        <strong>再看线路</strong>
+        <span>每条活动尽量匹配山迹线路，便于复核距离、爬升、交通和风险。</span>
+      </div>
+      <div>
+        <strong>回到来源</strong>
+        <span>山迹只保留线索摘要，关键信息以组织方原文为准。</span>
+      </div>
+    </section>
+    <section class="activity-board" aria-label="本周俱乐部活动列表">
+        <a class="activity-card" href="./activities/A202607001.html">
+          <div class="activity-date">
+            <span>活动时间</span>
+            <strong>周五</strong>
+            <b>晚</b>
+            <small>信息时效 周五 18:00</small>
+          </div>
+          <div class="activity-card-main">
+            <div class="activity-card-head">
+              <div>
+                <p class="activity-kicker">示例户外A · 晋安区</p>
+                <h2>周五鼓山夜爬轻徒步</h2>
+              </div>
+              <div class="activity-status-stack" aria-label="活动状态">
+                <span class="activity-status is-open">已收录</span>
+                <span class="activity-status is-audited">来源已核验</span>
+              </div>
+            </div>
+            <div class="activity-facts">
+              <span><b>俱乐部</b>示例户外A</span>
+              <span><b>区域</b>晋安区</span>
+              <span><b>原文费用</b>39元</span>
+              <span><b>信息时效</b>周五 18:00</span>
+            </div>
+            <p class="activity-note">适合有基础的新手，雨后取消或改线。集合点：鼓山地铁站。</p>
+            <div class="activity-route-row">
+              <span>关联线路</span>
+              <strong>晋安 鼓山登山道-涌泉寺登山线</strong>
+            </div>
+            <div class="activity-source-row">
+              <span>来源：示例户外A公众号</span>
+              <span>原文状态：待二次确认</span>
+              <span>点击查看线索详情</span>
+            </div>
+          </div>
         </a>
-        <a class="map-list-item activity-list-item" href="./activities/A202607002.html">
-          <strong>周六奇达旗冠顶看海线</strong>
-          <span>周六｜示例户外B｜连江县｜余位紧张｜余位需确认</span>
-          <span>来源：示例户外B活动页｜报名截止：周五 22:00｜关联路线：连江 奇达旗冠顶看海线</span>
+        <a class="activity-card is-featured" href="./activities/A202607002.html">
+          <div class="activity-date">
+            <span>活动时间</span>
+            <strong>周六</strong>
+            <b>全天</b>
+            <small>信息时效 周五 22:00</small>
+          </div>
+          <div class="activity-card-main">
+            <div class="activity-card-head">
+              <div>
+                <p class="activity-kicker">示例户外B · 连江县</p>
+                <h2>周六奇达旗冠顶看海线</h2>
+              </div>
+              <div class="activity-status-stack" aria-label="活动状态">
+                <span class="activity-status is-hot">重点关注</span>
+                <span class="activity-status is-audited">来源已核验</span>
+              </div>
+            </div>
+            <div class="activity-facts">
+              <span><b>俱乐部</b>示例户外B</span>
+              <span><b>区域</b>连江县</span>
+              <span><b>原文费用</b>128元</span>
+              <span><b>信息时效</b>周五 22:00</span>
+            </div>
+            <p class="activity-note">临海观景注意安全，台阶强度不低，需自备午餐。</p>
+            <div class="activity-route-row">
+              <span>关联线路</span>
+              <strong>连江 奇达旗冠顶看海线</strong>
+            </div>
+            <div class="activity-source-row">
+              <span>来源：示例户外B活动页</span>
+              <span>原文状态：名额状态需确认</span>
+              <span>点击查看线索详情</span>
+            </div>
+          </div>
         </a>
-        <a class="map-list-item activity-list-item" href="./activities/A202607003.html">
-          <strong>周六福道亲子轻徒步</strong>
-          <span>周六上午｜示例亲子户外｜鼓楼区｜报名中｜待审核</span>
-          <span>来源：示例亲子户外群公告｜报名截止：周六 09:00｜关联路线：鼓楼 福道精华步道</span>
+        <a class="activity-card" href="./activities/A202607003.html">
+          <div class="activity-date">
+            <span>活动时间</span>
+            <strong>周六</strong>
+            <b>上午</b>
+            <small>信息时效 周六 09:00</small>
+          </div>
+          <div class="activity-card-main">
+            <div class="activity-card-head">
+              <div>
+                <p class="activity-kicker">示例亲子户外 · 鼓楼区</p>
+                <h2>周六福道亲子轻徒步</h2>
+              </div>
+              <div class="activity-status-stack" aria-label="活动状态">
+                <span class="activity-status is-open">已收录</span>
+                <span class="activity-status is-reviewing">来源待核验</span>
+              </div>
+            </div>
+            <div class="activity-facts">
+              <span><b>俱乐部</b>示例亲子户外</span>
+              <span><b>区域</b>鼓楼区</span>
+              <span><b>原文费用</b>免费/AA</span>
+              <span><b>信息时效</b>周六 09:00</span>
+            </div>
+            <p class="activity-note">适合亲子轻量体验，需确认集合点和儿童年龄建议。</p>
+            <div class="activity-route-row">
+              <span>关联线路</span>
+              <strong>鼓楼 福道精华步道</strong>
+            </div>
+            <div class="activity-source-row">
+              <span>来源：示例亲子户外群公告</span>
+              <span>原文状态：待审核</span>
+              <span>点击查看线索详情</span>
+            </div>
+          </div>
         </a>
-        <a class="map-list-item activity-list-item" href="./activities/A202607004.html">
-          <strong>周日永泰溪谷避暑线</strong>
-          <span>周日｜示例户外C｜永泰县｜待确认｜天气待确认</span>
-          <span>来源：示例户外C活动页｜报名截止：周六 20:00｜关联路线：永泰 云顶溪谷避暑线</span>
+        <a class="activity-card" href="./activities/A202607004.html">
+          <div class="activity-date">
+            <span>活动时间</span>
+            <strong>周日</strong>
+            <b>全天</b>
+            <small>信息时效 周六 20:00</small>
+          </div>
+          <div class="activity-card-main">
+            <div class="activity-card-head">
+              <div>
+                <p class="activity-kicker">示例户外C · 永泰县</p>
+                <h2>周日永泰溪谷避暑线</h2>
+              </div>
+              <div class="activity-status-stack" aria-label="活动状态">
+                <span class="activity-status is-pending">待确认</span>
+                <span class="activity-status is-reviewing">待审核</span>
+              </div>
+            </div>
+            <div class="activity-facts">
+              <span><b>俱乐部</b>示例户外C</span>
+              <span><b>区域</b>永泰县</span>
+              <span><b>原文费用</b>158元</span>
+              <span><b>信息时效</b>周六 20:00</span>
+            </div>
+            <p class="activity-note">雨天自动取消或改线，需确认溪谷涨水风险。</p>
+            <div class="activity-route-row">
+              <span>关联线路</span>
+              <strong>永泰 云顶溪谷避暑线</strong>
+            </div>
+            <div class="activity-source-row">
+              <span>来源：示例户外C活动页</span>
+              <span>原文状态：天气待确认</span>
+              <span>点击查看线索详情</span>
+            </div>
+          </div>
         </a>
-        <a class="map-list-item activity-list-item" href="./activities/A202607005.html">
-          <strong>周日鼓岭避暑半日线</strong>
-          <span>周日｜示例户外D｜晋安区｜报名中｜正常报名</span>
-          <span>来源：示例户外D公众号｜报名截止：周六 18:00｜关联路线：晋安 鼓岭柳杉王公园-鼓岭栈道步道</span>
+        <a class="activity-card" href="./activities/A202607005.html">
+          <div class="activity-date">
+            <span>活动时间</span>
+            <strong>周日</strong>
+            <b>半日</b>
+            <small>信息时效 周六 18:00</small>
+          </div>
+          <div class="activity-card-main">
+            <div class="activity-card-head">
+              <div>
+                <p class="activity-kicker">示例户外D · 晋安区</p>
+                <h2>周日鼓岭避暑半日线</h2>
+              </div>
+              <div class="activity-status-stack" aria-label="活动状态">
+                <span class="activity-status is-open">已收录</span>
+                <span class="activity-status is-audited">来源已核验</span>
+              </div>
+            </div>
+            <div class="activity-facts">
+              <span><b>俱乐部</b>示例户外D</span>
+              <span><b>区域</b>晋安区</span>
+              <span><b>原文费用</b>68元</span>
+              <span><b>信息时效</b>周六 18:00</span>
+            </div>
+            <p class="activity-note">山上天气变化快，建议带薄外套和饮水。</p>
+            <div class="activity-route-row">
+              <span>关联线路</span>
+              <strong>晋安 鼓岭柳杉王公园-鼓岭栈道步道</strong>
+            </div>
+            <div class="activity-source-row">
+              <span>来源：示例户外D公众号</span>
+              <span>原文状态：正常显示</span>
+              <span>点击查看线索详情</span>
+            </div>
+          </div>
         </a>
     </section>
   </main>

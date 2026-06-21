@@ -12,24 +12,23 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "meeting": "鼓山地铁站",
     "transport": "公共交通集合",
     "fee": "39元",
-    "status": "报名中",
+    "status": "已收录",
     "tags": [
       "新手进阶",
       "夜爬",
       "市区"
     ],
-    "signup": "俱乐部官方报名页",
-    "signupUrl": "https://example.com/shanji-demo/A202607001",
+    "sourceAction": "查看原始来源",
     "audit": "已审核",
     "note": "适合有基础的新手，雨后取消或改线。",
     "sourceName": "示例户外A公众号",
     "sourceUrl": "https://example.com/shanji-demo/A202607001",
     "publishedAt": "2026-06-18 20:00",
     "deadline": "周五 18:00",
-    "officialStatus": "待二次确认",
+    "officialStatus": "原文状态待二次确认",
     "isFeatured": false,
     "isExpired": false,
-    "platformNote": "山迹只做活动信息聚合，报名和安全责任以组织方官方说明为准。"
+    "platformNote": "山迹只做公开活动信息收集和本地线路关联，不提供报名服务。"
   },
   {
     "id": "A202607002",
@@ -44,24 +43,23 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "meeting": "五一广场附近",
     "transport": "大巴往返",
     "fee": "128元",
-    "status": "余位紧张",
+    "status": "重点关注",
     "tags": [
       "看海",
       "摄影",
       "山海"
     ],
-    "signup": "俱乐部官方报名页",
-    "signupUrl": "https://example.com/shanji-demo/A202607002",
+    "sourceAction": "查看原始来源",
     "audit": "已审核",
     "note": "临海观景注意安全，台阶强度不低，需自备午餐。",
     "sourceName": "示例户外B活动页",
     "sourceUrl": "https://example.com/shanji-demo/A202607002",
     "publishedAt": "2026-06-18 21:30",
     "deadline": "周五 22:00",
-    "officialStatus": "余位需确认",
+    "officialStatus": "原文名额状态需确认",
     "isFeatured": true,
     "isExpired": false,
-    "platformNote": "山迹只做活动信息聚合，报名和安全责任以组织方官方说明为准。"
+    "platformNote": "山迹只做公开活动信息收集和本地线路关联，不提供报名服务。"
   },
   {
     "id": "A202607003",
@@ -76,14 +74,13 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "meeting": "福道入口",
     "transport": "自行前往",
     "fee": "免费/AA",
-    "status": "报名中",
+    "status": "已收录",
     "tags": [
       "亲子",
       "新手",
       "城市森林"
     ],
-    "signup": "俱乐部官方报名页",
-    "signupUrl": "https://example.com/shanji-demo/A202607003",
+    "sourceAction": "查看原始来源",
     "audit": "待审核",
     "note": "适合亲子轻量体验，需确认集合点和儿童年龄建议。",
     "sourceName": "示例亲子户外群公告",
@@ -93,7 +90,7 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "officialStatus": "待审核",
     "isFeatured": false,
     "isExpired": false,
-    "platformNote": "山迹只做活动信息聚合，报名和安全责任以组织方官方说明为准。"
+    "platformNote": "山迹只做公开活动信息收集和本地线路关联，不提供报名服务。"
   },
   {
     "id": "A202607004",
@@ -114,8 +111,7 @@ window.SHANJI_CLUB_ACTIVITIES = [
       "避暑",
       "溪谷"
     ],
-    "signup": "俱乐部官方报名页",
-    "signupUrl": "https://example.com/shanji-demo/A202607004",
+    "sourceAction": "查看原始来源",
     "audit": "待审核",
     "note": "雨天自动取消或改线，需确认溪谷涨水风险。",
     "sourceName": "示例户外C活动页",
@@ -125,7 +121,7 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "officialStatus": "天气待确认",
     "isFeatured": false,
     "isExpired": false,
-    "platformNote": "山迹只做活动信息聚合，报名和安全责任以组织方官方说明为准。"
+    "platformNote": "山迹只做公开活动信息收集和本地线路关联，不提供报名服务。"
   },
   {
     "id": "A202607005",
@@ -140,23 +136,22 @@ window.SHANJI_CLUB_ACTIVITIES = [
     "meeting": "鼓岭柳杉王公园",
     "transport": "自驾/拼车",
     "fee": "68元",
-    "status": "报名中",
+    "status": "已收录",
     "tags": [
       "新手",
       "亲子",
       "避暑"
     ],
-    "signup": "俱乐部官方报名页",
-    "signupUrl": "https://example.com/shanji-demo/A202607005",
+    "sourceAction": "查看原始来源",
     "audit": "已审核",
     "note": "山上天气变化快，建议带薄外套和饮水。",
     "sourceName": "示例户外D公众号",
     "sourceUrl": "https://example.com/shanji-demo/A202607005",
     "publishedAt": "2026-06-18 18:00",
     "deadline": "周六 18:00",
-    "officialStatus": "正常报名",
+    "officialStatus": "原文显示正常",
     "isFeatured": false,
     "isExpired": false,
-    "platformNote": "山迹只做活动信息聚合，报名和安全责任以组织方官方说明为准。"
+    "platformNote": "山迹只做公开活动信息收集和本地线路关联，不提供报名服务。"
   }
 ];
